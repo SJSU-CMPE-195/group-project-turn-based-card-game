@@ -1,17 +1,17 @@
-# Project Title
+# Turn Based Strategy Card Game
 
-> One-line description of what your project does
+> Our project is a two dimensional, turn based card inspired by many popular games over the decades, including Final Fantasy, Darkest Dungeon, and Slay The Spire. 
 
-## Team
+## Team 29
 
 | Name | GitHub | Email |
 |------|--------|-------|
-| Dorian Vail | [@username](https://github.com/username) | dorian.vail@sjsu.edu |
-| Vincent Cheng | [@username](https://github.com/username) | vincent.cheng@sjsu.edu |
-| Sarmad Nasir | [@username](https://github.com/username) | sarmad.nasir@sjsu.edu |
-| Surya Krishnamurthy | [@username](https://github.com/username) | surya.krishnamurthy@sjsu.edu |
+| Dorian Vail | [@Dorianv5](https://github.com/username) | dorian.vail@sjsu.edu |
+| Vincent Cheng | [@vincentc168777](https://github.com/username) | vincent.cheng@sjsu.edu |
+| Sarmad Nasir | [@sarmadn](https://github.com/username) | sarmad.nasir@sjsu.edu |
+| Surya Krishnamurthy | [@codinginc123](https://github.com/username) | surya.krishnamurthy@sjsu.edu |
 
-**Advisor:** [Advisor Name]
+**Advisor:** Bhawandeep Singh Harsh
 
 ---
 
@@ -25,9 +25,10 @@
 
 ### Key Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Combat system: [insert description]
+- Enemy ai: [insert description]
+- Card effects/interactions: [insert description]
+- Deck system: [insert description]
 
 ---
 
