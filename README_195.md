@@ -17,11 +17,11 @@
 
 ## Problem Statement
 
-[2-3 sentences describing the problem you're solving and why it matters]
+There are many popular, two dimensional, turn-based card games that have been released over the past few years including Slay The Spire, Darkest Dungeon, Final Fantasy and Balatro. These games have great mechanics on an individual basis, but they each have their own set of drawbacks. Slay the Spire lacks top down movements, for instance while Darkest Dungeon does not have a card system. This means people will have to buy several games to experience all mechanics instead of just some.
 
 ## Solution
 
-[2-3 sentences describing your solution approach]
+Our solution is to create a self-contained card game that combines mechanics from all the listed games above. It will have exciting combat like Slay The Spire, random encounters such as in Darkest Dungeon, and character control reminiscent of Final Fantasy. In addition, the game provides players with many chances to explore, plan and strategize in order to win. 
 
 ### Key Features
 
