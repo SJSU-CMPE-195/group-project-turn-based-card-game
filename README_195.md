@@ -6,10 +6,10 @@
 
 | Name | GitHub | Email |
 |------|--------|-------|
-| Name 1 | [@username](https://github.com/username) | name@sjsu.edu |
-| Name 2 | [@username](https://github.com/username) | name@sjsu.edu |
-| Name 3 | [@username](https://github.com/username) | name@sjsu.edu |
-| Name 4 | [@username](https://github.com/username) | name@sjsu.edu |
+| Dorian Vail | [@username](https://github.com/username) | dorian.vail@sjsu.edu |
+| Vincent Cheng | [@username](https://github.com/username) | vincent.cheng@sjsu.edu |
+| Sarmad Nasir | [@username](https://github.com/username) | sarmad.nasir@sjsu.edu |
+| Surya Krishnamurthy | [@username](https://github.com/username) | surya.krishnamurthy@sjsu.edu |
 
 **Advisor:** [Advisor Name]
 
