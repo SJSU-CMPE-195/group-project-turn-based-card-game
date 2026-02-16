@@ -25,10 +25,10 @@ Our solution is to create a self-contained card game that combines mechanics fro
 
 ### Key Features
 
-- Combat system: [insert description]
-- Enemy ai: [insert description]
-- Card effects/interactions: [insert description]
-- Deck system: [insert description]
+- Combat system: Used to alternate between combat scenarios. It is all-inclusive and has a card/upgrade shop. Must coordinate between combat mechanics, enemies and card outcomes.
+- Enemy ai: Cards selected based on difficulty of enemy. The enemies will be in the form of artificial intelligence.
+- Card effects/interactions: Cards are optimized and function in accordance with the combat system. Card interactions are improved to make gameplay smoother.
+- Deck system: It has card operations like shuffling and drawing cards. It has data structures like arrays, classes and sets. The deck system will coordinate with card effects and the combat system.
 
 ---
 
