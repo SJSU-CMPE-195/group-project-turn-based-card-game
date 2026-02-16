@@ -4,16 +4,16 @@
 [ext_resource type="Script" uid="uid://bmxkbkx044f03" path="res://Cards/Fireball/fireball_card.gd" id="2_ew4aa"]
 [ext_resource type="PackedScene" uid="uid://buxhoxquu328k" path="res://Cards/Fireball/FireballVFX.tscn" id="3_ew4aa"]
 
-[node name="CardTemplate" instance=ExtResource("1_1tysj")]
+[node name="FireballCard" unique_id=1196232583 instance=ExtResource("1_1tysj")]
 script = ExtResource("2_ew4aa")
 card_name = "Fireball"
 description = "Launches a ball of fire
 [color=red]6 Fire Damage"
 vfx_scene = ExtResource("3_ew4aa")
 
-[node name="Name" parent="PanelContainer/MarginContainer/VBoxContainer" index="0"]
+[node name="Name" parent="PanelContainer/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1732733523) index="0" unique_id=1440426399]
 text = "Fireball"
 
-[node name="Description" parent="PanelContainer/MarginContainer/VBoxContainer" index="2"]
+[node name="Description" parent="PanelContainer/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1732733523) index="2" unique_id=907473193]
 text = "Launches a ball of fire
 [color=red]6 Fire Damage"

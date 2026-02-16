@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dk6dt1n6n4xbu"]
+
+[ext_resource type="PackedScene" uid="uid://kgo4cjemjess" path="res://Cards/_Template/Card.tscn" id="1_clhom"]
+
+[node name="HealCard" unique_id=1640214145 instance=ExtResource("1_clhom")]
+position = Vector2(-20, -48)
+card_name = "Heal"
+description = "Heals [color=dark_green]5 health"
+
+[node name="Name" parent="PanelContainer/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1732733523) index="0" unique_id=1440426399]
+text = "Heal"
+
+[node name="Description" parent="PanelContainer/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1732733523) index="2" unique_id=907473193]
+text = "Heals [color=dark_green]5 health"
