@@ -1,0 +1,4 @@
+Deck system requirement
+	Data structure
+	Draw card from deck
+	Shuffle card deck

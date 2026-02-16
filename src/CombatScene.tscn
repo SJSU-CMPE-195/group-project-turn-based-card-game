@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://dy14emuaan1hh"]
+
+[ext_resource type="Texture2D" uid="uid://cwvm4ttyujci6" path="res://icon.svg" id="1_hd2ub"]
+[ext_resource type="Script" uid="uid://dj76uyh8ov30a" path="res://ally_unit.gd" id="2_diwen"]
+[ext_resource type="Script" uid="uid://xay0yki45qs2" path="res://enemy.gd" id="2_ijum5"]
+[ext_resource type="PackedScene" uid="uid://bckqrikkxb2i2" path="res://Cards/Fireball/FireballCard.tscn" id="3_ijum5"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ec351"]
+size = Vector2(1150, 650)
+
+[sub_resource type="Gradient" id="Gradient_ec351"]
+offsets = PackedFloat32Array(0.13, 0.17, 0.8566667, 0.87666667)
+colors = PackedColorArray(0.2173, 0.53, 0.22772335, 1, 0.73, 0.5128251, 0.35770002, 1, 0.73, 0.5128251, 0.35770002, 1, 0.2173, 0.53, 0.22772335, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hd2ub"]
+gradient = SubResource("Gradient_ec351")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[node name="CombatScene" type="Node2D"]
+y_sort_enabled = true
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+z_index = -1
+mesh = SubResource("QuadMesh_ec351")
+texture = SubResource("GradientTexture2D_hd2ub")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="EnemySlots" type="Node2D" parent="."]
+
+[node name="EnemySlot1" type="Node2D" parent="EnemySlots"]
+position = Vector2(350, 0)
+
+[node name="Icon2" type="Sprite2D" parent="EnemySlots/EnemySlot1"]
+modulate = Color(1, 0.51, 0.51, 1)
+texture = ExtResource("1_hd2ub")
+offset = Vector2(0, -60)
+script = ExtResource("2_ijum5")
+
+[node name="EnemySlot2" type="Node2D" parent="EnemySlots"]
+position = Vector2(150, 0)
+
+[node name="EnemySlot3" type="Node2D" parent="EnemySlots"]
+position = Vector2(250, 100)
+
+[node name="EnemySlot4" type="Node2D" parent="EnemySlots"]
+position = Vector2(250, -100)
+
+[node name="AllySlots" type="Node2D" parent="."]
+
+[node name="AllySlot1" type="Node2D" parent="AllySlots"]
+position = Vector2(-150, 0)
+
+[node name="AllySlot2" type="Node2D" parent="AllySlots"]
+position = Vector2(-350, 0)
+
+[node name="Icon" type="Sprite2D" parent="AllySlots/AllySlot2"]
+texture = ExtResource("1_hd2ub")
+offset = Vector2(0, -60)
+script = ExtResource("2_diwen")
+
+[node name="AllySlot3" type="Node2D" parent="AllySlots"]
+position = Vector2(-250, 100)
+
+[node name="AllySlot4" type="Node2D" parent="AllySlots"]
+position = Vector2(-250, -100)
+
+[node name="CardTemplate" parent="." instance=ExtResource("3_ijum5")]
+position = Vector2(3, 182)
