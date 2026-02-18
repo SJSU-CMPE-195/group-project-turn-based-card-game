@@ -1,6 +1,6 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1771290819
-ally_unit.gd::GDScript::7858940947498336426::1771218461::0::1::::AllyUnit<>AnimatedSprite2D<><>0<>0<><>::
+::res://::1771394607
+ally_unit.gd::GDScript::7858940947498336426::1771292146::0::1::::AllyUnit<>AnimatedSprite2D<><>0<>0<><>::
 CombatScene.tscn::PackedScene::8899236717140312901::1771218461::0::1::::<><><>0<>0<><>::uid://c0jytsw6dtp67::::res://Skeleton_Sword/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Idle.png<>uid://dj76uyh8ov30a::::res://ally_unit.gd<>uid://xay0yki45qs2::::res://enemy.gd<>uid://ddmlxg8f8wlw3::::res://EnemySpriteSheet.png<>uid://bckqrikkxb2i2::::res://Cards/Fireball/FireballCard.tscn<>uid://dk6dt1n6n4xbu::::res://Cards/Heal/Heal.tscn<>uid://bftdh1ledd24o::::res://Cards/Shield/Shield.tscn
 combat_manager.gd::GDScript::5679347407917366860::1771218461::0::1::::<>Node<><>0<>0<><>::
 enemy.gd::GDScript::1615846532760645375::1771218461::0::1::::Enemy<>AnimatedSprite2D<><>0<>0<><>::
@@ -21,7 +21,8 @@ HealVFX.tscn::PackedScene::1195095665528216435::1771218461::0::1::::<><><>0<>0<>
 ::res://Cards/Shield/::1771218461
 shield.gd::GDScript::6603370988268796857::1771218461::0::1::::<>Card<><>0<>1<><>::
 Shield.tscn::PackedScene::2776784113531885532::1771218461::0::1::::<><><>0<>0<><>::uid://kgo4cjemjess::::res://Cards/_Template/Card.tscn<>uid://c1cys5b6lljsj::::res://Cards/Shield/shield.gd
-::res://Modules & Game Logic/::1771221279
+::res://Modules & Game Logic/::1771292071
+Card.gd::GDScript::3562216972424298969::1771292071::0::1::::Cards<>Resource<><>0<>0<><>::
 deck_system.gd::GDScript::8988631754241149307::1771221268::0::1::::<>Node<><>0<>0<><>::
 deck_system_requirement.txt::TextFile::-1::1771221279::0::1::::<><><>0<>0<><>::
 ::res://Skeleton_Sword/::1771218461
