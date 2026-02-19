@@ -1,0 +1,16 @@
+Deck system requirement
+	Data structure
+	Draw card from deck
+	Shuffle card deck
+Variables:
+	cards as an array
+Functions:
+	draw_card()
+	discard_card()
+	add_card()
+	remove_card()
+	reset_card_deck()
+	shuffle_card_deck()
+	obtain_top_card()
+	duplicate_card()
+	card_stats()
