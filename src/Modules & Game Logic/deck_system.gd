@@ -13,7 +13,9 @@ var removed_card = []
 func draw_card():
 	if cards.empty():
 		return
-	return cards.pop_front()
+	var front = cards.pop_front()
+	removed_card = removed_card + [front]
+	return(front)
 
 func discard_card(card):
 	removed_card = removed_card + [card]
@@ -26,6 +28,7 @@ func remove_card(card):
 	
 func reset_card_deck():
 	cards = cards + removed_card
+	removed_card = []
 	shuffle_card_deck()
 	
 func shuffle_card_deck():

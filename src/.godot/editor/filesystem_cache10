@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1771808492
+::res://::1772157344
 ally_unit.gd::GDScript::7858940947498336426::1771292146::0::1::::AllyUnit<>AnimatedSprite2D<><>0<>0<><>::
 CombatScene.tscn::PackedScene::8899236717140312901::1771218461::0::1::::<><><>0<>0<><>::uid://c0jytsw6dtp67::::res://Skeleton_Sword/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Idle.png<>uid://dj76uyh8ov30a::::res://ally_unit.gd<>uid://xay0yki45qs2::::res://enemy.gd<>uid://ddmlxg8f8wlw3::::res://EnemySpriteSheet.png<>uid://bckqrikkxb2i2::::res://Cards/Fireball/FireballCard.tscn<>uid://dk6dt1n6n4xbu::::res://Cards/Heal/Heal.tscn<>uid://bftdh1ledd24o::::res://Cards/Shield/Shield.tscn
 combat_manager.gd::GDScript::5679347407917366860::1771218461::0::1::::<>Node<><>0<>0<><>::
@@ -7,7 +7,7 @@ enemy.gd::GDScript::1615846532760645375::1771218461::0::1::::Enemy<>AnimatedSpri
 EnemySpriteSheet.png::CompressedTexture2D::7395310441613162324::1771218461::1771218602::1::::<><><>0<>0<>3704aff18231e201eae636df62427317<>res://.godot/imported/EnemySpriteSheet.png-9611d8cad7fc845d58745e5abf340e76.ctex::
 icon.svg::CompressedTexture2D::6361129280607079295::1771218461::1771218602::1::::<><><>0<>0<>6d5dbd9bec35f68d536b69ccf9a38c75<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1771218461::0::1::::<><><>0<>0<><>::
-Unit.gd::GDScript::4818840654758580887::1771808462::0::1::::Unit<>Node<><>0<>0<><>::
+Unit.gd::GDScript::4818840654758580887::1771809159::0::1::::Unit<>Node<><>0<>0<><>::
 ::res://Cards/::1771218461
 ::res://Cards/_Template/::1771218461
 Card.tscn::PackedScene::715176647974731726::1771218461::0::1::::<><><>0<>0<><>::uid://mccf7osvgmqt::::res://Cards/_Template/card_scene.gd<>uid://cwvm4ttyujci6::::res://icon.svg
@@ -22,10 +22,10 @@ HealVFX.tscn::PackedScene::1195095665528216435::1771218461::0::1::::<><><>0<>0<>
 ::res://Cards/Shield/::1771218461
 shield.gd::GDScript::6603370988268796857::1771218461::0::1::::<>Card<><>0<>1<><>::
 Shield.tscn::PackedScene::2776784113531885532::1771218461::0::1::::<><><>0<>0<><>::uid://kgo4cjemjess::::res://Cards/_Template/Card.tscn<>uid://c1cys5b6lljsj::::res://Cards/Shield/shield.gd
-::res://Modules & Game Logic/::1771569237
+::res://Modules & Game Logic/::1772155708
 Card.gd::GDScript::3562216972424298969::1771568609::0::1::::Cards<>Resource<><>0<>0<><>::
 Deck_class_variables_and_functions.txt::TextFile::-1::1771569237::0::1::::<><><>0<>0<><>::
-deck_system.gd::GDScript::8988631754241149307::1771568985::0::1::::Deck<>Node<><>0<>0<><>::
+deck_system.gd::GDScript::8988631754241149307::1772155708::0::1::::Deck<>Node<><>0<>0<><>::
 deck_system_requirement.txt::TextFile::-1::1771221279::0::1::::<><><>0<>0<><>::
 Unit_class_variables_and_functions.txt::TextFile::-1::1771569237::0::1::::<><><>0<>0<><>::
 ::res://Skeleton_Sword/::1771218461
@@ -59,9 +59,14 @@ Skeleton_01_Yellow_Die.png::CompressedTexture2D::6129454548603323228::1771218461
 Skeleton_01_Yellow_Hurt.png::CompressedTexture2D::2420461975158141853::1771218461::1771218602::1::::<><><>0<>0<>eb434f5c54e7e3f8e45d31576f98a344<>res://.godot/imported/Skeleton_01_Yellow_Hurt.png-243fa1ce45ab48961b2ada886c00f9eb.ctex::
 Skeleton_01_Yellow_Idle.png::CompressedTexture2D::5928176781014286313::1771218461::1771218602::1::::<><><>0<>0<>4f9559921e22e78a95b3d37caac92938<>res://.godot/imported/Skeleton_01_Yellow_Idle.png-f51d754f11112f3ec3119c952573e225.ctex::
 Skeleton_01_Yellow_Walk.png::CompressedTexture2D::3019467542247336986::1771218461::1771218602::1::::<><><>0<>0<>0608bc0a82060945cf315d0bc6cc14fe<>res://.godot/imported/Skeleton_01_Yellow_Walk.png-73bbda0169010319574ce3dc959b9723.ctex::
-::res://VFX/::1771623142
-decal.gdshader::Shader::9142059144967415022::1771623142::0::1::::<><><>0<>0<><>::
+::res://User Interface/::1772157195
+Card Shop.tscn::PackedScene::5330264241181331538::1772157134::0::1::::<><><>0<>0<><>::
+Card_Shop.gd::GDScript::1686771968656058726::1772157174::0::1::::<>Node<><>0<>0<><>::
+Upgrade Shop.tscn::PackedScene::7901269976142595844::1772157185::0::1::::<><><>0<>0<><>::
+Upgrade_Shop.gd::GDScript::2779835749798481318::1772157195::0::1::::<>Node<><>0<>0<><>::
+::res://VFX/::1772157134
+decal.gdshader::Shader::9142059144967415022::1772157134::0::1::::<><><>0<>0<><>::
 MasterProjectile.tscn::PackedScene::2949857197381625552::1771218461::0::1::::<><><>0<>0<><>::uid://c3m1v71i1dcsc::::res://VFX/master_projectile.gd<>uid://daqar4qo5clq4::::res://VFX/master_projectile.gdshader<>uid://d3iqm4qpdbagk::::res://VFX/decal.gdshader
 master_projectile.gd::GDScript::6764519387094225446::1771218461::0::1::::<>Node2D<><>0<>1<><>::
-master_projectile.gdshader::Shader::7192324002210945561::1771218461::0::1::::<><><>0<>0<><>::
+master_projectile.gdshader::Shader::7192324002210945561::1772157134::0::1::::<><><>0<>0<><>::
 vfx.gd::GDScript::9103114165510318438::1771218461::0::1::::<>Node<><>0<>0<><>::
