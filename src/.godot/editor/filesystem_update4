@@ -7,3 +7,8 @@ res://CombatScene.tscn
 res://Cards/Fireball/fireball_card.gd
 res://Cards/Fireball/FireballCard.tscn
 res://combat_manager.gd
+res://ally_unit.gd
+res://unit.gd
+res://Cards/_Template/card_scene.gd
+res://Cards/Shield/shield.gd
+res://Modules & Game Logic/deck_system.gd
