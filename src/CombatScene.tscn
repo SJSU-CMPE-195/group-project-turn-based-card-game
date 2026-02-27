@@ -55,41 +55,41 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CombatScene" type="Node2D" unique_id=1036058247]
+[node name="CombatScene" type="Node2D"]
 y_sort_enabled = true
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1889719281]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 z_index = -1
 mesh = SubResource("QuadMesh_ec351")
 texture = ExtResource("1_c531c")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=932029058]
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="EnemySlots" type="Node2D" parent="." unique_id=1735407046]
+[node name="EnemySlots" type="Node2D" parent="."]
 
-[node name="EnemySlot1" type="Node2D" parent="EnemySlots" unique_id=1543877888]
+[node name="EnemySlot1" type="Node2D" parent="EnemySlots"]
 position = Vector2(350, 0)
 
-[node name="Enemy" parent="EnemySlots/EnemySlot1" unique_id=2084425834 instance=ExtResource("4_6ravy")]
+[node name="Enemy" parent="EnemySlots/EnemySlot1" instance=ExtResource("4_6ravy")]
 
-[node name="EnemySlot2" type="Node2D" parent="EnemySlots" unique_id=988087311]
+[node name="EnemySlot2" type="Node2D" parent="EnemySlots"]
 position = Vector2(150, 0)
 
-[node name="EnemySlot3" type="Node2D" parent="EnemySlots" unique_id=1620018605]
+[node name="EnemySlot3" type="Node2D" parent="EnemySlots"]
 position = Vector2(250, 100)
 
-[node name="EnemySlot4" type="Node2D" parent="EnemySlots" unique_id=958334054]
+[node name="EnemySlot4" type="Node2D" parent="EnemySlots"]
 position = Vector2(250, -100)
 
-[node name="AllySlots" type="Node2D" parent="." unique_id=1579145934]
+[node name="AllySlots" type="Node2D" parent="."]
 
-[node name="AllySlot1" type="Node2D" parent="AllySlots" unique_id=1793309163]
+[node name="AllySlot1" type="Node2D" parent="AllySlots"]
 position = Vector2(-150, 0)
 
-[node name="AllySlot2" type="Node2D" parent="AllySlots" unique_id=1788255386]
+[node name="AllySlot2" type="Node2D" parent="AllySlots"]
 position = Vector2(-350, 0)
 
-[node name="Icon" type="AnimatedSprite2D" parent="AllySlots/AllySlot2" unique_id=1708439576]
+[node name="Icon" type="AnimatedSprite2D" parent="AllySlots/AllySlot2"]
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_ovs4j")
@@ -97,40 +97,40 @@ frame_progress = 0.75967073
 offset = Vector2(0, -40)
 script = ExtResource("2_diwen")
 
-[node name="HealthComponent" parent="AllySlots/AllySlot2/Icon" unique_id=411859767 instance=ExtResource("5_c531c")]
+[node name="HealthComponent" parent="AllySlots/AllySlot2/Icon" instance=ExtResource("5_c531c")]
 offset_left = -119.0
 offset_top = -85.5
 offset_right = -49.0
 offset_bottom = -72.5
 
-[node name="AllySlot3" type="Node2D" parent="AllySlots" unique_id=1211967304]
+[node name="AllySlot3" type="Node2D" parent="AllySlots"]
 position = Vector2(-250, 100)
 
-[node name="AllySlot4" type="Node2D" parent="AllySlots" unique_id=1913174463]
+[node name="AllySlot4" type="Node2D" parent="AllySlots"]
 position = Vector2(-250, -100)
 
-[node name="Cards" type="Node2D" parent="." unique_id=1048103616]
+[node name="Cards" type="Node2D" parent="."]
 position = Vector2(0, 59)
 scale = Vector2(0.9, 0.9)
 
-[node name="CardTemplate5" parent="Cards" unique_id=2139854470 instance=ExtResource("5_55xw1")]
+[node name="CardTemplate5" parent="Cards" instance=ExtResource("5_55xw1")]
 position = Vector2(261, 207)
 rotation = 0.12915437
 
-[node name="CardTemplate4" parent="Cards" unique_id=689857036 instance=ExtResource("3_ijum5")]
+[node name="CardTemplate4" parent="Cards" instance=ExtResource("3_ijum5")]
 position = Vector2(171, 185)
 rotation = 0.064577185
 
-[node name="Shield" parent="Cards" unique_id=2102861138 instance=ExtResource("7_oc8fh")]
+[node name="Shield" parent="Cards" instance=ExtResource("7_oc8fh")]
 position = Vector2(86.00001, 181)
 
-[node name="CardTemplate2" parent="Cards" unique_id=165919648 instance=ExtResource("5_55xw1")]
+[node name="CardTemplate2" parent="Cards" instance=ExtResource("5_55xw1")]
 position = Vector2(-25, 174)
 
-[node name="CardTemplate" parent="Cards" unique_id=904237571 instance=ExtResource("3_ijum5")]
+[node name="CardTemplate" parent="Cards" instance=ExtResource("3_ijum5")]
 position = Vector2(-158, 187)
 rotation = -0.064577185
 
-[node name="CardTemplate3" parent="Cards" unique_id=1150612057 instance=ExtResource("5_55xw1")]
+[node name="CardTemplate3" parent="Cards" instance=ExtResource("5_55xw1")]
 position = Vector2(-243, 209)
 rotation = -0.12915437

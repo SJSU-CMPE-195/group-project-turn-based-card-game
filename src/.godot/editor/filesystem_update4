@@ -3,3 +3,5 @@ res://Cards/Poison/poison_card.gd
 res://Cards/Poison/PoisonCard.tscn
 res://Cards/Heal/Heal.tscn
 res://Cards/Heal/heal_card.gd
+res://CombatScene.tscn
+res://Cards/Fireball/fireball_card.gd
