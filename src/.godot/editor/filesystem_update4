@@ -6,3 +6,7 @@ res://Cards/Fireball/fireball_card.gd
 res://CombatScene.tscn
 res://Cards/Fireball/FireballCard.tscn
 res://Cards/Poison/poison_card.gd
+res://combat_manager.gd
+res://unit.gd
+res://Cards/_Template/card_scene.gd
+res://Cards/Shield/shield.gd
