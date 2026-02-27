@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Turn Based Card Game"
 run/main_scene="uid://dkto06aiqtmjk"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -41,4 +41,4 @@ PoisonTest={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.8862616, 0.88626146, 0.8862615, 1)
+environment/defaults/default_clear_color=Color(0.29, 0.29, 0.29, 1)

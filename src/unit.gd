@@ -14,6 +14,8 @@ signal died
 signal turn_started
 signal turn_ended
 
+var status_effects: Array
+
 
 # ========================
 # Exported Stats

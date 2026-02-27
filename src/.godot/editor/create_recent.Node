@@ -1,3 +1,6 @@
+TextureRect
+PanelContainer
+GridContainer
 Enemy
 ProgressBar
 Node2D

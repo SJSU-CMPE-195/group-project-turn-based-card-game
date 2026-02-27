@@ -6,33 +6,13 @@ class_name Card
 @onready var card_description = $PanelContainer/MarginContainer/VBoxContainer/Description
 @onready var type = $PanelContainer/MarginContainer/VBoxContainer/Control/Type
 
-@export_enum("Spell", "Attack") var card_type = "Not Set":
-	set(t):
-		if Engine.is_editor_hint():
-			card_type = t
-			if type != null:
-				type.text = str(card_type)
+@export_enum("Spell", "Attack") var card_type = "Not Set"
 
-@export var card_name: String = "Name":
-	set(t):
-		if Engine.is_editor_hint():
-			card_name = t
-			if name_label != null:
-				name_label.text = card_name
+@export var card_name: String = "Name"
 
-@export var art: Texture2D = load("res://icon.svg"):
-	set(t):
-		if Engine.is_editor_hint():
-			art = t
-			if card_art != null:
-				card_art.texture = art
+@export var art: Texture2D = load("res://icon.svg")
 
-@export_multiline var description: String = "Description":
-	set(t):
-		if Engine.is_editor_hint():
-			description = t
-			if card_description != null:
-				card_description.text = description
+@export_multiline var description: String = "Description"
 
 @export var vfx_scene: PackedScene
 
@@ -42,6 +22,8 @@ func activate():
 	push_error("ACTIVATE NOT IMPLEMENTED: extend this script and implement activate()")
 
 func _ready():
+	await get_tree().process_frame
+	print("SHOW:", description)
 	type.text = str(card_type)
 	name_label.text = card_name
 	card_art.texture = art

@@ -16,7 +16,7 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 
 [sub_resource type="Gradient" id="Gradient_0ksp8"]
-colors = PackedColorArray(1, 0.26666665, 0, 1, 1, 0.55, 0, 1)
+colors = PackedColorArray(0.19499996, 0.65, 0, 1, 0.100000024, 1, 0, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_biacm"]
 gradient = SubResource("Gradient_0ksp8")
@@ -126,19 +126,19 @@ radial_accel_curve = SubResource("CurveTexture_tnleb")
 scale_max = 3.0
 scale_curve = SubResource("CurveTexture_gd6us")
 
-[sub_resource type="Gradient" id="Gradient_tnleb"]
-offsets = PackedFloat32Array(0.042372882, 0.21186441, 0.4957627, 1)
-colors = PackedColorArray(1, 0.776, 0.44, 1, 1, 0.43333334, 0, 1, 1, 0.18333335, 0, 0.6784314, 1, 0, 0, 0)
+[sub_resource type="Gradient" id="Gradient_hr6qr"]
+offsets = PackedFloat32Array(0.042372882, 0.22727273, 0.4957627, 1)
+colors = PackedColorArray(0.44, 1, 0.608, 1, 0, 1, 0, 1, 0.24666661, 0.74, 0, 0.6784314, 1, 0, 0, 0)
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_4fcxf"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_oykcu"]
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_0ksp8"]
-noise = SubResource("FastNoiseLite_4fcxf")
-color_ramp = SubResource("Gradient_tnleb")
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4aiel"]
+noise = SubResource("FastNoiseLite_oykcu")
+color_ramp = SubResource("Gradient_hr6qr")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_biacm"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iir3f"]
 shader = ExtResource("3_0m6v7")
-shader_parameter/decal_texture = SubResource("NoiseTexture2D_0ksp8")
+shader_parameter/decal_texture = SubResource("NoiseTexture2D_4aiel")
 
 [sub_resource type="QuadMesh" id="QuadMesh_tcqk4"]
 size = Vector2(140, 140)
@@ -154,30 +154,30 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.13084112, 0.11214953)
 
-[node name="MasterProjectile" type="Node2D"]
+[node name="MasterProjectile" type="Node2D" unique_id=1927649459]
 script = ExtResource("1_ues2v")
 target_position = Vector2(600, -100)
-max_height = 400.0
+max_height = 200.0
 landing_radius = 70.0
 decal_duration = 3.0
 
-[node name="Body" type="Node2D" parent="."]
+[node name="Body" type="Node2D" parent="." unique_id=1713387756]
 
-[node name="ParticleTrail" type="GPUParticles2D" parent="Body"]
+[node name="ParticleTrail" type="GPUParticles2D" parent="Body" unique_id=76457537]
 amount = 200
 texture = SubResource("GradientTexture2D_tnleb")
 lifetime = 0.2
 process_material = SubResource("ParticleProcessMaterial_4fcxf")
 
-[node name="Body" type="MeshInstance2D" parent="Body"]
+[node name="Body" type="MeshInstance2D" parent="Body" unique_id=1392077326]
 material = SubResource("ShaderMaterial_0ksp8")
 mesh = SubResource("QuadMesh_3ytp0")
 texture = SubResource("GradientTexture2D_tcqk4")
 
-[node name="Target" type="Node2D" parent="."]
+[node name="Target" type="Node2D" parent="." unique_id=505642040]
 modulate = Color(1, 1, 1, 0)
 
-[node name="LandingParticles" type="GPUParticles2D" parent="Target"]
+[node name="LandingParticles" type="GPUParticles2D" parent="Target" unique_id=97785518]
 emitting = false
 amount = 100
 texture = SubResource("GradientTexture2D_4fcxf")
@@ -186,11 +186,11 @@ one_shot = true
 explosiveness = 0.9
 process_material = SubResource("ParticleProcessMaterial_3ytp0")
 
-[node name="Decal" type="MeshInstance2D" parent="."]
+[node name="Decal" type="MeshInstance2D" parent="." unique_id=2075073486]
 visible = false
 modulate = Color(1, 1, 1, 0)
 z_index = -1
-material = SubResource("ShaderMaterial_biacm")
+material = SubResource("ShaderMaterial_iir3f")
 scale = Vector2(1, 0.407)
 mesh = SubResource("QuadMesh_tcqk4")
 texture = SubResource("GradientTexture2D_gd6us")

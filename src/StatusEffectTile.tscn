@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://8k5owreg4dan"]
+
+[ext_resource type="Texture2D" uid="uid://cwvm4ttyujci6" path="res://icon.svg" id="1_x6uaw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4wb4i"]
+texture = ExtResource("1_x6uaw")
+
+[node name="PanelContainer" type="PanelContainer" unique_id=2085570552]
+custom_minimum_size = Vector2(10, 10)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_4wb4i")

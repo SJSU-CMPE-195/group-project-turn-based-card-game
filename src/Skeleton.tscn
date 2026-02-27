@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://cwxl03uj0y4li"]
+[gd_scene load_steps=14 format=3 uid="uid://cwxl03uj0y4li"]
 
 [ext_resource type="Texture2D" uid="uid://c0jytsw6dtp67" path="res://Skeleton_Sword/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Idle.png" id="1_qg60r"]
 [ext_resource type="Script" uid="uid://xay0yki45qs2" path="res://enemy.gd" id="2_ppgkr"]
 [ext_resource type="PackedScene" uid="uid://cq02p6k1x53uj" path="res://HealthComponent.tscn" id="3_ppgkr"]
+[ext_resource type="PackedScene" uid="uid://8k5owreg4dan" path="res://StatusEffectTile.tscn" id="4_o44yk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hvv87"]
 atlas = ExtResource("1_qg60r")
@@ -73,14 +74,24 @@ texture_filter = 1
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_oc8fh")
 animation = &"idle"
+frame_progress = 0.5409828
 offset = Vector2(0, -30)
 flip_h = true
 script = ExtResource("2_ppgkr")
 metadata/_custom_type_script = "uid://xay0yki45qs2"
 
 [node name="HealthComponent" parent="." unique_id=411859767 instance=ExtResource("3_ppgkr")]
-custom_minimum_size = Vector2(70, 0)
 offset_left = -83.200005
 offset_top = -31.2
 offset_right = -13.200005
 offset_bottom = -19.2
+
+[node name="StatusEfffects" type="GridContainer" parent="." unique_id=1874750500]
+offset_left = -28.4
+offset_top = 13.199997
+offset_right = 11.6
+offset_bottom = 53.199997
+columns = 5
+
+[node name="PanelContainer" parent="StatusEfffects" unique_id=2085570552 instance=ExtResource("4_o44yk")]
+layout_mode = 2

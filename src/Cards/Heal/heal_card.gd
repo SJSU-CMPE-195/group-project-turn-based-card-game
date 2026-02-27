@@ -1,4 +1,3 @@
-@tool
 extends Card
 
 func activate():
