@@ -1,0 +1,4 @@
+res://CombatScene.tscn
+res://VFX/master_projectile.gdshader
+res://Cards/Heal/Heal.tscn
+res://Cards/_Template/card_scene.gd
