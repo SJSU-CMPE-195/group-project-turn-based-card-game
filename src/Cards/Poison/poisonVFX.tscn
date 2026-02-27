@@ -1,0 +1,196 @@
+[gd_scene load_steps=34 format=3 uid="uid://eyoiylt6f2yb"]
+
+[ext_resource type="Script" uid="uid://c3m1v71i1dcsc" path="res://VFX/master_projectile.gd" id="1_ues2v"]
+[ext_resource type="Shader" uid="uid://daqar4qo5clq4" path="res://VFX/master_projectile.gdshader" id="2_hagqc"]
+[ext_resource type="Shader" uid="uid://d3iqm4qpdbagk" path="res://VFX/decal.gdshader" id="3_0m6v7"]
+
+[sub_resource type="Gradient" id="Gradient_gd6us"]
+offsets = PackedFloat32Array(0, 0.7633333)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tnleb"]
+gradient = SubResource("Gradient_gd6us")
+width = 16
+height = 16
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_0ksp8"]
+colors = PackedColorArray(1, 0.26666665, 0, 1, 1, 0.55, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_biacm"]
+gradient = SubResource("Gradient_0ksp8")
+
+[sub_resource type="Gradient" id="Gradient_52otu"]
+colors = PackedColorArray(1.0954857, 1.0954857, 1.0954857, 1, 0.8, 0.8, 0.8, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_i54qu"]
+gradient = SubResource("Gradient_52otu")
+use_hdr = true
+
+[sub_resource type="Curve" id="Curve_3ytp0"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_tcqk4"]
+curve = SubResource("Curve_3ytp0")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4fcxf"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 25.0
+emission_ring_inner_radius = 0.0
+emission_ring_cone_angle = 90.0
+scale_curve = SubResource("CurveTexture_tcqk4")
+color_ramp = SubResource("GradientTexture1D_i54qu")
+color_initial_ramp = SubResource("GradientTexture1D_biacm")
+
+[sub_resource type="Gradient" id="Gradient_4fcxf"]
+offsets = PackedFloat32Array(0.16818182, 0.27966103, 1)
+colors = PackedColorArray(1, 0.9325, 0.85, 1, 0.50388527, 0.7755526, 0.089822195, 1, 0.42540222, 0.66227305, 5.7756904e-07, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_tnleb"]
+frequency = 0.0036
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4fcxf"]
+noise = SubResource("FastNoiseLite_tnleb")
+color_ramp = SubResource("Gradient_4fcxf")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0ksp8"]
+shader = ExtResource("2_hagqc")
+shader_parameter/source_texture = SubResource("NoiseTexture2D_4fcxf")
+shader_parameter/scroll = Vector2(10, 0)
+
+[sub_resource type="QuadMesh" id="QuadMesh_3ytp0"]
+size = Vector2(50, 50)
+
+[sub_resource type="Gradient" id="Gradient_3ytp0"]
+offsets = PackedFloat32Array(0.6766667, 0.72)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tcqk4"]
+gradient = SubResource("Gradient_3ytp0")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="Gradient" id="Gradient_biacm"]
+colors = PackedColorArray(1, 0.51666665, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4fcxf"]
+gradient = SubResource("Gradient_biacm")
+width = 1
+height = 9
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="Curve" id="Curve_gd6us"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.44736844, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_tnleb"]
+curve = SubResource("Curve_gd6us")
+
+[sub_resource type="Curve" id="Curve_tcqk4"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.56766915, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_gd6us"]
+curve = SubResource("Curve_tcqk4")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3ytp0"]
+lifetime_randomness = 1.0
+particle_flag_align_y = true
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(1, 0.407, 1)
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 70.0
+emission_ring_inner_radius = 0.0
+emission_ring_cone_angle = 90.0
+angle_min = 90.000015
+angle_max = 90.000015
+direction = Vector3(0, -1, 0)
+spread = 5.0
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+gravity = Vector3(0, 200, 0)
+radial_accel_min = 1000.0
+radial_accel_max = 1000.0
+radial_accel_curve = SubResource("CurveTexture_tnleb")
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_gd6us")
+
+[sub_resource type="Gradient" id="Gradient_tnleb"]
+offsets = PackedFloat32Array(0.042372882, 0.21186441, 0.4957627, 1)
+colors = PackedColorArray(1, 0.776, 0.44, 1, 1, 0.43333334, 0, 1, 1, 0.18333335, 0, 0.6784314, 1, 0, 0, 0)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_4fcxf"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_0ksp8"]
+noise = SubResource("FastNoiseLite_4fcxf")
+color_ramp = SubResource("Gradient_tnleb")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_biacm"]
+shader = ExtResource("3_0m6v7")
+shader_parameter/decal_texture = SubResource("NoiseTexture2D_0ksp8")
+
+[sub_resource type="QuadMesh" id="QuadMesh_tcqk4"]
+size = Vector2(140, 140)
+
+[sub_resource type="Gradient" id="Gradient_tcqk4"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.37666667, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gd6us"]
+gradient = SubResource("Gradient_tcqk4")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.13084112, 0.11214953)
+
+[node name="MasterProjectile" type="Node2D"]
+script = ExtResource("1_ues2v")
+target_position = Vector2(600, -100)
+max_height = 400.0
+landing_radius = 70.0
+decal_duration = 3.0
+
+[node name="Body" type="Node2D" parent="."]
+
+[node name="ParticleTrail" type="GPUParticles2D" parent="Body"]
+amount = 200
+texture = SubResource("GradientTexture2D_tnleb")
+lifetime = 0.2
+process_material = SubResource("ParticleProcessMaterial_4fcxf")
+
+[node name="Body" type="MeshInstance2D" parent="Body"]
+material = SubResource("ShaderMaterial_0ksp8")
+mesh = SubResource("QuadMesh_3ytp0")
+texture = SubResource("GradientTexture2D_tcqk4")
+
+[node name="Target" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+
+[node name="LandingParticles" type="GPUParticles2D" parent="Target"]
+emitting = false
+amount = 100
+texture = SubResource("GradientTexture2D_4fcxf")
+lifetime = 0.8
+one_shot = true
+explosiveness = 0.9
+process_material = SubResource("ParticleProcessMaterial_3ytp0")
+
+[node name="Decal" type="MeshInstance2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = -1
+material = SubResource("ShaderMaterial_biacm")
+scale = Vector2(1, 0.407)
+mesh = SubResource("QuadMesh_tcqk4")
+texture = SubResource("GradientTexture2D_gd6us")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dy14emuaan1hh"]
+[gd_scene load_steps=17 format=3 uid="uid://dy14emuaan1hh"]
 
 [ext_resource type="Texture2D" uid="uid://ca81l8hoi7uua" path="res://5DD67A08-8A4E-4C25-B1FB-5F781FD7DB76.png" id="1_c531c"]
 [ext_resource type="Script" uid="uid://dj76uyh8ov30a" path="res://ally_unit.gd" id="2_diwen"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dk6dt1n6n4xbu" path="res://Cards/Heal/Heal.tscn" id="5_55xw1"]
 [ext_resource type="PackedScene" uid="uid://cq02p6k1x53uj" path="res://HealthComponent.tscn" id="5_c531c"]
 [ext_resource type="PackedScene" uid="uid://bftdh1ledd24o" path="res://Cards/Shield/Shield.tscn" id="7_oc8fh"]
+[ext_resource type="PackedScene" uid="uid://bxvl0wu3oo0il" path="res://Cards/Poison/PoisonCard.tscn" id="9_6ravy"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_ec351"]
 size = Vector2(-1200, -700)
@@ -134,3 +135,6 @@ rotation = -0.064577185
 [node name="CardTemplate3" parent="Cards" instance=ExtResource("5_55xw1")]
 position = Vector2(-243, 209)
 rotation = -0.12915437
+
+[node name="PoisonCard" parent="Cards" instance=ExtResource("9_6ravy")]
+position = Vector2(524.44446, 208.8889)

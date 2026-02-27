@@ -2,7 +2,10 @@
 extends AnimatedSprite2D
 class_name Unit
 
+# ========================
 # Signals
+# ========================
+
 signal health_changed(current: int, max: int)
 signal block_changed(current_block: int)
 signal damage_taken(amount: int)
@@ -11,22 +14,39 @@ signal died
 signal turn_started
 signal turn_ended
 
+
+# ========================
 # Exported Stats
+# ========================
+
 @export var max_health: int = 100
 
+
+# ========================
 # Runtime State
+# ========================
+
 var current_health: int
 var block: int = 0
 var is_dead: bool = false
 
 
-func _ready():
+# ========================
+# Initialization
+# ========================
+
+func _ready() -> void:
 	current_health = max_health
 	connect_combat_manager()
 	emit_signal("health_changed", current_health, max_health)
 
 
 @abstract func connect_combat_manager()
+
+
+# ========================
+# Core Combat
+# ========================
 
 func take_damage(amount: int) -> void:
 	if is_dead:
@@ -55,22 +75,27 @@ func heal(amount: int) -> void:
 	if is_dead:
 		return
 	
-	current_health += amount
-	current_health = min(current_health, max_health)
+	var old_health = current_health
+	current_health = min(current_health + amount, max_health)
 	
-	emit_signal("healed", amount)
-	emit_signal("health_changed", current_health, max_health)
+	var actual_healed = current_health - old_health
+	if actual_healed > 0:
+		emit_signal("healed", actual_healed)
+		emit_signal("health_changed", current_health, max_health)
 
 
 func add_block(amount: int) -> void:
 	if is_dead:
 		return
-	
+
 	block += amount
 	emit_signal("block_changed", block)
 
 
 func clear_block() -> void:
+	if block == 0:
+		return
+		
 	block = 0
 	emit_signal("block_changed", block)
 
@@ -89,7 +114,7 @@ func start_turn() -> void:
 	if is_dead:
 		return
 	
-	clear_block() # Slay the Spire style
+	clear_block()  # Slay the Spire style
 	emit_signal("turn_started")
 
 
@@ -114,5 +139,5 @@ func die() -> void:
 
 
 func on_death() -> void:
-	# Override in subclasses
+	# Override in subclasses if needed
 	queue_free()

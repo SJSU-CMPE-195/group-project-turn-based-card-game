@@ -12,5 +12,5 @@ func activate():
 	
 
 func _input(event):
-	if event.is_action_pressed(""): ## Activates when input is "Selected"
+	if event.is_action_pressed("PoisonTest"): ## Activates when input is "Selected"
 		activate()
