@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://kgo4cjemjess"]
+[gd_scene load_steps=5 format=3 uid="uid://dflln1nkalt3x"]
 
-[ext_resource type="Script" uid="uid://mccf7osvgmqt" path="res://Cards/_Template/card_scene.gd" id="1_oclfm"]
-[ext_resource type="Texture2D" uid="uid://cwvm4ttyujci6" path="res://icon.svg" id="2_fynp6"]
+[ext_resource type="Script" uid="uid://cqjnq6akuvilu" path="res://Cards/Poison/poison_card.gd" id="1_dhdhf"]
+[ext_resource type="Texture2D" uid="uid://cwvm4ttyujci6" path="res://icon.svg" id="2_gpu8k"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4fkt"]
 content_margin_left = 0.0
@@ -32,10 +32,9 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="CardTemplate" type="Node2D"]
-script = ExtResource("1_oclfm")
-card_type = "Attack"
-art = ExtResource("2_fynp6")
+[node name="PoisonCard" type="Node2D"]
+script = ExtResource("1_dhdhf")
+art = ExtResource("2_gpu8k")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 custom_minimum_size = Vector2(200, 300)
@@ -85,7 +84,7 @@ offset_top = 4.0
 offset_right = 170.0
 offset_bottom = 174.0
 mouse_filter = 2
-texture = ExtResource("2_fynp6")
+texture = ExtResource("2_gpu8k")
 expand_mode = 5
 
 [node name="Type" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/Control"]
