@@ -154,30 +154,30 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.13084112, 0.11214953)
 
-[node name="MasterProjectile" type="Node2D" unique_id=1503133159]
+[node name="MasterProjectile" type="Node2D"]
 script = ExtResource("1_3ytp0")
 target_position = Vector2(600, -100)
 max_height = 400.0
 landing_radius = 70.0
 decal_duration = 3.0
 
-[node name="Body" type="Node2D" parent="." unique_id=919789921]
+[node name="Body" type="Node2D" parent="."]
 
-[node name="ParticleTrail" type="GPUParticles2D" parent="Body" unique_id=1251004552]
+[node name="ParticleTrail" type="GPUParticles2D" parent="Body"]
 amount = 200
 texture = SubResource("GradientTexture2D_tnleb")
 lifetime = 0.2
 process_material = SubResource("ParticleProcessMaterial_4fcxf")
 
-[node name="Body" type="MeshInstance2D" parent="Body" unique_id=1005504901]
+[node name="Body" type="MeshInstance2D" parent="Body"]
 material = SubResource("ShaderMaterial_0ksp8")
 mesh = SubResource("QuadMesh_3ytp0")
 texture = SubResource("GradientTexture2D_tcqk4")
 
-[node name="Target" type="Node2D" parent="." unique_id=1678050268]
+[node name="Target" type="Node2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 
-[node name="LandingParticles" type="GPUParticles2D" parent="Target" unique_id=1102418147]
+[node name="LandingParticles" type="GPUParticles2D" parent="Target"]
 emitting = false
 amount = 100
 texture = SubResource("GradientTexture2D_4fcxf")
@@ -186,7 +186,7 @@ one_shot = true
 explosiveness = 0.9
 process_material = SubResource("ParticleProcessMaterial_3ytp0")
 
-[node name="Decal" type="MeshInstance2D" parent="." unique_id=1752885961]
+[node name="Decal" type="MeshInstance2D" parent="."]
 visible = false
 modulate = Color(1, 1, 1, 0)
 z_index = -1

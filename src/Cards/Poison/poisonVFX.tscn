@@ -49,8 +49,8 @@ color_ramp = SubResource("GradientTexture1D_i54qu")
 color_initial_ramp = SubResource("GradientTexture1D_biacm")
 
 [sub_resource type="Gradient" id="Gradient_4fcxf"]
-offsets = PackedFloat32Array(0.16818182, 0.27966103, 1)
-colors = PackedColorArray(1, 0.9325, 0.85, 1, 0.50388527, 0.7755526, 0.089822195, 1, 0.42540222, 0.66227305, 5.7756904e-07, 1)
+offsets = PackedFloat32Array(0.16818182, 0.26818183, 0.9915254)
+colors = PackedColorArray(1, 0.9325, 0.85, 1, 0.3770007, 0.8001973, 0, 1, 0.2048252, 0.63966334, 1.92523e-07, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_tnleb"]
 frequency = 0.0036

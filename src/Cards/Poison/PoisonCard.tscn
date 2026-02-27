@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxvl0wu3oo0il"]
+[gd_scene load_steps=6 format=3 uid="uid://dflln1nkalt3x"]
 
-[ext_resource type="Script" uid="uid://b8mh65y24m4fv" path="res://Cards/Poison/poison_card.gd" id="1_dhdhf"]
+[ext_resource type="Script" uid="uid://cqjnq6akuvilu" path="res://Cards/Poison/poison_card.gd" id="1_dhdhf"]
 [ext_resource type="Texture2D" uid="uid://cwvm4ttyujci6" path="res://icon.svg" id="2_gpu8k"]
 [ext_resource type="PackedScene" uid="uid://eyoiylt6f2yb" path="res://Cards/Poison/poisonVFX.tscn" id="3_ui154"]
 
@@ -33,12 +33,8 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="PoisonCard" type="Node2D"]
+[node name="CardTemplate" type="Node2D"]
 script = ExtResource("1_dhdhf")
-card_type = "Attack"
-card_name = "Poison"
-art = ExtResource("2_gpu8k")
-description = "Inflict 1 Poison damage for 3 turns"
 vfx_scene = ExtResource("3_ui154")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
@@ -119,7 +115,7 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
-text = "Inflict 1 Poison damage for 3 turns"
+text = "Inflict 1 Poison Damage"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
