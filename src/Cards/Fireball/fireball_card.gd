@@ -15,3 +15,6 @@ func _input(event):
 	if event.is_action_pressed("select"): ## Activates when input is "Selected"
 		activate()
 	#after combat and unit code os done, put  afunction here that deals damage ie, return damage number
+
+func actEffect() -> int:
+	return 5
