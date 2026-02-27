@@ -78,7 +78,7 @@ func reset():
 func impact():
 	target_reached.emit()
 	if !Engine.is_editor_hint():
-		VFX.start_shake(0.3)
+		VFX.start_shake(0.15)
 	$Decal.visible = true
 	var tween = create_tween()
 	$Decal.modulate =  Color(1.4, 1.4, 1.4, 1.0)

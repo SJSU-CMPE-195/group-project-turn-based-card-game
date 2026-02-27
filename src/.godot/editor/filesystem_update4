@@ -1,0 +1,15 @@
+res://CombatScene.tscn
+res://Cards/Fireball/FireballVFX.tscn
+res://VFX/master_projectile.gd
+res://Cards/_Template/card_scene.gd
+res://VFX/MasterProjectile.tscn
+res://VFX/master_projectile.gdshader
+res://ally_unit.gd
+res://BaseUnit.tscn
+res://unit.gd
+res://health_component.gd
+res://HealthComponent.tscn
+res://Skeleton.tscn
+res://enemy.gd
+res://Cards/Fireball/FireballCard.tscn
+res://Cards/Fireball/fireball_card.gd

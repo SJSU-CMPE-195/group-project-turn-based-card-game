@@ -2,6 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://bia6ym6m5iqya" path="res://VFX/MasterProjectile.tscn" id="1_fwtbb"]
 
-[node name="MasterProjectile" instance=ExtResource("1_fwtbb")]
+[node name="MasterProjectile" unique_id=1500785945 instance=ExtResource("1_fwtbb")]
 scale = Vector2(0.3, 0.3)
 max_height = 200.0
+
+[node name="ParticleTrail" parent="Body" parent_id_path=PackedInt32Array(919789921) index="0" unique_id=1251004552]
+modulate = Color(1.1638972, 1.1638972, 1.1638972, 1)

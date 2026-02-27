@@ -49,11 +49,11 @@ color_ramp = SubResource("GradientTexture1D_i54qu")
 color_initial_ramp = SubResource("GradientTexture1D_biacm")
 
 [sub_resource type="Gradient" id="Gradient_4fcxf"]
-offsets = PackedFloat32Array(0, 0.13983051, 1)
+offsets = PackedFloat32Array(0.16818182, 0.26818183, 1)
 colors = PackedColorArray(1, 0.9325, 0.85, 1, 1, 0.55, 0, 1, 1, 0, 0, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_tnleb"]
-frequency = 0.0047
+frequency = 0.0036
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4fcxf"]
 noise = SubResource("FastNoiseLite_tnleb")
@@ -154,30 +154,30 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.13084112, 0.11214953)
 
-[node name="MasterProjectile" type="Node2D"]
+[node name="MasterProjectile" type="Node2D" unique_id=1503133159]
 script = ExtResource("1_3ytp0")
 target_position = Vector2(600, -100)
 max_height = 400.0
 landing_radius = 70.0
 decal_duration = 3.0
 
-[node name="Body" type="Node2D" parent="."]
+[node name="Body" type="Node2D" parent="." unique_id=919789921]
 
-[node name="ParticleTrail" type="GPUParticles2D" parent="Body"]
+[node name="ParticleTrail" type="GPUParticles2D" parent="Body" unique_id=1251004552]
 amount = 200
 texture = SubResource("GradientTexture2D_tnleb")
 lifetime = 0.2
 process_material = SubResource("ParticleProcessMaterial_4fcxf")
 
-[node name="Body" type="MeshInstance2D" parent="Body"]
+[node name="Body" type="MeshInstance2D" parent="Body" unique_id=1005504901]
 material = SubResource("ShaderMaterial_0ksp8")
 mesh = SubResource("QuadMesh_3ytp0")
 texture = SubResource("GradientTexture2D_tcqk4")
 
-[node name="Target" type="Node2D" parent="."]
+[node name="Target" type="Node2D" parent="." unique_id=1678050268]
 modulate = Color(1, 1, 1, 0)
 
-[node name="LandingParticles" type="GPUParticles2D" parent="Target"]
+[node name="LandingParticles" type="GPUParticles2D" parent="Target" unique_id=1102418147]
 emitting = false
 amount = 100
 texture = SubResource("GradientTexture2D_4fcxf")
@@ -186,7 +186,7 @@ one_shot = true
 explosiveness = 0.9
 process_material = SubResource("ParticleProcessMaterial_3ytp0")
 
-[node name="Decal" type="MeshInstance2D" parent="."]
+[node name="Decal" type="MeshInstance2D" parent="." unique_id=1752885961]
 visible = false
 modulate = Color(1, 1, 1, 0)
 z_index = -1
