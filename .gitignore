@@ -200,3 +200,13 @@ mono_crash.*.json
 *~
 *.bak
 *.tmp
+
+# Godot editor and cache
+src/godot/editor/
+src/godot/*.cfg
+src/godot/*.bin
+src/global_script_class_cache.cfg
+src/*.godot  # Only if these are backup/cache files
+
+# Keep project.godot
+!src/project.godot
