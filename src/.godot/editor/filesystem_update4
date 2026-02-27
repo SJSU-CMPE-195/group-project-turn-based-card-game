@@ -1,2 +1,6 @@
-res://CombatScene.tscn
-res://ally_unit.gd
+res://Unit.gd
+res://combat_manager.gd
+res://Cards/_Template/Card.tscn
+res://Cards/_Template/card_scene.gd
+res://Cards/Fireball/fireball_card.gd
+res://Cards/Shield/shield.gd

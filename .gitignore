@@ -161,3 +161,6 @@ docker-data/
 # Project Specific
 # ===========================
 # Add project-specific ignores below
+# Ignore all UID cache files
+**/uid_cache.bin
+**/*.uid.cache
