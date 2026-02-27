@@ -164,3 +164,6 @@ docker-data/
 # Ignore all UID cache files
 **/uid_cache.bin
 **/*.uid.cache
+src/godot/editor/
+src/godot/*.cfg
+src/global_script_class_cache.cfg
