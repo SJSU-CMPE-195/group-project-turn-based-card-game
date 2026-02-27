@@ -1,8 +1,8 @@
-[gd_scene load_steps=34 format=3 uid="uid://bia6ym6m5iqya"]
+[gd_scene load_steps=34 format=3 uid="uid://eyoiylt6f2yb"]
 
-[ext_resource type="Script" uid="uid://c3m1v71i1dcsc" path="res://VFX/master_projectile.gd" id="1_3ytp0"]
-[ext_resource type="Shader" uid="uid://daqar4qo5clq4" path="res://VFX/master_projectile.gdshader" id="2_gd6us"]
-[ext_resource type="Shader" uid="uid://d3iqm4qpdbagk" path="res://VFX/decal.gdshader" id="2_tcqk4"]
+[ext_resource type="Script" uid="uid://c3m1v71i1dcsc" path="res://VFX/master_projectile.gd" id="1_ues2v"]
+[ext_resource type="Shader" uid="uid://daqar4qo5clq4" path="res://VFX/master_projectile.gdshader" id="2_hagqc"]
+[ext_resource type="Shader" uid="uid://d3iqm4qpdbagk" path="res://VFX/decal.gdshader" id="3_0m6v7"]
 
 [sub_resource type="Gradient" id="Gradient_gd6us"]
 offsets = PackedFloat32Array(0, 0.7633333)
@@ -49,8 +49,8 @@ color_ramp = SubResource("GradientTexture1D_i54qu")
 color_initial_ramp = SubResource("GradientTexture1D_biacm")
 
 [sub_resource type="Gradient" id="Gradient_4fcxf"]
-offsets = PackedFloat32Array(0.16818182, 0.26818183, 1)
-colors = PackedColorArray(1, 0.9325, 0.85, 1, 1, 0.55, 0, 1, 1, 0, 0, 1)
+offsets = PackedFloat32Array(0.16818182, 0.26818183, 0.9915254)
+colors = PackedColorArray(1, 0.9325, 0.85, 1, 0.3770007, 0.8001973, 0, 1, 0.2048252, 0.63966334, 1.92523e-07, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_tnleb"]
 frequency = 0.0036
@@ -61,7 +61,7 @@ color_ramp = SubResource("Gradient_4fcxf")
 seamless = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0ksp8"]
-shader = ExtResource("2_gd6us")
+shader = ExtResource("2_hagqc")
 shader_parameter/source_texture = SubResource("NoiseTexture2D_4fcxf")
 shader_parameter/scroll = Vector2(10, 0)
 
@@ -137,7 +137,7 @@ noise = SubResource("FastNoiseLite_4fcxf")
 color_ramp = SubResource("Gradient_tnleb")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_biacm"]
-shader = ExtResource("2_tcqk4")
+shader = ExtResource("3_0m6v7")
 shader_parameter/decal_texture = SubResource("NoiseTexture2D_0ksp8")
 
 [sub_resource type="QuadMesh" id="QuadMesh_tcqk4"]
@@ -155,7 +155,7 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.13084112, 0.11214953)
 
 [node name="MasterProjectile" type="Node2D"]
-script = ExtResource("1_3ytp0")
+script = ExtResource("1_ues2v")
 target_position = Vector2(600, -100)
 max_height = 400.0
 landing_radius = 70.0
