@@ -1,0 +1,24 @@
+Unit
+Variables:
+	Health
+	Mana
+	Shield
+	Status effect 
+		Poison
+		Burn
+		Bleed
+		Heal 
+		Dodge
+	Health regeneration
+	Heal amp
+Functions:
+	take_damage()
+	heal()
+	add_shield()
+	add_mana()
+	use_mana()
+	poison()
+	burn()
+	bleed()
+	heal()
+	dodge()
