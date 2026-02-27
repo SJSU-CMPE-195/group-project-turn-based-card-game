@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://bjrte0orbeey7"]
+
+[ext_resource type="Script" uid="uid://bkuhysq7qpuwf" path="res://unit.gd" id="1_p6mcb"]
+[ext_resource type="Script" uid="uid://6735gifvs4w1" path="res://health_component.gd" id="2_k5kjm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xfgb"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w8ddn"]
+bg_color = Color(0.18799993, 0.94, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0, 0, 0)
+corner_radius_top_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k5kjm"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tltoy"]
+bg_color = Color(1, 0.14999998, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0, 0, 0)
+corner_radius_top_right = 5
+corner_radius_bottom_left = 5
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=206694468]
+script = ExtResource("1_p6mcb")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=778065099]
+custom_minimum_size = Vector2(100, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -13.5
+offset_right = 50.0
+offset_bottom = 13.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_2xfgb")
+theme_override_styles/fill = SubResource("StyleBoxFlat_w8ddn")
+value = 50.0
+show_percentage = false
+script = ExtResource("2_k5kjm")
+
+[node name="ProgressBar" type="ProgressBar" parent="ProgressBar" unique_id=2003492611]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_k5kjm")
+theme_override_styles/fill = SubResource("StyleBoxFlat_tltoy")
+value = 60.0
+show_percentage = false

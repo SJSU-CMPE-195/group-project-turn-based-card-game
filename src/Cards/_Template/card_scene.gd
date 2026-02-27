@@ -47,8 +47,8 @@ func hover():
 	if tween != null:
 		tween.kill()
 	tween = create_tween()
-	tween.parallel().tween_property(self, "scale", Vector2(1.1, 1.1), 0.1)
-	tween.parallel().tween_property(get_child(0), "position:y", -200.0, 0.1)
+	tween.parallel().tween_property(self, "scale", Vector2(1.1, 1.1), 0.05)
+	tween.parallel().tween_property(get_child(0), "position:y", -200.0, 0.1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CIRC)
 
 func end_hover():
 	z_index = 0.0
@@ -56,4 +56,4 @@ func end_hover():
 		tween.kill()
 	tween = create_tween()
 	tween.parallel().tween_property(self, "scale", Vector2(1.0, 1.0), 0.05)
-	tween.parallel().tween_property(get_child(0), "position:y", -150.0, 0.1)
+	tween.parallel().tween_property(get_child(0), "position:y", -150.0, 0.1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CIRC)

@@ -1,10 +1,7 @@
-extends AnimatedSprite2D
+extends Unit
 class_name AllyUnit
 
-var full_health = 100
-var player_health = full_health
-
-func _ready():
+func connect_combat_manager():
 	play()
 	CombatManager.selected_ally = self
 
