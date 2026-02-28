@@ -17,12 +17,14 @@ class_name Card
 @export var vfx_scene: PackedScene
 
 var tween: Tween
+signal card_clicked_sig(card: Card)
 
 func activate():
 	push_error("ACTIVATE NOT IMPLEMENTED: extend this script and implement activate()")
 
 func _ready():
 	await get_tree().process_frame
+	add_to_group("Cards In Scene");
 	print("SHOW:", description)
 	type.text = str(card_type)
 	name_label.text = card_name
@@ -30,6 +32,7 @@ func _ready():
 	card_description.text = description
 	$PanelContainer.mouse_entered.connect(hover)
 	$PanelContainer.mouse_exited.connect(end_hover)
+	$PanelContainer.gui_input.connect(_on_card_gui_input)
 
 func hover():
 	z_index = 1.0
@@ -46,3 +49,11 @@ func end_hover():
 	tween = create_tween()
 	tween.parallel().tween_property(self, "scale", Vector2(1.0, 1.0), 0.05)
 	tween.parallel().tween_property(get_child(0), "position:y", -150.0, 0.1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CIRC)
+
+func _on_card_gui_input(event: InputEvent):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			# sends a signal and passes a value to something else
+			card_clicked_sig.emit(self)
+			print("card click test")
+	

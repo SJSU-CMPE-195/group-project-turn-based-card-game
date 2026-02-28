@@ -1,7 +1,4 @@
-res://Cards/Poison/PoisonCard.tscn
-res://Cards/_Template/card_scene.gd
-res://Cards/Poison/poisonVFX.tscn
 res://CombatScene.tscn
-res://Skeleton.tscn
-res://StatusEffectTile.tscn
-res://unit.gd
+res://Cards/_Template/card_scene.gd
+res://Cards/_Template/Card.tscn
+res://combat_manager.gd
