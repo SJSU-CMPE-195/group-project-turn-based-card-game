@@ -1,86 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://cwxl03uj0y4li"]
+[gd_scene load_steps=2 format=3 uid="uid://cwxl03uj0y4li"]
 
-[ext_resource type="Texture2D" uid="uid://c0jytsw6dtp67" path="res://Skeleton_Sword/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Idle.png" id="1_qg60r"]
-[ext_resource type="Script" uid="uid://xay0yki45qs2" path="res://enemy.gd" id="2_ppgkr"]
-[ext_resource type="PackedScene" uid="uid://cq02p6k1x53uj" path="res://HealthComponent.tscn" id="3_ppgkr"]
+[ext_resource type="PackedScene" uid="uid://c5ufwxsu6d6ew" path="res://EnemyBase.tscn" id="1_bx3f0"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hvv87"]
-atlas = ExtResource("1_qg60r")
-region = Rect2(0, 0, 96, 64)
+[node name="Enemy" unique_id=2079094664 instance=ExtResource("1_bx3f0")]
+scale = Vector2(3, 3)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oc8fh"]
-atlas = ExtResource("1_qg60r")
-region = Rect2(96, 0, 96, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c531c"]
-atlas = ExtResource("1_qg60r")
-region = Rect2(192, 0, 96, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6ravy"]
-atlas = ExtResource("1_qg60r")
-region = Rect2(288, 0, 96, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7gog2"]
-atlas = ExtResource("1_qg60r")
-region = Rect2(384, 0, 96, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ji6bj"]
-atlas = ExtResource("1_qg60r")
-region = Rect2(480, 0, 96, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_obqq3"]
-atlas = ExtResource("1_qg60r")
-region = Rect2(576, 0, 96, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vp7l8"]
-atlas = ExtResource("1_qg60r")
-region = Rect2(672, 0, 96, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_oc8fh"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hvv87")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oc8fh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c531c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6ravy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7gog2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ji6bj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_obqq3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vp7l8")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 10.0
-}]
-
-[node name="Enemy" type="AnimatedSprite2D" unique_id=2084425834]
-texture_filter = 1
-scale = Vector2(2.5, 2.5)
-sprite_frames = SubResource("SpriteFrames_oc8fh")
-animation = &"idle"
-offset = Vector2(0, -30)
-flip_h = true
-script = ExtResource("2_ppgkr")
-metadata/_custom_type_script = "uid://xay0yki45qs2"
-
-[node name="HealthComponent" parent="." unique_id=411859767 instance=ExtResource("3_ppgkr")]
-custom_minimum_size = Vector2(70, 0)
-offset_left = -83.200005
-offset_top = -31.2
-offset_right = -13.200005
-offset_bottom = -19.2
+[node name="StatusEffectsComponent" parent="." index="0" unique_id=465425090]
+offset_left = -30.0
+offset_top = 11.0
+offset_right = 38.0
+offset_bottom = 51.0
+theme_override_constants/h_separation = 2
+columns = 4

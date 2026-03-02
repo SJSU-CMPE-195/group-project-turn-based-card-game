@@ -1,10 +1,16 @@
-<<<<<<< HEAD
-res://Cards/Data.gd
-res://Cards/DataCard.gd
-res://Cards/_Template/card_scene.gd
-res://Unit.gd
-res://User Interface/Card_Shop.gd
-=======
+res://Skeleton.tscn
+res://EnemyBase.tscn
+res://StatusEffectsComponent.tscn
+res://status_effects_component.gd
+res://status_effect.gd
+res://StatusEffectTile.tscn
+res://status_effect_tile.gd
 res://CombatScene.tscn
-res://ally_unit.gd
->>>>>>> a38637f30e01447cfe08d63f7e3d04df632320d9
+res://poison_status.gd
+res://Status Effects/status_effect.gd
+res://Status Effects/Poison.tres
+res://Cards/Fireball/FireballCard.tscn
+res://Status Effects/burning_status.gd
+res://Status Effects/Burn.tres
+res://Cards/Fireball/fireball_card.gd
+res://unit.gd

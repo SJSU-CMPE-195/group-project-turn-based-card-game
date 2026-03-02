@@ -1,0 +1,3 @@
+BurningStatus
+PoisonStatus
+Resource

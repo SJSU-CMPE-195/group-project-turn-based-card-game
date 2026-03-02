@@ -1,0 +1,92 @@
+[gd_scene load_steps=14 format=3 uid="uid://c5ufwxsu6d6ew"]
+
+[ext_resource type="Texture2D" uid="uid://c0jytsw6dtp67" path="res://Skeleton_Sword/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Idle.png" id="1_cbq1i"]
+[ext_resource type="Script" uid="uid://xay0yki45qs2" path="res://enemy.gd" id="1_gjhpl"]
+[ext_resource type="PackedScene" uid="uid://cq02p6k1x53uj" path="res://HealthComponent.tscn" id="2_u4ydw"]
+[ext_resource type="PackedScene" uid="uid://di6br3and4k2y" path="res://StatusEffectsComponent.tscn" id="3_5kjxm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvv87"]
+atlas = ExtResource("1_cbq1i")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oc8fh"]
+atlas = ExtResource("1_cbq1i")
+region = Rect2(96, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c531c"]
+atlas = ExtResource("1_cbq1i")
+region = Rect2(192, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ravy"]
+atlas = ExtResource("1_cbq1i")
+region = Rect2(288, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gog2"]
+atlas = ExtResource("1_cbq1i")
+region = Rect2(384, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ji6bj"]
+atlas = ExtResource("1_cbq1i")
+region = Rect2(480, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obqq3"]
+atlas = ExtResource("1_cbq1i")
+region = Rect2(576, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vp7l8"]
+atlas = ExtResource("1_cbq1i")
+region = Rect2(672, 0, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oc8fh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvv87")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oc8fh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c531c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ravy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gog2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ji6bj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obqq3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vp7l8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[node name="Enemy" type="AnimatedSprite2D" unique_id=2079094664]
+texture_filter = 1
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_oc8fh")
+animation = &"idle"
+offset = Vector2(0, -30)
+flip_h = true
+script = ExtResource("1_gjhpl")
+metadata/_custom_type_script = "uid://xay0yki45qs2"
+
+[node name="StatusEffectsComponent" parent="." unique_id=465425090 instance=ExtResource("3_5kjxm")]
+offset_left = -27.0
+offset_top = 10.0
+offset_right = 13.0
+offset_bottom = 50.0
+
+[node name="HealthComponent" parent="." unique_id=411859767 instance=ExtResource("2_u4ydw")]
+offset_left = -80.0
+offset_top = -34.0
+offset_right = -10.0
+offset_bottom = -21.0
