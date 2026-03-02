@@ -1,6 +1,10 @@
 @tool
 extends Card
 
+func select_card():
+	await CombatManager.select_enemy()
+	activate()
+
 func activate():
 	var instance = vfx_scene.instantiate()
 	CombatManager.selected_ally.add_child(instance) ## adds the vfx as a child of the ally unit
@@ -11,8 +15,9 @@ func activate():
 	var burn = preload("res://Status Effects/Burn.tres").duplicate()
 	CombatManager.selected_enemy.apply_status_effect(burn)
 	CombatManager.selected_enemy.take_damage(20)
+	CombatManager.end_turn()
 	
 
 func _input(event):
 	if event.is_action_pressed("select"): ## Activates when input is "Selected"
-		activate()
+		select_card()
