@@ -53,10 +53,10 @@ Our solution is to create a self-contained card game that combines mechanics fro
 
 | Category | Technology |
 |----------|------------|
-| Frontend | |
-| Backend | |
-| Database | |
-| Deployment | |
+| Frontend |Godot 4.5|
+| Backend |GDScript|
+| Database |Resource in Godot|
+| Deployment |Github|
 
 ---
 
