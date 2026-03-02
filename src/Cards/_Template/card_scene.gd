@@ -38,6 +38,9 @@ var tween: Tween
 func activate():
 	push_error("ACTIVATE NOT IMPLEMENTED: extend this script and implement activate()")
 
+func select_card():
+	pass
+
 func _ready():
 	$PanelContainer.mouse_entered.connect(hover)
 	$PanelContainer.mouse_exited.connect(end_hover)

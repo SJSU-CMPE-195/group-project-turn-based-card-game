@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://dy14emuaan1hh"]
+[gd_scene load_steps=23 format=3 uid="uid://dy14emuaan1hh"]
 
 [ext_resource type="Texture2D" uid="uid://ca81l8hoi7uua" path="res://5DD67A08-8A4E-4C25-B1FB-5F781FD7DB76.png" id="1_c531c"]
+[ext_resource type="Script" uid="uid://dbtdyjn18gho5" path="res://unit_slot.gd" id="2_6ravy"]
 [ext_resource type="Script" uid="uid://dj76uyh8ov30a" path="res://ally_unit.gd" id="2_diwen"]
 [ext_resource type="Texture2D" uid="uid://ddmlxg8f8wlw3" path="res://EnemySpriteSheet.png" id="3_hvv87"]
 [ext_resource type="PackedScene" uid="uid://bckqrikkxb2i2" path="res://Cards/Fireball/FireballCard.tscn" id="3_ijum5"]
@@ -8,9 +9,28 @@
 [ext_resource type="PackedScene" uid="uid://dk6dt1n6n4xbu" path="res://Cards/Heal/Heal.tscn" id="5_55xw1"]
 [ext_resource type="PackedScene" uid="uid://cq02p6k1x53uj" path="res://HealthComponent.tscn" id="5_c531c"]
 [ext_resource type="PackedScene" uid="uid://bftdh1ledd24o" path="res://Cards/Shield/Shield.tscn" id="7_oc8fh"]
+[ext_resource type="PackedScene" uid="uid://xilvmcdv5y5f" path="res://Cursor.tscn" id="10_7gog2"]
+[ext_resource type="Script" uid="uid://dd1l21wes61le" path="res://combat_hint.gd" id="11_ji6bj"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_ec351"]
 size = Vector2(-1200, -700)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7gog2"]
+size = Vector2(200, 100)
+
+[sub_resource type="QuadMesh" id="QuadMesh_6ravy"]
+size = Vector2(150, 75)
+
+[sub_resource type="Gradient" id="Gradient_7gog2"]
+offsets = PackedFloat32Array(0.64084506, 0.6584507)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ji6bj"]
+gradient = SubResource("Gradient_7gog2")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y04i6"]
 atlas = ExtResource("3_hvv87")
@@ -67,13 +87,37 @@ texture = ExtResource("1_c531c")
 
 [node name="EnemySlots" type="Node2D" parent="." unique_id=1735407046]
 
-[node name="EnemySlot1" type="Node2D" parent="EnemySlots" unique_id=1543877888]
+[node name="EnemySlot1" type="Area2D" parent="EnemySlots" unique_id=728398467 node_paths=PackedStringArray("unit")]
 position = Vector2(350, 0)
+script = ExtResource("2_6ravy")
+unit = NodePath("Enemy")
 
 [node name="Enemy" parent="EnemySlots/EnemySlot1" unique_id=2079094664 instance=ExtResource("4_6ravy")]
 
-[node name="EnemySlot2" type="Node2D" parent="EnemySlots" unique_id=988087311]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemySlots/EnemySlot1" unique_id=1942393523]
+shape = SubResource("RectangleShape2D_7gog2")
+
+[node name="SelectReticle" type="MeshInstance2D" parent="EnemySlots/EnemySlot1" unique_id=1641587066]
+visible = false
+z_index = -1
+mesh = SubResource("QuadMesh_6ravy")
+texture = SubResource("GradientTexture2D_ji6bj")
+
+[node name="EnemySlot2" type="Area2D" parent="EnemySlots" unique_id=1035886690 node_paths=PackedStringArray("unit")]
 position = Vector2(150, 0)
+script = ExtResource("2_6ravy")
+unit = NodePath("Enemy")
+
+[node name="Enemy" parent="EnemySlots/EnemySlot2" unique_id=1531105001 instance=ExtResource("4_6ravy")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemySlots/EnemySlot2" unique_id=2117017221]
+shape = SubResource("RectangleShape2D_7gog2")
+
+[node name="SelectReticle" type="MeshInstance2D" parent="EnemySlots/EnemySlot2" unique_id=2086405667]
+visible = false
+z_index = -1
+mesh = SubResource("QuadMesh_6ravy")
+texture = SubResource("GradientTexture2D_ji6bj")
 
 [node name="EnemySlot3" type="Node2D" parent="EnemySlots" unique_id=1620018605]
 position = Vector2(250, 100)
@@ -134,3 +178,16 @@ rotation = -0.064577185
 [node name="CardTemplate3" parent="Cards" unique_id=1150612057 instance=ExtResource("5_55xw1")]
 position = Vector2(-243, 209)
 rotation = -0.12915437
+
+[node name="Cursor" parent="." unique_id=344290246 instance=ExtResource("10_7gog2")]
+
+[node name="Label" type="Label" parent="." unique_id=1479867913]
+visible = false
+offset_left = -154.0
+offset_top = -139.0
+offset_right = 157.0
+offset_bottom = -70.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Select Target"
+script = ExtResource("11_ji6bj")
