@@ -70,7 +70,7 @@ texture = ExtResource("1_c531c")
 [node name="EnemySlot1" type="Node2D" parent="EnemySlots" unique_id=1543877888]
 position = Vector2(350, 0)
 
-[node name="Enemy" parent="EnemySlots/EnemySlot1" unique_id=2084425834 instance=ExtResource("4_6ravy")]
+[node name="Enemy" parent="EnemySlots/EnemySlot1" unique_id=2079094664 instance=ExtResource("4_6ravy")]
 
 [node name="EnemySlot2" type="Node2D" parent="EnemySlots" unique_id=988087311]
 position = Vector2(150, 0)

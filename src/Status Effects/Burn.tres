@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="BurningStatus" load_steps=4 format=3 uid="uid://dilbhom7tv2cv"]
+
+[ext_resource type="Script" uid="uid://dvhinv8pk82nb" path="res://Status Effects/burning_status.gd" id="1_nxu8j"]
+
+[sub_resource type="Gradient" id="Gradient_nxu8j"]
+offsets = PackedFloat32Array(0.17605634, 0.28873238, 0.3415493)
+colors = PackedColorArray(1, 0.84966666, 0.59000003, 1, 1, 0.30400002, 0.13, 1, 0.51, 0.51, 0.51, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_suqva"]
+gradient = SubResource("Gradient_nxu8j")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[resource]
+script = ExtResource("1_nxu8j")
+tick_damage = 2
+name = "Burn"
+icon = SubResource("GradientTexture2D_suqva")
+duration = 3
+metadata/_custom_type_script = "uid://dvhinv8pk82nb"

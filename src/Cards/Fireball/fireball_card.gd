@@ -8,6 +8,8 @@ func activate():
 	instance.set_target(CombatManager.selected_enemy) ## set target of the attack, attack animates to target position
 	instance.play() ## starts the vfx animation
 	await instance.target_reached
+	var burn = preload("res://Status Effects/Burn.tres").duplicate()
+	CombatManager.selected_enemy.apply_status_effect(burn)
 	CombatManager.selected_enemy.take_damage(20)
 	
 
