@@ -2,6 +2,9 @@
 extends AnimatedSprite2D
 class_name Unit
 
+@onready var status_effects_component = $StatusEffectsComponent
+@onready var health_component = $HealthComponent
+
 # Signals
 signal health_changed(current: int, max: int)
 signal block_changed(current_block: int)
@@ -50,6 +53,9 @@ func take_damage(amount: int) -> void:
 	if current_health <= 0:
 		die()
 
+
+func apply_status_effect(effect: StatusEffect):
+	status_effects_component.add_status_effect(effect)
 
 func heal(amount: int) -> void:
 	if is_dead:

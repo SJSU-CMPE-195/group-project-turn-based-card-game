@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://di6br3and4k2y"]
+
+[ext_resource type="Script" uid="uid://bjhvbwsg64xcn" path="res://status_effects_component.gd" id="1_xri6a"]
+
+[node name="StatusEffectsComponent" type="GridContainer" unique_id=465425090]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_xri6a")

@@ -53,10 +53,10 @@ Our solution is to create a self-contained card game that combines mechanics fro
 
 | Category | Technology |
 |----------|------------|
-| Frontend | |
-| Backend | |
-| Database | |
-| Deployment | |
+| Frontend |Godot 4.5|
+| Backend |GDScript|
+| Database |Resource in Godot|
+| Deployment |Github|
 
 ---
 
@@ -64,15 +64,18 @@ Our solution is to create a self-contained card game that combines mechanics fro
 
 ### Prerequisites
 
-- [Prerequisite 1] v.X.X+
-- [Prerequisite 2] v.X.X+
+- Godot 4.5
+- Operating Systems: Windows 11 
+- Github for version control
 
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/[org]/[repo].git
-cd [repo]
+# Step 1. Clone the repository
+git clone https://github.com/SJSU-CMPE-195/group-project-turn-based-card-game.git
+
+# Step 2. Change directory
+cd group-project-turn-based-card-game
 
 # Install dependencies
 [install command]

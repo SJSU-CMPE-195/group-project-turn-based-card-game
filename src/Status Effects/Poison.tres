@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="PoisonStatus" load_steps=4 format=3 uid="uid://bnh7bfjvkywbu"]
+
+[ext_resource type="Script" uid="uid://b28fuur8ndsom" path="res://poison_status.gd" id="1_wckpa"]
+
+[sub_resource type="Gradient" id="Gradient_wckpa"]
+offsets = PackedFloat32Array(0.5880282, 0.62323946)
+colors = PackedColorArray(0.91833323, 0.3, 1, 1, 0.725, 1, 0.33999997, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mv7pa"]
+gradient = SubResource("Gradient_wckpa")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[resource]
+script = ExtResource("1_wckpa")
+icon = SubResource("GradientTexture2D_mv7pa")
+stacking_behavior = "Stack"
+metadata/_custom_type_script = "uid://b28fuur8ndsom"
