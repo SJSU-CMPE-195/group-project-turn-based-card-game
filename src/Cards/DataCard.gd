@@ -3,6 +3,7 @@ class_name Data_Card
 
 @export_enum("Spell", "Attack", "Defense") var card_type: String = "Defense"
 @export var rank: int = 1
+@export var highest_rank: int = 10
 @export var money: int = 100
 @export var cost: int = 5
 @export var damage: int = 10
@@ -15,20 +16,26 @@ class_name Data_Card
 func buy(gold: int):
 	if(gold > money):
 		return true
-	if(gold == money):
+	elif(gold == money):
 		return true
-	if(money > gold):
+	elif(money > gold):
 		return false
 
 func upgrade():
-	money = money + 100
-	rank = rank + 1
-	damage = damage + 10
-	block = block + 10
+	if(rank >= highest_rank):
+		return null
+	else:
+		rank = rank + 1
+		damage = damage + 10
+		block = block + 10
 	
 func effects(user: Unit, target: Unit):
 	if target != null:
 		if damage > 0:
 			target.take_damage(damage)
+		if status_script != null:
+			var new_effect
+			new_effect = status_script.new()
+			target.apply_status_effect(new_effect)
 	if block > 0:
 		user.add_block(block)
