@@ -8,18 +8,6 @@ script = ExtResource("1_1ongq")
 product = ExtResource("2_pmrkh")
 gold = 100
 
-[node name="Name_of_Card" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-
-[node name="Cost_of_Card" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-
-[node name="Card_Description" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-
 [node name="Buy_Card" type="Button" parent="."]
 offset_right = 8.0
 offset_bottom = 8.0
