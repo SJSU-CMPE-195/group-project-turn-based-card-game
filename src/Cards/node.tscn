@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn07ccifvow46"]
+
+[ext_resource type="Script" uid="uid://bfrymito8pxw1" path="res://Modules & Game Logic/Card_shop.gd" id="1_5v1xt"]
+[ext_resource type="Resource" uid="uid://c7y58hfbd32vy" path="res://Cards/new_resource.tres" id="2_iwtmx"]
+
+[node name="Node" type="Node"]
+
+[node name="Card_shop" type="Node" parent="."]
+script = ExtResource("1_5v1xt")
+product = ExtResource("2_iwtmx")
+gold = 100
+metadata/_custom_type_script = "uid://bfrymito8pxw1"
+
+[node name="Card button test" type="Button" parent="Card_shop"]
+offset_left = 100.0
+offset_top = 200.0
+offset_right = 250.0
+offset_bottom = 400.0
+
+[connection signal="pressed" from="Card_shop/Card button test" to="Card_shop" method="_on_buy_card_pressed"]

@@ -1,3 +1,25 @@
-[gd_scene format=3 uid="uid://ch7aw5la4y251"]
+[gd_scene load_steps=3 format=3 uid="uid://ch7aw5la4y251"]
+
+[ext_resource type="Script" uid="uid://bfrymito8pxw1" path="res://Modules & Game Logic/Card_shop.gd" id="1_1ongq"]
+[ext_resource type="Resource" uid="uid://c7y58hfbd32vy" path="res://Cards/new_resource.tres" id="2_pmrkh"]
 
 [node name="CardShop" type="Node2D"]
+script = ExtResource("1_1ongq")
+product = ExtResource("2_pmrkh")
+gold = 100
+
+[node name="Name_of_Card" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Cost_of_Card" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Card_Description" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Buy_Card" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0

@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://dkto06aiqtmjk"]
+[gd_scene load_steps=2 format=3 uid="uid://dkto06aiqtmjk"]
+
+[ext_resource type="Script" uid="uid://bfrymito8pxw1" path="res://Modules & Game Logic/Card_shop.gd" id="1_5p4mt"]
 
 [node name="UpgradeShop" type="Node2D"]
+
+[node name="Card_shop" type="Node" parent="."]
+script = ExtResource("1_5p4mt")
+metadata/_custom_type_script = "uid://bfrymito8pxw1"
+
+[node name="Card to upgrade" type="Button" parent="Card_shop"]
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 250.0
+offset_bottom = 300.0
+
+[connection signal="pressed" from="Card_shop/Card to upgrade" to="Card_shop" method="_on_card_to_upgrade_pressed"]
