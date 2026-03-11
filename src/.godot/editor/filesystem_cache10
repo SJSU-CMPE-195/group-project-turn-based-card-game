@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1773166072
+::res://::1773246802
 5DD67A08-8A4E-4C25-B1FB-5F781FD7DB76.png::CompressedTexture2D::4842565863547310456::1772159129::1772163000::1::::<><><>0<>0<>6a1641d24a3b43405df85bd445bb07db<>res://.godot/imported/5DD67A08-8A4E-4C25-B1FB-5F781FD7DB76.png-fdefaeb4a7452b99a56f14aab84d1d76.ctex::
 ally_unit.gd::GDScript::7858940947498336426::1772229217::0::1::::AllyUnit<>Unit<><>0<>0<><>::
 BaseUnit.tscn::PackedScene::3054376799777507760::1772162997::0::1::::<><><>0<>0<><>::uid://bkuhysq7qpuwf::::res://unit.gd<>uid://6735gifvs4w1::::res://health_component.gd
@@ -43,8 +43,9 @@ poison_card.gd::GDScript::7499392044452373649::1773109064::0::1::::<>Card<><>0<>
 ::res://Cards/Shield/::1771218461
 shield.gd::GDScript::6603370988268796857::1771218461::0::1::::<>Card<><>0<>1<><>::
 Shield.tscn::PackedScene::2776784113531885532::1771218461::0::1::::<><><>0<>0<><>::uid://kgo4cjemjess::::res://Cards/_Template/Card.tscn<>uid://c1cys5b6lljsj::::res://Cards/Shield/shield.gd
-::res://images/::1773166511
-Screenshot 2026-03-10 111026.png::CompressedTexture2D::3379653006813312652::1773166511::1773166511::1::::<><><>0<>0<>02ecbff88012e4e9949e4c15b2e7db63<>res://.godot/imported/Screenshot 2026-03-10 111026.png-03d61a99a06f46b2d9b15af3f871fbaa.ctex::
+::res://images/::1773246802
+Coin.png::CompressedTexture2D::3379653006813312652::1773166511::1773246803::1::::<><><>0<>0<>8a0182876de399b2d7ed1b32f0ab94c3<>res://.godot/imported/Coin.png-1a1806c522c80e97612b78d38e7e9dfe.ctex::
+Shop_background.png::CompressedTexture2D::331771560046523789::1773246776::1773246790::1::::<><><>0<>0<>7a72abf4016d8959b02302d10a462b8f<>res://.godot/imported/Shop_background.png-63948aacae5892f8258b3763c29c2b48.ctex::
 ::res://Modules & Game Logic/::1773109064
 Card.gd::GDScript::3562216972424298969::1773106245::0::1::::Cards<>Resource<><>0<>0<><>::
 Card_shop.gd::GDScript::2773938411274430058::1773109064::0::1::::Card_shop<>Node<><>0<>0<><>::
