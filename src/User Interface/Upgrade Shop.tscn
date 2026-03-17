@@ -1,17 +1,99 @@
-[gd_scene load_steps=2 format=3 uid="uid://dkto06aiqtmjk"]
+[gd_scene load_steps=8 format=3 uid="uid://dkto06aiqtmjk"]
 
-[ext_resource type="Script" uid="uid://bfrymito8pxw1" path="res://Modules & Game Logic/Card_shop.gd" id="1_5p4mt"]
+[ext_resource type="Texture2D" uid="uid://eyyh14nmcuef" path="res://images/Shop_background.png" id="1_awj6m"]
+[ext_resource type="PackedScene" uid="uid://bckqrikkxb2i2" path="res://Cards/Fireball/FireballCard.tscn" id="3_b0k30"]
+[ext_resource type="Texture2D" uid="uid://bofenkjv1aaam" path="res://images/Coin.png" id="3_gv66k"]
+[ext_resource type="Texture2D" uid="uid://bl7uy6vkcc37c" path="res://images/Upgrade_button.png" id="3_vrv3w"]
+[ext_resource type="PackedScene" uid="uid://bftdh1ledd24o" path="res://Cards/Shield/Shield.tscn" id="5_6nlb5"]
+[ext_resource type="PackedScene" uid="uid://dk6dt1n6n4xbu" path="res://Cards/Heal/Heal.tscn" id="6_xbj78"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2w6fm"]
+line_spacing = 0.0
+font_size = 25
+font_color = Color(0.0034808286, 0.064501986, 0.36675528, 1)
 
 [node name="UpgradeShop" type="Node2D"]
 
-[node name="Card_shop" type="Node" parent="."]
-script = ExtResource("1_5p4mt")
-metadata/_custom_type_script = "uid://bfrymito8pxw1"
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1200.0
+offset_bottom = 700.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_awj6m")
+expand_mode = 1
+stretch_mode = 6
 
-[node name="Card to upgrade" type="Button" parent="Card_shop"]
-offset_left = 100.0
-offset_top = 100.0
-offset_right = 250.0
+[node name="FireballCard" parent="." instance=ExtResource("3_b0k30")]
+position = Vector2(125, 200)
+art = ExtResource("3_gv66k")
+
+[node name="Button to upgrade" type="Button" parent="FireballCard"]
+offset_left = -93.0
+offset_top = 155.0
+offset_right = 537.0
+offset_bottom = 310.0
+scale = Vector2(0.3, 0.3)
+text = "
+"
+icon = ExtResource("3_vrv3w")
+
+[node name="TextureRect" type="TextureRect" parent="FireballCard"]
+offset_left = -93.0
+offset_top = 207.0
+offset_right = 286.0
+offset_bottom = 588.0
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("3_gv66k")
+
+[node name="Shield" parent="." instance=ExtResource("5_6nlb5")]
+position = Vector2(425, 200)
+
+[node name="Button to upgrade" type="Button" parent="Shield"]
+offset_left = -93.0
+offset_top = 155.0
+offset_right = 533.0
+offset_bottom = 310.0
+scale = Vector2(0.3, 0.3)
+icon = ExtResource("3_vrv3w")
+
+[node name="TextureRect" type="TextureRect" parent="Shield"]
+offset_left = -93.0
+offset_top = 207.0
+offset_right = 286.0
+offset_bottom = 588.0
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("3_gv66k")
+
+[node name="HealCard" parent="." instance=ExtResource("6_xbj78")]
+position = Vector2(725, 200)
+
+[node name="Button to upgrade" type="Button" parent="HealCard"]
+offset_left = -93.0
+offset_top = 155.0
+offset_right = 533.0
+offset_bottom = 310.0
+scale = Vector2(0.3, 0.3)
+icon = ExtResource("3_vrv3w")
+
+[node name="TextureRect" type="TextureRect" parent="HealCard"]
+offset_left = -93.0
+offset_top = 207.0
+offset_right = 286.0
+offset_bottom = 588.0
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("3_gv66k")
+
+[node name="Name label" type="Label" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 450.0
+offset_right = 650.0
 offset_bottom = 300.0
-
-[connection signal="pressed" from="Card_shop/Card to upgrade" to="Card_shop" method="_on_card_to_upgrade_pressed"]
+grow_horizontal = 2
+text = "Upgrade Shop
+"
+label_settings = SubResource("LabelSettings_2w6fm")
+horizontal_alignment = 1

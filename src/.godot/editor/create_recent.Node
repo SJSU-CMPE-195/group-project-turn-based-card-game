@@ -1,5 +1,7 @@
-Card
 Button
+Label      - Matches the "text" keyword.
+TextureRect
+Card
 Card_shop
 Node
 Label
@@ -7,9 +9,6 @@ Control
 CollisionShape2D
 Area2D
 MeshInstance2D
-TextureRect
 Panel
 GridContainer
 Enemy
-ProgressBar
-Node2D
