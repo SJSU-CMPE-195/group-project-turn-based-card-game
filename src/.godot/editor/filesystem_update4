@@ -1,4 +1,3 @@
-res://User Interface/Upgrade Shop.tscn
+res://User Interface/Deck_system.tscn
 res://Status Effects/Burn.tres
-res://User Interface/Card Shop.tscn
-res://Modules & Game Logic/Card_shop.gd
+res://Modules & Game Logic/Deck_class_variables_and_functions.txt
