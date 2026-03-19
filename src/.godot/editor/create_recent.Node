@@ -1,14 +1,9 @@
-Button
-HBoxContainer
-Label      - Matches the "text" keyword.
-TextureRect
-Card
-Card_shop
-Node
+Camera2D
+MeshInstance2D
 Label
 Control
 CollisionShape2D
 Area2D
-MeshInstance2D
+TextureRect
 Panel
 GridContainer
