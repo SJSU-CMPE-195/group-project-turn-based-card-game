@@ -1,7 +1,8 @@
+Camera2D
+MeshInstance2D
 Label
 CollisionShape2D
 Area2D
-MeshInstance2D
 TextureRect
 Panel
 GridContainer

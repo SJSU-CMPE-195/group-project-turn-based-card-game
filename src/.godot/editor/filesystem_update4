@@ -1,0 +1,6 @@
+res://Skeleton.tscn
+res://Status Effects/Burn.tres
+res://map_generator.gd
+res://MapGenerator.tscn
+res://MapNode.tscn
+res://map_node.gd

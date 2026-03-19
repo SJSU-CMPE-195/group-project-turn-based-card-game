@@ -12,3 +12,7 @@ offset_right = 38.0
 offset_bottom = 51.0
 theme_override_constants/h_separation = 2
 columns = 4
+
+[node name="HealthComponent" parent="." index="1" unique_id=411859767]
+scale = Vector2(0.66, 0.66)
+pivot_offset = Vector2(35, 6)
