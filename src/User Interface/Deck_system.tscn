@@ -26,3 +26,11 @@ text = "Deck System
 label_settings = SubResource("LabelSettings_7cito")
 horizontal_alignment = 1
 script = ExtResource("2_1t7fn")
+
+[node name="Cards_hand_container" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Cards_deck_button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0

@@ -1,11 +1,11 @@
-Button
-HBoxContainer
 Label      - Matches the "text" keyword.
 TextureRect
+Label
+Button
+HBoxContainer
 Card
 Card_shop
 Node
-Label
 Control
 CollisionShape2D
 Area2D

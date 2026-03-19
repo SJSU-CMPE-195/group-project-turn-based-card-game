@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Data_Card" load_steps=2 format=3 uid="uid://cbk7p85hmqim"]
+
+[ext_resource type="Script" uid="uid://dxvr65658sfjm" path="res://Cards/DataCard.gd" id="1_vbta4"]
+
+[resource]
+script = ExtResource("1_vbta4")
+money = 200
+card_name = "Heal card"
+metadata/_custom_type_script = "uid://dxvr65658sfjm"

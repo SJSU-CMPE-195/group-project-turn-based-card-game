@@ -1,10 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://dkto06aiqtmjk"]
+[gd_scene load_steps=12 format=3 uid="uid://dkto06aiqtmjk"]
 
 [ext_resource type="Texture2D" uid="uid://eyyh14nmcuef" path="res://images/Shop_background.png" id="1_awj6m"]
+[ext_resource type="Resource" uid="uid://duh650wd25okn" path="res://Cards/Fireball/fireball.tres" id="2_jtywd"]
 [ext_resource type="PackedScene" uid="uid://bckqrikkxb2i2" path="res://Cards/Fireball/FireballCard.tscn" id="3_b0k30"]
 [ext_resource type="Texture2D" uid="uid://bofenkjv1aaam" path="res://images/Coin.png" id="3_gv66k"]
+[ext_resource type="Resource" uid="uid://bd5hajgcfm6c5" path="res://Cards/Shield/shield.tres" id="3_j63wu"]
 [ext_resource type="Texture2D" uid="uid://bl7uy6vkcc37c" path="res://images/Upgrade_button.png" id="3_vrv3w"]
+[ext_resource type="Resource" uid="uid://cbk7p85hmqim" path="res://Cards/Heal/heal.tres" id="4_rpni3"]
 [ext_resource type="PackedScene" uid="uid://bftdh1ledd24o" path="res://Cards/Shield/Shield.tscn" id="5_6nlb5"]
+[ext_resource type="Script" uid="uid://bfrymito8pxw1" path="res://Modules & Game Logic/Card_shop.gd" id="5_xbj78"]
 [ext_resource type="PackedScene" uid="uid://dk6dt1n6n4xbu" path="res://Cards/Heal/Heal.tscn" id="6_xbj78"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2w6fm"]
@@ -13,6 +17,11 @@ font_size = 25
 font_color = Color(0.0034808286, 0.064501986, 0.36675528, 1)
 
 [node name="UpgradeShop" type="Node2D"]
+script = ExtResource("5_xbj78")
+fireball = ExtResource("2_jtywd")
+shield = ExtResource("3_j63wu")
+heal = ExtResource("4_rpni3")
+gold = 700
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -28,17 +37,7 @@ stretch_mode = 6
 
 [node name="FireballCard" parent="." instance=ExtResource("3_b0k30")]
 position = Vector2(125, 200)
-art = ExtResource("3_gv66k")
-
-[node name="Button to upgrade" type="Button" parent="FireballCard"]
-offset_left = -93.0
-offset_top = 155.0
-offset_right = 537.0
-offset_bottom = 310.0
-scale = Vector2(0.3, 0.3)
-text = "
-"
-icon = ExtResource("3_vrv3w")
+script = null
 
 [node name="TextureRect" type="TextureRect" parent="FireballCard"]
 offset_left = -93.0
@@ -47,17 +46,22 @@ offset_right = 286.0
 offset_bottom = 588.0
 scale = Vector2(0.17, 0.17)
 texture = ExtResource("3_gv66k")
+script = ExtResource("5_xbj78")
+
+[node name="Button to upgrade fireball" type="Button" parent="FireballCard"]
+offset_left = -93.0
+offset_top = 155.0
+offset_right = 537.0
+offset_bottom = 310.0
+scale = Vector2(0.3, 0.3)
+text = "
+"
+icon = ExtResource("3_vrv3w")
+script = ExtResource("5_xbj78")
 
 [node name="Shield" parent="." instance=ExtResource("5_6nlb5")]
 position = Vector2(425, 200)
-
-[node name="Button to upgrade" type="Button" parent="Shield"]
-offset_left = -93.0
-offset_top = 155.0
-offset_right = 533.0
-offset_bottom = 310.0
-scale = Vector2(0.3, 0.3)
-icon = ExtResource("3_vrv3w")
+script = null
 
 [node name="TextureRect" type="TextureRect" parent="Shield"]
 offset_left = -93.0
@@ -67,16 +71,18 @@ offset_bottom = 588.0
 scale = Vector2(0.17, 0.17)
 texture = ExtResource("3_gv66k")
 
-[node name="HealCard" parent="." instance=ExtResource("6_xbj78")]
-position = Vector2(725, 200)
-
-[node name="Button to upgrade" type="Button" parent="HealCard"]
+[node name="Button to upgrade shield" type="Button" parent="Shield"]
 offset_left = -93.0
 offset_top = 155.0
 offset_right = 533.0
 offset_bottom = 310.0
 scale = Vector2(0.3, 0.3)
 icon = ExtResource("3_vrv3w")
+script = ExtResource("5_xbj78")
+
+[node name="HealCard" parent="." instance=ExtResource("6_xbj78")]
+position = Vector2(725, 200)
+script = null
 
 [node name="TextureRect" type="TextureRect" parent="HealCard"]
 offset_left = -93.0
@@ -85,6 +91,14 @@ offset_right = 286.0
 offset_bottom = 588.0
 scale = Vector2(0.17, 0.17)
 texture = ExtResource("3_gv66k")
+
+[node name="Button to upgrade heal" type="Button" parent="HealCard"]
+offset_left = -93.0
+offset_top = 155.0
+offset_right = 533.0
+offset_bottom = 310.0
+scale = Vector2(0.3, 0.3)
+icon = ExtResource("3_vrv3w")
 
 [node name="Name label" type="Label" parent="."]
 anchors_preset = 10
@@ -97,3 +111,9 @@ text = "Upgrade Shop
 "
 label_settings = SubResource("LabelSettings_2w6fm")
 horizontal_alignment = 1
+
+[connection signal="pressed" from="FireballCard/Button to upgrade fireball" to="." method="_on_button_to_upgrade_fireball_pressed"]
+[connection signal="pressed" from="FireballCard/Button to upgrade fireball" to="FireballCard" method="_on_button_to_upgrade_fireball_pressed"]
+[connection signal="pressed" from="FireballCard/Button to upgrade fireball" to="Shield/Button to upgrade shield" method="_on_button_to_upgrade_fireball_pressed"]
+[connection signal="pressed" from="Shield/Button to upgrade shield" to="." method="_on_button_to_upgrade_shield_pressed"]
+[connection signal="pressed" from="HealCard/Button to upgrade heal" to="." method="_on_button_to_upgrade_heal_pressed"]
