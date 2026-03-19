@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://crt5kik0ivf2e"]
+
+[ext_resource type="Script" uid="uid://cn7rufkvjmxpg" path="res://map_generator.gd" id="1_tpkai"]
+
+[node name="Node2D" type="Node2D" unique_id=1822779809]
+position = Vector2(544, 626)
+script = ExtResource("1_tpkai")
+bridges = 20
