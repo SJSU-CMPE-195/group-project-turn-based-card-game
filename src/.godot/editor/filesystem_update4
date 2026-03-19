@@ -1,3 +1,5 @@
-res://User Interface/Deck_system.tscn
+res://MapNode.tscn
 res://Status Effects/Burn.tres
-res://Modules & Game Logic/Deck_class_variables_and_functions.txt
+res://map_generator.gd
+res://MapGenerator.tscn
+res://map_node.gd

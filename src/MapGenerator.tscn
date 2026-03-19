@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://slbyaxo6t3f0"]
+
+[ext_resource type="Script" uid="uid://dudrbn0xop75y" path="res://map_generator.gd" id="1_tpkai"]
+
+[node name="Node2D" type="Node2D" unique_id=1822779809]
+position = Vector2(544, 626)
+script = ExtResource("1_tpkai")
