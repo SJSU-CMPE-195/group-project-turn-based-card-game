@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3go76t12spt8"]
+
+[ext_resource type="Script" uid="uid://djreghmluv4xd" path="res://map_node.gd" id="1_r064c"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_r064c"]
+size = Vector2(10, 10)
+
+[node name="MeshInstance2D" type="MeshInstance2D" unique_id=586546588]
+mesh = SubResource("QuadMesh_r064c")
+script = ExtResource("1_r064c")

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 res://Modules & Game Logic/Card_shop.gd
 res://User Interface/Card Shop.tscn
 res://Status Effects/Burn.tres
@@ -10,3 +11,21 @@ res://Cards/DataCard.gd
 res://User Interface/Upgrade Shop.tscn
 res://Cards/Fireball/fireball_card.gd
 res://Cards/_Template/card_scene.gd
+=======
+res://Skeleton.tscn
+res://Status Effects/Burn.tres
+res://map_generator.gd
+res://MapGenerator.tscn
+res://MapNode.tscn
+res://map_node.gd
+res://combat_hint.gd
+res://combat_manager.gd
+res://cursor.gd
+res://Cursor.tscn
+res://enemy.gd
+res://unit_slot.gd
+res://Cards/DataCard.gd
+res://Cards/_Template/card_scene.gd
+res://Cards/Fireball/FireballCard.tscn
+res://Cards/Fireball/fireball_card.gd
+>>>>>>> 50efc0476909fe25120485a01ff6e5284676c492
