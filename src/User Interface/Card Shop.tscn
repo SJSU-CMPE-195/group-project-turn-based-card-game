@@ -1,3 +1,64 @@
-[gd_scene format=3 uid="uid://ch7aw5la4y251"]
+[gd_scene load_steps=9 format=3 uid="uid://ch7aw5la4y251"]
+
+[ext_resource type="Script" uid="uid://bfrymito8pxw1" path="res://Modules & Game Logic/Card_shop.gd" id="1_1ongq"]
+[ext_resource type="Resource" uid="uid://c7y58hfbd32vy" path="res://Cards/new_resource.tres" id="2_pmrkh"]
+[ext_resource type="Texture2D" uid="uid://eyyh14nmcuef" path="res://images/Shop_background.png" id="3_i40vj"]
+[ext_resource type="PackedScene" uid="uid://bckqrikkxb2i2" path="res://Cards/Fireball/FireballCard.tscn" id="4_fce2j"]
+[ext_resource type="PackedScene" uid="uid://dk6dt1n6n4xbu" path="res://Cards/Heal/Heal.tscn" id="4_hn8vq"]
+[ext_resource type="Texture2D" uid="uid://bkb3h01mamkq0" path="res://images/Buy.png" id="5_fce2j"]
+[ext_resource type="PackedScene" uid="uid://bftdh1ledd24o" path="res://Cards/Shield/Shield.tscn" id="6_1yxok"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fce2j"]
+font_size = 25
+font_color = Color(0.043137256, 0, 1, 1)
 
 [node name="CardShop" type="Node2D"]
+script = ExtResource("1_1ongq")
+product = ExtResource("2_pmrkh")
+gold = 100
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1200.0
+offset_bottom = 700.0
+texture = ExtResource("3_i40vj")
+
+[node name="FireballCard" parent="TextureRect" instance=ExtResource("4_fce2j")]
+position = Vector2(125, 200)
+
+[node name="Button to buy" type="Button" parent="TextureRect/FireballCard"]
+offset_left = -55.0
+offset_top = 155.0
+offset_right = 343.0
+offset_bottom = 314.0
+scale = Vector2(0.3, 0.3)
+icon = ExtResource("5_fce2j")
+
+[node name="Shield" parent="TextureRect" instance=ExtResource("6_1yxok")]
+position = Vector2(425, 200)
+
+[node name="Button to buy" type="Button" parent="TextureRect/Shield"]
+offset_left = -55.0
+offset_top = 155.0
+offset_right = 343.0
+offset_bottom = 314.0
+scale = Vector2(0.3, 0.3)
+icon = ExtResource("5_fce2j")
+
+[node name="HealCard" parent="TextureRect" instance=ExtResource("4_hn8vq")]
+position = Vector2(725, 200)
+
+[node name="Button to buy" type="Button" parent="TextureRect/HealCard"]
+offset_left = -55.0
+offset_top = 155.0
+offset_right = 343.0
+offset_bottom = 314.0
+scale = Vector2(0.3, 0.3)
+icon = ExtResource("5_fce2j")
+
+[node name="Name label" type="Label" parent="."]
+offset_left = 500.0
+offset_right = 580.0
+offset_bottom = 49.0
+text = "Card Shop
+"
+label_settings = SubResource("LabelSettings_fce2j")

@@ -1,12 +1,9 @@
 Camera2D
 MeshInstance2D
 Label
+Control
 CollisionShape2D
 Area2D
 TextureRect
 Panel
 GridContainer
-Enemy
-ProgressBar
-Node2D
-AnimatedSprite2D

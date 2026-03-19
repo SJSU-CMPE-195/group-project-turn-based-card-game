@@ -1,3 +1,4 @@
+Data_Card
+Resource
 BurningStatus
 PoisonStatus
-Resource
