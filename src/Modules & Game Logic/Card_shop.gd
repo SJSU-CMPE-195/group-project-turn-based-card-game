@@ -18,6 +18,7 @@ func product_found():
 
 func buy():
 	if product.money > gold:
+		print("Not sufficient gold to purchase ", product.card_name)
 		return null
 	else:
 		gold = gold - product.money
@@ -26,9 +27,7 @@ func buy():
 
 func press_buy():
 	var bought = buy()
-	if (product.money > gold):
-		print("Not sufficient gold to purchase ", product.card_name)
-	elif(gold >= product.money):
+	if(bought != null):
 		print(bought.card_name, " has been purchased, you have ", gold, " gold remaining")
 
 func press_upgrade():

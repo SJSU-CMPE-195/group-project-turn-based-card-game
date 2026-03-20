@@ -114,6 +114,5 @@ horizontal_alignment = 1
 
 [connection signal="pressed" from="FireballCard/Button to upgrade fireball" to="." method="_on_button_to_upgrade_fireball_pressed"]
 [connection signal="pressed" from="FireballCard/Button to upgrade fireball" to="FireballCard" method="_on_button_to_upgrade_fireball_pressed"]
-[connection signal="pressed" from="FireballCard/Button to upgrade fireball" to="Shield/Button to upgrade shield" method="_on_button_to_upgrade_fireball_pressed"]
 [connection signal="pressed" from="Shield/Button to upgrade shield" to="." method="_on_button_to_upgrade_shield_pressed"]
 [connection signal="pressed" from="HealCard/Button to upgrade heal" to="." method="_on_button_to_upgrade_heal_pressed"]

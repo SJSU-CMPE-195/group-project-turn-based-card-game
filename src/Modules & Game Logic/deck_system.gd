@@ -1,8 +1,10 @@
 extends Node
 class_name Deck
 
-##var deck = []
-## var hand = []
+@onready var draw = $Card_drawn
+var deck = []
+var hand = []
+var single_card
 var cards = []
 var removed_card = []
 
@@ -14,7 +16,8 @@ func draw_card():
 	if cards.empty():
 		return
 	var front = cards.pop_front()
-	removed_card = removed_card + [front]
+	# removed_card = removed_card + [front]
+	hand = hand + [front]
 	return(front)
 
 func discard_card(card):
@@ -43,3 +46,13 @@ func obtain_top_card():
 
 func duplicate_card(card):
 	return(card.duplicate(true))
+
+func _on_cards_deck_button_pressed() -> void:
+	single_card = draw_card()
+	if(single_card != null):
+		var name = single_card.name
+		var text = draw.text
+		draw.text = name
+	else:
+		return
+		
