@@ -6,10 +6,10 @@
 
 | Name | GitHub | Email |
 |------|--------|-------|
-| Dorian Vail | [@Dorianv5](https://github.com/username) | dorian.vail@sjsu.edu |
-| Vincent Cheng | [@vincentc168777](https://github.com/username) | vincent.cheng@sjsu.edu |
-| Sarmad Nasir | [@sarmadn](https://github.com/username) | sarmad.nasir@sjsu.edu |
-| Surya Krishnamurthy | [@codinginc123](https://github.com/username) | surya.krishnamurthy@sjsu.edu |
+| Dorian Vail | [@Dorianv5](https://github.com/Dorianv5) | dorian.vail@sjsu.edu |
+| Vincent Cheng | [@vincentc168777](https://github.com/vincentc168777) | vincent.cheng@sjsu.edu |
+| Sarmad Nasir | [@sarmadn](https://github.com/sarmadn) | sarmad.nasir@sjsu.edu |
+| Surya Krishnamurthy | [@codinginc123](https://github.com/codinginc123) | surya.krishnamurthy@sjsu.edu |
 
 **Advisor:** Bhawandeep Singh Harsh
 
@@ -28,13 +28,14 @@ Our solution is to create a self-contained card game that combines mechanics fro
 - Combat system: Used to alternate between combat scenarios. It is all-inclusive and has a card/upgrade shop. Must coordinate between combat mechanics, enemies and card outcomes.
 - Enemy ai: Cards selected based on difficulty of enemy. The enemies will be in the form of artificial intelligence.
 - Card effects/interactions: Cards are optimized and function in accordance with the combat system. Card interactions are improved to make gameplay smoother.
+- Card & Upgrade shop: To buy cards with gold and upgrade them. Will be available with the click of a button from the combat scene where player(s) can access both to do as they wish.
 - Deck system: It has card operations like shuffling and drawing cards. It has data structures like arrays, classes and sets. The deck system will coordinate with card effects and the combat system.
 
 ---
 
 ## Demo
 
-[Link to demo video or GIF]
+link: [https://youtu.be/ik9uDN4Mgp0]
 
 **Live Demo:** [URL if deployed]
 
@@ -42,11 +43,11 @@ Our solution is to create a self-contained card game that combines mechanics fro
 
 ## Screenshots
 
-| Feature | Screenshot |
-|---------|------------|
-| [Feature 1] | ![Screenshot](docs/screenshots/feature1.png) |
-| [Feature 2] | ![Screenshot](docs/screenshots/feature2.png) |
-
+| Feature | Screenshot | 
+|---------|------------| 
+| Map generator | ![Map generator](docs/Map_generator.png) | 
+| Combat scene | ![Combat scene](docs/Combat_scene.png) | 
+| Card shop | ![Card shop](docs/Card_shop.png) |
 ---
 
 ## Tech Stack
@@ -65,6 +66,7 @@ Our solution is to create a self-contained card game that combines mechanics fro
 ### Prerequisites
 
 - Godot 4.5
+    - installation url: https://godotengine.org/download/windows/ 
 - Operating Systems: Windows 11 
 - Github for version control
 
@@ -77,16 +79,9 @@ git clone https://github.com/SJSU-CMPE-195/group-project-turn-based-card-game.gi
 # Step 2. Change directory
 cd group-project-turn-based-card-game
 
-# Install dependencies
-[install command]
+# Step 3. Proceed to godot engine project manager once done with installation
 
-# Set up environment variables
-cp .env.example .env
-# Edit .env with your values
-
-# Run database migrations (if applicable)
-[migration command]
-```
+# Step 4. Select import and find path to group project turn based card game in order to add it
 
 ### Running Locally
 
@@ -96,6 +91,12 @@ cp .env.example .env
 
 # The app will be available at http://localhost:XXXX
 ```
+
+### Running
+Press "run specific scene" or use shortcut "ctrl + shift + f5. Once in "select scene" window, click any scene twice to run it.
+
+### Usage
+Players can go through each scene. They typically will begin at the map generator scene. Move to the combat scene to play the game. Use provided cards to defeat enemies. Select an energy target by pressing space on keyboard, click where to place card, and launch it. Buy new cards or upgrade owned cards to have better chances at winning. 
 
 ### Running Tests
 
@@ -126,11 +127,25 @@ cp .env.example .env
 
 ```
 .
-├── [folder]/           # Description
-├── src/                # Source code files
-├── tests/              # Test files
-├── docs/               # Documentation files
-└── README.md
+├── [folder]                 # Description
+    ├── docs/               # Documentation files
+       .gitkeep
+        Card_shop.png
+        Combat_scene.png
+        Map_generator.png
+    ├── src/                # Source code files
+        .godot
+        Cards
+        Module & Game Logic
+        Skeleton_Sword
+        Status Effects
+        User Interface
+        VFX
+        images
+    ├── tests/              # Test files
+        .gitignore
+        README_195.md
+        SCHEDULE-195.md
 ```
 
 ---

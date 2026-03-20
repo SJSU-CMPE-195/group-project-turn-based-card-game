@@ -4,6 +4,5 @@
 
 [resource]
 script = ExtResource("1_vbta4")
-money = 200
 card_name = "Heal card"
 metadata/_custom_type_script = "uid://dxvr65658sfjm"

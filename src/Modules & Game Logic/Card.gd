@@ -1,9 +1,8 @@
-## extends Node
+# extends Node
 extends Resource
 class_name Cards
-# (abstract class)
 
-# list of parameters:
+# variable declaration
 var art : Texture2D
 var cost: int = 10
 enum type_of_card {attack, defense, status, power}
@@ -15,7 +14,3 @@ var recharge_time: float = 5.0
 var description: String = ""
 var target: int = 1
 var tier: int = 1
-
-## func activate() ## Not implemented in this class
-
-## func select_targets() ## helper function to assign target

@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_7rkjo")
+money = 200
 card_name = "Shield card"
 metadata/_custom_type_script = "uid://dxvr65658sfjm"

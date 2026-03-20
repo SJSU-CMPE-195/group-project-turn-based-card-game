@@ -57,7 +57,8 @@ offset_bottom = 350.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0.7764706, 1)
 theme_override_font_sizes/font_size = 47
-text = "100
+text = "300
+
 "
 
 [node name="Shield" parent="TextureRect" instance=ExtResource("6_1yxok")]
@@ -114,7 +115,8 @@ offset_right = 63.0
 offset_bottom = 350.0
 theme_override_colors/font_outline_color = Color(0, 0, 0.827451, 1)
 theme_override_font_sizes/font_size = 47
-text = "300
+text = "100
+
 "
 
 [node name="Name label" type="Label" parent="."]
@@ -130,6 +132,5 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [connection signal="pressed" from="TextureRect/FireballCard/Button to buy fireball" to="." method="_on_button_to_buy_fireball_pressed"]
-[connection signal="pressed" from="TextureRect/FireballCard/Button to buy fireball" to="." method="_on_button_to_buy_pressed"]
 [connection signal="pressed" from="TextureRect/Shield/Button to buy shield" to="." method="_on_button_to_buy_shield_pressed"]
 [connection signal="pressed" from="TextureRect/HealCard/Button to buy heal" to="." method="_on_button_to_buy_heal_pressed"]
