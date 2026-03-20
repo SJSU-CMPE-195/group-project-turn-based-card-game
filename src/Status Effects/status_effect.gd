@@ -33,3 +33,7 @@ func remove():
 
 func stack():
 	stacks += 1
+
+func set_duration(amount: int):
+	duration = amount
+	updated.emit()

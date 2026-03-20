@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 res://Modules & Game Logic/Card_shop.gd
 res://User Interface/Card Shop.tscn
 res://Status Effects/Burn.tres
@@ -11,21 +11,32 @@ res://Cards/DataCard.gd
 res://User Interface/Upgrade Shop.tscn
 res://Cards/Fireball/fireball_card.gd
 res://Cards/_Template/card_scene.gd
-=======
-res://Skeleton.tscn
 res://Status Effects/Burn.tres
-res://map_generator.gd
-res://MapGenerator.tscn
-res://MapNode.tscn
-res://map_node.gd
-res://combat_hint.gd
+res://combat_scene.gd
+res://room.gd
 res://combat_manager.gd
-res://cursor.gd
-res://Cursor.tscn
-res://enemy.gd
-res://unit_slot.gd
-res://Cards/DataCard.gd
+res://energy_orb.gdshader
+res://Cards/_Template/Card.tscn
 res://Cards/_Template/card_scene.gd
 res://Cards/Fireball/FireballCard.tscn
 res://Cards/Fireball/fireball_card.gd
->>>>>>> 50efc0476909fe25120485a01ff6e5284676c492
+res://energy_display.gd
+res://end_turn_button.gd
+res://Status Effects/burning_status.gd
+res://turn_start_display.gd
+res://status_effects_component.gd
+res://Status Effects/status_effect.gd
+res://enemy.gd
+res://ally_unit.gd
+res://unit.gd
+res://StatusEffectsComponent.tscn
+res://StatusEffectTile.tscn
+res://Skeleton.tscn
+res://scene_manager.gd
+res://MapGenerator.tscn
+res://MapNode.tscn
+res://map_node.gd
+res://map_generator.gd
+res://User Interface/Upgrade Shop.tscn
+res://User Interface/upgrade_shop.gd
+

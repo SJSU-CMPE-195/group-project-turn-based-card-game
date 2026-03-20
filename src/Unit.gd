@@ -115,10 +115,10 @@ func die() -> void:
 		return
 	
 	is_dead = true
-	emit_signal("died")
+	died.emit()
 	on_death()
 
 
 func on_death() -> void:
 	# Override in subclasses
-	queue_free()
+	visible = false

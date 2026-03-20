@@ -11,7 +11,7 @@ func add_status_effect(new_effect: StatusEffect):
 				"Stack":
 					effect.stack()
 				"Refresh Duration":
-					effect.duration = new_effect.duration
+					effect.set_duration(new_effect.duration)
 				"Add Duration":
 					effect.duration += new_effect.duration
 				"No Effect":
@@ -20,8 +20,14 @@ func add_status_effect(new_effect: StatusEffect):
 	var instance = tile.instantiate()
 	instance.set_status_effect(new_effect)
 	add_child(instance)
+	connect_signals(new_effect)
+	new_effect.unit = get_parent()
 	active_effects.append(new_effect)
 	new_effect.removed.connect(remove_status_effect)
+
+func connect_signals(status_effect: StatusEffect):
+	get_parent().turn_started.connect(status_effect.on_turn_start)
+	get_parent().turn_ended.connect(status_effect.on_turn_end)
 
 func remove_status_effect(effect: StatusEffect):
 	active_effects.erase(effect)

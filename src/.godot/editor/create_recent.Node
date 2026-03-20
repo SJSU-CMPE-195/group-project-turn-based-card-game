@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 Label      - Matches the "text" keyword.
 TextureRect
 Label
@@ -7,11 +7,12 @@ HBoxContainer
 Card
 Card_shop
 Node
-=======
 Camera2D
 MeshInstance2D
+Button
+RichTextLabel
 Label
->>>>>>> 50efc0476909fe25120485a01ff6e5284676c492
+Camera2D
 Control
 CollisionShape2D
 Area2D

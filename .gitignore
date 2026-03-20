@@ -163,8 +163,9 @@ docker-data/
 # Add project-specific ignores below
 *.cfg
 *.cfg
-*.godot
+#*.godot
 src/unit.gd.uid
 src/map_generator.gd.uid
 src/unit.gd.uid
 *.uid
+*.cfg

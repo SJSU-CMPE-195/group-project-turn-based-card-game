@@ -26,12 +26,20 @@ class_name Card
 			description = t
 			card_description.text = description
 
+@export var cost: int = 2:
+	set(t):
+		if Engine.is_editor_hint():
+			cost = t
+			energy_cost.text = str(t)
+
 @export var vfx_scene: PackedScene
 
 @onready var card_art: TextureRect = $PanelContainer/MarginContainer/VBoxContainer/CardArt
 @onready var name_label = $PanelContainer/MarginContainer/VBoxContainer/Name
 @onready var card_description = $PanelContainer/MarginContainer/VBoxContainer/Description
 @onready var type = $PanelContainer/MarginContainer/VBoxContainer/Control/Type
+@onready var energy_cost = $PanelContainer/EnergyCost
+
 
 var tween: Tween
 
