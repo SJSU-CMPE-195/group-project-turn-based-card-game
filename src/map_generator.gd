@@ -25,10 +25,6 @@ func _ready():
 	visualize()
 
 
-# ------------------------------------------------------------
-# GRID GENERATION
-# ------------------------------------------------------------
-
 func generate():
 
 	path_arr.clear()
@@ -132,7 +128,8 @@ func visualize():
 	node_arr.clear()
 
 	for c in get_children():
-		c.queue_free()
+		if c is MapNode:
+			c.queue_free()
 
 	# spawn nodes (RECTANGULAR with null entries)
 

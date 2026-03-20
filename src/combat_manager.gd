@@ -3,25 +3,48 @@ extends Node
 var selected_ally: AllyUnit
 var selected_enemy: Enemy
 
+var enemies: Array
+var allies: Array
+
 var selecting: bool = false
 
 var turn_count: int = 0
 var player_turn: bool = true
 var target_select_hint: Node
 
+var max_player_energy: int = 5
+var player_energy: int = 5
+
 signal enemy_selected
 signal unit_selected
-signal turn_ended
+signal enemy_turn_ended
+signal player_turn_ended
 signal enemy_turn_start
 signal player_turn_start
+signal combat_started
+signal energy_spent
+
+func register_ally(unit: Unit):
+	allies.append(unit)
+	unit.died.connect(ally_died)
+
+func register_enemy(unit: Unit):
+	enemies.append(unit)
+	unit.died.connect(enemy_died)
 
 func end_turn():
-	turn_ended.emit()
+	print("ENDING: ", player_turn)
+	if player_turn:
+		player_turn_ended.emit()
+	else:
+		enemy_turn_ended.emit()
 	turn_count += 1
 	player_turn = !player_turn
+	begin_turn()
 
 func begin_turn():
 	if player_turn:
+		create_energy(max_player_energy - player_energy)
 		player_turn_start.emit()
 	else:
 		enemy_turn_start.emit()
@@ -37,3 +60,35 @@ func select_unit(unit: Unit):
 		selected_enemy = unit
 		enemy_selected.emit()
 	unit_selected.emit()
+
+func begin_combat():
+	begin_turn()
+	combat_started.emit()
+
+func create_energy(amount: int):
+	player_energy += amount
+	energy_spent.emit()
+
+func spend_energy(amount: int):
+	player_energy -= amount
+	energy_spent.emit()
+
+func enemy_died():
+	for enemy: Node in enemies:
+		if !enemy.is_dead:
+			return
+	win_combat()
+
+func ally_died():
+	for enemy in enemies:
+		if !enemy.is_dead:
+			return
+	lose_combat()
+
+func win_combat():
+	SceneManager.exit_to_map()
+	pass
+
+func lose_combat():
+	SceneManager.exit_to_map()
+	pass

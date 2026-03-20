@@ -1,5 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dkto06aiqtmjk"]
 
+[ext_resource type="Script" uid="uid://lm0ssoxo6ccv" path="res://User Interface/upgrade_shop.gd" id="1_6nlb5"]
 [ext_resource type="Texture2D" uid="uid://eyyh14nmcuef" path="res://images/Shop_background.png" id="1_awj6m"]
 [ext_resource type="Resource" uid="uid://duh650wd25okn" path="res://Cards/Fireball/fireball.tres" id="2_jtywd"]
 [ext_resource type="PackedScene" uid="uid://bckqrikkxb2i2" path="res://Cards/Fireball/FireballCard.tscn" id="3_b0k30"]
@@ -23,23 +24,25 @@ shield = ExtResource("3_j63wu")
 heal = ExtResource("4_rpni3")
 gold = 700
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=174540634]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1200.0
-offset_bottom = 700.0
+offset_left = -26.0
+offset_top = -20.0
+offset_right = 1174.0
+offset_bottom = 680.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_awj6m")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="FireballCard" parent="." instance=ExtResource("3_b0k30")]
+[node name="FireballCard" parent="." unique_id=1369441075 instance=ExtResource("3_b0k30")]
 position = Vector2(125, 200)
 script = null
 
-[node name="TextureRect" type="TextureRect" parent="FireballCard"]
+[node name="TextureRect" type="TextureRect" parent="FireballCard" unique_id=75640717]
 offset_left = -93.0
 offset_top = 207.0
 offset_right = 286.0
@@ -59,11 +62,11 @@ text = "
 icon = ExtResource("3_vrv3w")
 script = ExtResource("5_xbj78")
 
-[node name="Shield" parent="." instance=ExtResource("5_6nlb5")]
+[node name="Shield" parent="." unique_id=188632598 instance=ExtResource("5_6nlb5")]
 position = Vector2(425, 200)
 script = null
 
-[node name="TextureRect" type="TextureRect" parent="Shield"]
+[node name="TextureRect" type="TextureRect" parent="Shield" unique_id=1025507383]
 offset_left = -93.0
 offset_top = 207.0
 offset_right = 286.0
@@ -84,7 +87,7 @@ script = ExtResource("5_xbj78")
 position = Vector2(725, 200)
 script = null
 
-[node name="TextureRect" type="TextureRect" parent="HealCard"]
+[node name="TextureRect" type="TextureRect" parent="HealCard" unique_id=1959651425]
 offset_left = -93.0
 offset_top = 207.0
 offset_right = 286.0

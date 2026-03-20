@@ -1,10 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3go76t12spt8"]
+[gd_scene load_steps=4 format=3 uid="uid://b3go76t12spt8"]
 
 [ext_resource type="Script" uid="uid://djreghmluv4xd" path="res://map_node.gd" id="1_r064c"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_r064c"]
 size = Vector2(10, 10)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r064c"]
+
 [node name="MeshInstance2D" type="MeshInstance2D" unique_id=586546588]
 mesh = SubResource("QuadMesh_r064c")
 script = ExtResource("1_r064c")
+
+[node name="Button" type="Button" parent="." unique_id=148627749]
+custom_minimum_size = Vector2(20, 20)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_r064c")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -2,8 +2,10 @@
 extends Card
 
 func select_card():
-	await CombatManager.select_enemy()
-	activate()
+	if CombatManager.player_energy >= cost:
+		CombatManager.spend_energy(cost)
+		await CombatManager.select_enemy()
+		activate()
 
 func activate():
 	var instance = vfx_scene.instantiate()
@@ -14,10 +16,10 @@ func activate():
 	await instance.target_reached
 	var burn = preload("res://Status Effects/Burn.tres").duplicate()
 	CombatManager.selected_enemy.apply_status_effect(burn)
-	CombatManager.selected_enemy.take_damage(20)
-	CombatManager.end_turn()
+	CombatManager.selected_enemy.take_damage(30)
 	
 
 func _input(event):
 	if event.is_action_pressed("select"): ## Activates when input is "Selected"
-		select_card()
+		if z_index == 1:
+			select_card()
