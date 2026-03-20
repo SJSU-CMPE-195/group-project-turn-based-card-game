@@ -35,7 +35,7 @@ Our solution is to create a self-contained card game that combines mechanics fro
 
 ## Demo
 
-[Link to demo video or GIF]
+link: [https://youtu.be/ik9uDN4Mgp0]
 
 **Live Demo:** [URL if deployed]
 
@@ -79,7 +79,9 @@ git clone https://github.com/SJSU-CMPE-195/group-project-turn-based-card-game.gi
 # Step 2. Change directory
 cd group-project-turn-based-card-game
 
-# Step 3. 
+# Step 3. Proceed to godot engine project manager once done with installation
+
+# Step 4. Select import and find path to group project turn based card game in order to add it
 
 ### Running Locally
 
@@ -89,6 +91,12 @@ cd group-project-turn-based-card-game
 
 # The app will be available at http://localhost:XXXX
 ```
+
+### Running
+Press "run specific scene" or use shortcut "ctrl + shift + f5. Once in "select scene" window, click any scene twice to run it.
+
+### Usage
+Players can go through each scene. They typically will begin at the map generator scene. Move to the combat scene to play the game. Use provided cards to defeat enemies. Select an energy target by pressing space on keyboard, click where to place card, and launch it. Buy new cards or upgrade owned cards to have better chances at winning. 
 
 ### Running Tests
 
@@ -119,11 +127,25 @@ cd group-project-turn-based-card-game
 
 ```
 .
-├── [folder]/           # Description
-├── src/                # Source code files
-├── tests/              # Test files
-├── docs/               # Documentation files
-└── README.md
+├── [folder]                 # Description
+    ├── docs/               # Documentation files
+       .gitkeep
+        Card_shop.png
+        Combat_scene.png
+        Map_generator.png
+    ├── src/                # Source code files
+        .godot
+        Cards
+        Module & Game Logic
+        Skeleton_Sword
+        Status Effects
+        User Interface
+        VFX
+        images
+    ├── tests/              # Test files
+        .gitignore
+        README_195.md
+        SCHEDULE-195.md
 ```
 
 ---
