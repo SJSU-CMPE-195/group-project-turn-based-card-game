@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1773973389
+::res://::1774991349
 5DD67A08-8A4E-4C25-B1FB-5F781FD7DB76.png::CompressedTexture2D::4842565863547310456::1772159129::1772163000::1::::<><><>0<>0<>6a1641d24a3b43405df85bd445bb07db<>res://.godot/imported/5DD67A08-8A4E-4C25-B1FB-5F781FD7DB76.png-fdefaeb4a7452b99a56f14aab84d1d76.ctex::
 ally_unit.gd::GDScript::7858940947498336426::1773968657::0::1::::AllyUnit<>Unit<><>0<>0<><>::
 BaseUnit.tscn::PackedScene::3054376799777507760::1772162997::0::1::::<><><>0<>0<><>::uid://bkuhysq7qpuwf::::res://unit.gd<>uid://6735gifvs4w1::::res://health_component.gd
@@ -34,8 +34,8 @@ status_effect_tile.gd::GDScript::2158772098838848678::1772941576::0::1::::<>Text
 turn_start_display.gd::GDScript::1050656282978491290::1773968657::0::1::::<>Label<><>0<>0<><>::
 unit.gd::GDScript::3130065524770804793::1773968657::0::1::::Unit<>AnimatedSprite2D<><>1<>0<><>::
 unit_slot.gd::GDScript::7268899576094761430::1772942503::0::1::::<>Area2D<><>0<>0<><>::
-::res://Cards/::1773955093
-DataCard.gd::GDScript::8818046561074701554::1773955093::0::1::::Data_Card<>Resource<><>0<>0<><>::
+::res://Cards/::1773973475
+DataCard.gd::GDScript::8818046561074701554::1773973475::0::1::::Data_Card<>Resource<><>0<>0<><>::
 new_resource.tres::Resource/Data_Card::7070310246320578494::1773109064::0::1::::<><><>0<>0<><>::uid://dxvr65658sfjm::::res://Cards/DataCard.gd
 node.tscn::PackedScene::8125273095242507697::1773109064::0::1::::<><><>0<>0<><>::uid://bfrymito8pxw1::::res://Modules & Game Logic/Card_shop.gd<>uid://c7y58hfbd32vy::::res://Cards/new_resource.tres
 ::res://Cards/_Template/::1773968657
@@ -57,20 +57,20 @@ poison_card.gd::GDScript::7499392044452373649::1773109064::0::1::::<>Card<><>0<>
 shield.gd::GDScript::6603370988268796857::1771218461::0::1::::<>Card<><>0<>1<><>::
 shield.tres::Resource/Data_Card::2659344048255394638::1773964707::0::1::::<><><>0<>0<><>::uid://dxvr65658sfjm::::res://Cards/DataCard.gd
 Shield.tscn::PackedScene::2776784113531885532::1771218461::0::1::::<><><>0<>0<><>::uid://kgo4cjemjess::::res://Cards/_Template/Card.tscn<>uid://c1cys5b6lljsj::::res://Cards/Shield/shield.gd
-::res://images/::1773903114
+::res://images/::1774991349
 Buy.png::CompressedTexture2D::3092087427976657217::1773868748::1773902946::1::::<><><>0<>0<>285fbcbefd08ca80050a0dafd1e29c93<>res://.godot/imported/Buy.png-c87c6951eb5544c89d897275b2b10155.ctex::
 Coin.png::CompressedTexture2D::3379653006813312652::1773868748::1773902946::1::::<><><>0<>0<>8a0182876de399b2d7ed1b32f0ab94c3<>res://.godot/imported/Coin.png-1a1806c522c80e97612b78d38e7e9dfe.ctex::
-Deck_background.png::CompressedTexture2D::8807104525297934731::1773903101::1773903114::1::::<><><>0<>0<>41bce82b70fa8ac23b11beec9307b6b8<>res://.godot/imported/Deck_background.png-c6de08da876cb7889da9172dcbe856f0.ctex::
+Deck_background.png::CompressedTexture2D::7394028931597579102::1774991326::1774991349::1::::<><><>0<>0<>63069312c36ee796306ea53da8e13d24<>res://.godot/imported/Deck_background.png-c6de08da876cb7889da9172dcbe856f0.ctex::
 Shop_background.png::CompressedTexture2D::331771560046523789::1773868748::1773902946::1::::<><><>0<>0<>7a72abf4016d8959b02302d10a462b8f<>res://.godot/imported/Shop_background.png-63948aacae5892f8258b3763c29c2b48.ctex::
 Upgrade_button.png::CompressedTexture2D::3225816911872303074::1773868748::1773902946::1::::<><><>0<>0<>cee0c6a5689e8cbc2f867de8bc6f02c1<>res://.godot/imported/Upgrade_button.png-542e145dfc8b286d151db0ed49474662.ctex::
-::res://Modules & Game Logic/::1773967615
-Card.gd::GDScript::3562216972424298969::1773106245::0::1::::Cards<>Resource<><>0<>0<><>::
-Card_shop.gd::GDScript::2773938411274430058::1773965071::0::1::::Card_shop<>Node<><>0<>0<><>::
+::res://Modules & Game Logic/::1773974050
+Card.gd::GDScript::3562216972424298969::1773973515::0::1::::Cards<>Resource<><>0<>0<><>::
+Card_shop.gd::GDScript::2773938411274430058::1773973693::0::1::::Card_shop<>Node<><>0<>0<><>::
 Deck_class_variables_and_functions.txt::TextFile::-1::1773903158::0::1::::<><><>0<>0<><>::
-deck_system.gd::GDScript::8988631754241149307::1773967615::0::1::::Deck<>Node<><>0<>0<><>::
+deck_system.gd::GDScript::8988631754241149307::1773973949::0::1::::Deck<>Node<><>0<>0<><>::
 deck_system_requirement.txt::TextFile::-1::1771221279::0::1::::<><><>0<>0<><>::
 Unit_class_variables_and_functions.txt::TextFile::-1::1773109064::0::1::::<><><>0<>0<><>::
-Upgrade_shop.gd::GDScript::2624085188849154106::1773966698::0::1::::Upgrade_shop<>Node<><>0<>0<><>::
+Upgrade_shop.gd::GDScript::2624085188849154106::1773974050::0::1::::Upgrade_shop<>Node<><>0<>0<><>::
 ::res://Skeleton_Sword/::1771218461
 ::res://Skeleton_Sword/Skeleton_White/::1771218461
 ::res://Skeleton_Sword/Skeleton_White/Skeleton_Without_VFX/::1771218602

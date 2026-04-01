@@ -1,8 +1,7 @@
 extends Node
 class_name Deck
 
-# correpond to Card_drawn label
-@onready var draw = $Card_drawn
+@onready var horizontal_hand_container = $HorizontalContainerHand
 # variable declaration for deck system
 var deck = []
 var hand = []
@@ -49,8 +48,6 @@ func _on_cards_deck_button_pressed() -> void: # Button to draw card when pressed
 	single_card = draw_card()
 	if(single_card != null): # If card found
 		var name = single_card.name
-		var text = draw.text
-		draw.text = name
 	else: # If card not found
 		return
 		
