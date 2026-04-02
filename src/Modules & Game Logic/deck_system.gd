@@ -1,53 +1,85 @@
 extends Node
 class_name Deck
+@onready var horizontal_hand = $HorizontalContainerHand
+@onready var horizontal_discard = $DiscardPileHorizontal
+@export var scene: PackedScene
 
-@onready var horizontal_hand_container = $HorizontalContainerHand
-# variable declaration for deck system
-var deck = []
+var fireball = preload("res://Cards/Fireball/fireball.tres")
+var shield = preload("res://Cards/Shield/shield.tres")
+var heal = preload("res://Cards/Heal/heal.tres")
+
+# deck has three cards of each minimum
+var deck = [fireball, heal, shield, fireball.duplicate(), heal.duplicate(), shield.duplicate(),
+fireball.duplicate(), heal.duplicate(), shield.duplicate()] 
+
+# player draws from cards, duplicate of deck
+var cards = deck.duplicate()
+
+#hand is what player has
 var hand = []
-var single_card
-var cards = []
-var removed_card = []
 
-func draw_card(): # function to draw card from deck
-	if cards.empty():
-		return
-	var front = cards.pop_front()
-	# removed_card = removed_card + [front]
-	hand = hand + [front]
-	return(front)
+# removed/used cards go in discard pile
+var discard_pile = []
 
-func discard_card(card): # add card to discard pile
-	removed_card = removed_card + [card]
+func draw_card():
+	var size
+	var front
+	size = cards.size()
+	if size <= 0:
+		print("Zero cards remaining, cannot draw")
+		return null
+	else:
+		front = cards.pop_front()
+		hand.push_back(front)
+		# show_hand() 
+		print("Card drawn successfully!")
+		return(front)
+
+func remove_card(card): # add card to discard pile, remove from hand
+	hand.erase(card)
+	# show_hand()
+	discard_pile.push_back(card)
+	# show_discard()
 	
-func add_card(card): # add new card
-	cards = cards + [card]
-
-func remove_card(card): # remove card from deck
-	cards.erase(card)
+func add_card(card): 
+	var card_duplicate
+	card_duplicate = card.duplicate(true)
+	cards.push_back(card_duplicate)
+	deck.push_back(card_duplicate)
 	
 func reset_card_deck(): # removed cards returned to initial deck, shuffle deck
-	cards = cards + removed_card
-	removed_card = []
-	shuffle_card_deck()
+	discard_pile = []
+	hand = []
+	cards = deck.duplicate()
+	print("Deck has been reset successfully.")
 	
-func shuffle_card_deck(): # Shuffle deck of cards
+func shuffle_card_deck(): 
 	cards.shuffle()
-	print("Deck has been shuffled.")
+	print("Deck has been shuffled successfully.")
 
-func obtain_top_card(): # Get top card
+func obtain_top_card():
 	if cards.empty():
-		return
+		return null
 	else:
 		return(cards[0])
 
-func duplicate_card(card): # Make copy of card
+func duplicate_card(card):
 	return(card.duplicate(true))
 
-func _on_cards_deck_button_pressed() -> void: # Button to draw card when pressed
-	single_card = draw_card()
-	if(single_card != null): # If card found
-		var name = single_card.name
-	else: # If card not found
+#func show_hand():
+
+#func show_discard():
+
+func _on_reset_button_pressed() -> void:
+	reset_card_deck()
+
+func _on_shuffle_button_pressed() -> void:
+	shuffle_card_deck()
+
+func _on_draw_button_pressed() -> void:
+	var flag = true # remove variable
+	if(flag == true): # replace code with when card can be drawn
+		draw_card()
+	else: # scenario when card cannot be drawn
 		return
-		
+	

@@ -1,15 +1,14 @@
-MarginContainer
+Control
+Node2D
 HBoxContainer
+Button
+MarginContainer
 Label
 Label      - Matches the "text" keyword.
 TextureRect
-Button
 Card
 Card_shop
 Node
 Camera2D
 MeshInstance2D
-Button
 RichTextLabel
-Label
-Camera2D
