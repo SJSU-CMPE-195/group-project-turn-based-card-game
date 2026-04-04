@@ -1,4 +1,4 @@
-res://Modules & Game Logic/deck_system.gd
-res://User Interface/Deck_system.tscn
+res://User Interface/Deck system.tscn
 res://Status Effects/Burn.tres
 res://energy_orb.gdshader
+res://Modules & Game Logic/deck_system_revised.gd

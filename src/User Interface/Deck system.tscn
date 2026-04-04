@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://olexu8hc1rho"]
+
+[ext_resource type="Script" uid="uid://df5ul2o3gmk4q" path="res://Modules & Game Logic/deck_system_revised.gd" id="1_ikkbp"]
+[ext_resource type="PackedScene" uid="uid://kgo4cjemjess" path="res://Cards/_Template/Card.tscn" id="2_eex1v"]
+[ext_resource type="Texture2D" uid="uid://qqy1h64kxant" path="res://images/Deck_background.png" id="3_dbfnp"]
+[ext_resource type="Texture2D" uid="uid://bpdpjnqibu370" path="res://images/reset.png" id="4_tayht"]
+[ext_resource type="Texture2D" uid="uid://cq4l5hhdg8s06" path="res://images/shuffle.png" id="5_k87sd"]
+[ext_resource type="Texture2D" uid="uid://niidmi0ifdth" path="res://images/draw.png" id="6_3rxnu"]
+
+[node name="DeckSystem" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ikkbp")
+scene = ExtResource("2_eex1v")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_dbfnp")
+expand_mode = 1
+
+[node name="VerticalDeckContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -498.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 15
+alignment = 2
+
+[node name="ButtonInterface" type="HBoxContainer" parent="VerticalDeckContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Reset_button" type="Button" parent="VerticalDeckContainer/ButtonInterface"]
+layout_mode = 2
+icon = ExtResource("4_tayht")
+
+[node name="Shuffle_button" type="Button" parent="VerticalDeckContainer/ButtonInterface"]
+layout_mode = 2
+icon = ExtResource("5_k87sd")
+
+[node name="Draw_button" type="Button" parent="VerticalDeckContainer/ButtonInterface"]
+layout_mode = 2
+icon = ExtResource("6_3rxnu")
+
+[node name="HorizontalContainerHand" type="HBoxContainer" parent="VerticalDeckContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="DiscardPileHorizontal" type="HBoxContainer" parent="VerticalDeckContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[connection signal="pressed" from="VerticalDeckContainer/ButtonInterface/Reset_button" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="VerticalDeckContainer/ButtonInterface/Shuffle_button" to="." method="_on_shuffle_button_pressed"]
+[connection signal="pressed" from="VerticalDeckContainer/ButtonInterface/Draw_button" to="." method="_on_draw_button_pressed"]

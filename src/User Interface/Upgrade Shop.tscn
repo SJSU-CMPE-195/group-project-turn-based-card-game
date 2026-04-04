@@ -1,6 +1,5 @@
 [gd_scene load_steps=12 format=3 uid="uid://dkto06aiqtmjk"]
 
-[ext_resource type="Script" uid="uid://lm0ssoxo6ccv" path="res://User Interface/upgrade_shop.gd" id="1_6nlb5"]
 [ext_resource type="Texture2D" uid="uid://eyyh14nmcuef" path="res://images/Shop_background.png" id="1_awj6m"]
 [ext_resource type="Resource" uid="uid://duh650wd25okn" path="res://Cards/Fireball/fireball.tres" id="2_jtywd"]
 [ext_resource type="PackedScene" uid="uid://bckqrikkxb2i2" path="res://Cards/Fireball/FireballCard.tscn" id="3_b0k30"]
@@ -17,56 +16,61 @@ line_spacing = 0.0
 font_size = 25
 font_color = Color(0.0034808286, 0.064501986, 0.36675528, 1)
 
-[node name="UpgradeShop" type="Node2D"]
+[node name="UpgradeShop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("5_xbj78")
 fireball = ExtResource("2_jtywd")
 shield = ExtResource("3_j63wu")
 heal = ExtResource("4_rpni3")
 gold = 700
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=174540634]
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -26.0
-offset_top = -20.0
-offset_right = 1174.0
-offset_bottom = 680.0
+offset_right = 348.0
+offset_bottom = 252.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_awj6m")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="FireballCard" parent="." unique_id=1369441075 instance=ExtResource("3_b0k30")]
+[node name="FireballCard" parent="." instance=ExtResource("3_b0k30")]
 position = Vector2(125, 200)
 script = null
 
-[node name="TextureRect" type="TextureRect" parent="FireballCard" unique_id=75640717]
+[node name="TextureRect" type="TextureRect" parent="FireballCard"]
 offset_left = -93.0
-offset_top = 207.0
+offset_top = 225.0
 offset_right = 286.0
-offset_bottom = 588.0
+offset_bottom = 606.0
 scale = Vector2(0.17, 0.17)
 texture = ExtResource("3_gv66k")
 script = ExtResource("5_xbj78")
 
 [node name="Button to upgrade fireball" type="Button" parent="FireballCard"]
 offset_left = -93.0
-offset_top = 155.0
+offset_top = 175.0
 offset_right = 537.0
-offset_bottom = 310.0
+offset_bottom = 330.0
 scale = Vector2(0.3, 0.3)
 text = "
 "
 icon = ExtResource("3_vrv3w")
 script = ExtResource("5_xbj78")
 
-[node name="Shield" parent="." unique_id=188632598 instance=ExtResource("5_6nlb5")]
+[node name="Shield" parent="." instance=ExtResource("5_6nlb5")]
 position = Vector2(425, 200)
 script = null
 
-[node name="TextureRect" type="TextureRect" parent="Shield" unique_id=1025507383]
+[node name="TextureRect" type="TextureRect" parent="Shield"]
 offset_left = -93.0
 offset_top = 207.0
 offset_right = 286.0
@@ -85,9 +89,8 @@ script = ExtResource("5_xbj78")
 
 [node name="HealCard" parent="." instance=ExtResource("6_xbj78")]
 position = Vector2(725, 200)
-script = null
 
-[node name="TextureRect" type="TextureRect" parent="HealCard" unique_id=1959651425]
+[node name="TextureRect" type="TextureRect" parent="HealCard"]
 offset_left = -93.0
 offset_top = 207.0
 offset_right = 286.0
@@ -104,6 +107,7 @@ scale = Vector2(0.3, 0.3)
 icon = ExtResource("3_vrv3w")
 
 [node name="Name label" type="Label" parent="."]
+layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_left = 450.0
@@ -113,9 +117,8 @@ grow_horizontal = 2
 text = "Upgrade Shop
 "
 label_settings = SubResource("LabelSettings_2w6fm")
-horizontal_alignment = 1
 
-[connection signal="pressed" from="FireballCard/Button to upgrade fireball" to="." method="_on_button_to_upgrade_fireball_pressed"]
 [connection signal="pressed" from="FireballCard/Button to upgrade fireball" to="FireballCard" method="_on_button_to_upgrade_fireball_pressed"]
+[connection signal="pressed" from="FireballCard/Button to upgrade fireball" to="." method="_on_button_to_upgrade_fireball_pressed"]
 [connection signal="pressed" from="Shield/Button to upgrade shield" to="." method="_on_button_to_upgrade_shield_pressed"]
 [connection signal="pressed" from="HealCard/Button to upgrade heal" to="." method="_on_button_to_upgrade_heal_pressed"]

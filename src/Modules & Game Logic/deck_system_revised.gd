@@ -1,8 +1,9 @@
-extends Node
-class_name Deck
-@onready var horizontal_hand = $HorizontalContainerHand
-@onready var horizontal_discard = $DiscardPileHorizontal
+extends Control
 @export var scene: PackedScene
+@onready var vertical_deck = $VerticalDeckContainer
+@onready var horizontal_hand = $VerticalDeckContainer/HorizontalContainerHand
+@onready var horizontal_discard = $VerticalDeckContainer/DiscardPileHorizontal
+@onready var button_interface = $VerticalDeckContainer/ButtonInterface
 
 var fireball = preload("res://Cards/Fireball/fireball.tres")
 var shield = preload("res://Cards/Shield/shield.tres")
@@ -31,15 +32,15 @@ func draw_card():
 	else:
 		front = cards.pop_front()
 		hand.push_back(front)
-		# show_hand() 
+		show_hand() 
 		print("Card drawn successfully!")
 		return(front)
 
 func remove_card(card): # add card to discard pile, remove from hand
 	hand.erase(card)
-	# show_hand()
+	show_hand()
 	discard_pile.push_back(card)
-	# show_discard()
+	show_discard()
 	
 func add_card(card): 
 	var card_duplicate
@@ -66,20 +67,29 @@ func obtain_top_card():
 func duplicate_card(card):
 	return(card.duplicate(true))
 
-#func show_hand():
-
-#func show_discard():
+func show_hand():
+	var card_in_hand
+	for i in hand:
+		card_in_hand = scene.instantiate()
+		horizontal_hand.add_child(card_in_hand)
+	for j in horizontal_hand.get_children():
+		print(j.name)
+	
+func show_discard():
+	var card_in_discard
+	for i in discard_pile:
+		card_in_discard = scene.instantiate()
+		horizontal_discard.add_child(card_in_discard)
 
 func _on_reset_button_pressed() -> void:
 	reset_card_deck()
-
+	
 func _on_shuffle_button_pressed() -> void:
 	shuffle_card_deck()
-
+	
 func _on_draw_button_pressed() -> void:
 	var flag = true # remove variable
 	if(flag == true): # replace code with when card can be drawn
 		draw_card()
 	else: # scenario when card cannot be drawn
 		return
-	
