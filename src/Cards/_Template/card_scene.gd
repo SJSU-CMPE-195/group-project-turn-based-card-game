@@ -1,8 +1,8 @@
 @tool
-extends Node2D
+extends Control
 class_name Card
 
-@export_enum("Spell", "Attack") var card_type = "Not Set":
+@export var card_type: String = "Not Set":
 	set(t):
 		if Engine.is_editor_hint():
 			card_type = t

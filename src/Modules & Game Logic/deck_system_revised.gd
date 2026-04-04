@@ -52,10 +52,12 @@ func reset_card_deck(): # removed cards returned to initial deck, shuffle deck
 	discard_pile = []
 	hand = []
 	cards = deck.duplicate()
+	show_hand()
+	show_discard()
 	print("Deck has been reset successfully.")
 	
 func shuffle_card_deck(): 
-	cards.shuffle()
+	hand.shuffle()
 	print("Deck has been shuffled successfully.")
 
 func obtain_top_card():
@@ -69,17 +71,31 @@ func duplicate_card(card):
 
 func show_hand():
 	var card_in_hand
-	for i in hand:
+	for i in horizontal_hand.get_children():
+		horizontal_hand.remove_child(i)
+		i.free()
+	for j in hand:
 		card_in_hand = scene.instantiate()
 		horizontal_hand.add_child(card_in_hand)
-	for j in horizontal_hand.get_children():
-		print(j.name)
+		card_in_hand.card_type = j.card_type
+		card_in_hand.card_name = j.card_name
+		card_in_hand.art = j.art
+		card_in_hand.description = j.description
+		card_in_hand.cost = j.cost
 	
 func show_discard():
 	var card_in_discard
-	for i in discard_pile:
+	for i in horizontal_discard.get_children():
+		horizontal_discard.remove_child(i)
+		i.free()
+	for j in discard_pile:
 		card_in_discard = scene.instantiate()
 		horizontal_discard.add_child(card_in_discard)
+		card_in_discard.card_type = j.card_type
+		card_in_discard.card_name = j.card_name
+		card_in_discard.art = j.art
+		card_in_discard.description = j.description
+		card_in_discard.cost = j.cost
 
 func _on_reset_button_pressed() -> void:
 	reset_card_deck()
@@ -93,3 +109,12 @@ func _on_draw_button_pressed() -> void:
 		draw_card()
 	else: # scenario when card cannot be drawn
 		return
+	
+func _on_remove_button_pressed() -> void:
+	var size
+	size = hand.size()
+	if(size <= 0):
+		print("Can't remove card")
+	else:
+		remove_card(hand[0])
+		print("Card removed succsssfully")

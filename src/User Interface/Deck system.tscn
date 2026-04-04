@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://olexu8hc1rho"]
+[gd_scene load_steps=8 format=3 uid="uid://olexu8hc1rho"]
 
 [ext_resource type="Script" uid="uid://df5ul2o3gmk4q" path="res://Modules & Game Logic/deck_system_revised.gd" id="1_ikkbp"]
 [ext_resource type="PackedScene" uid="uid://kgo4cjemjess" path="res://Cards/_Template/Card.tscn" id="2_eex1v"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bpdpjnqibu370" path="res://images/reset.png" id="4_tayht"]
 [ext_resource type="Texture2D" uid="uid://cq4l5hhdg8s06" path="res://images/shuffle.png" id="5_k87sd"]
 [ext_resource type="Texture2D" uid="uid://niidmi0ifdth" path="res://images/draw.png" id="6_3rxnu"]
+[ext_resource type="Texture2D" uid="uid://ca25uvv0vkp81" path="res://images/remove.png" id="7_k87sd"]
 
 [node name="DeckSystem" type="Control"]
 layout_mode = 3
@@ -37,12 +38,23 @@ offset_top = -498.0
 offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_constants/separation = 15
+theme_override_constants/separation = 0
 alignment = 2
+
+[node name="HorizontalContainerHand" type="HBoxContainer" parent="VerticalDeckContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="DiscardPileHorizontal" type="HBoxContainer" parent="VerticalDeckContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
 
 [node name="ButtonInterface" type="HBoxContainer" parent="VerticalDeckContainer"]
 layout_mode = 2
-theme_override_constants/separation = 15
+theme_override_constants/separation = 0
 alignment = 1
 
 [node name="Reset_button" type="Button" parent="VerticalDeckContainer/ButtonInterface"]
@@ -57,16 +69,11 @@ icon = ExtResource("5_k87sd")
 layout_mode = 2
 icon = ExtResource("6_3rxnu")
 
-[node name="HorizontalContainerHand" type="HBoxContainer" parent="VerticalDeckContainer"]
+[node name="Remove_button" type="Button" parent="VerticalDeckContainer/ButtonInterface"]
 layout_mode = 2
-theme_override_constants/separation = 15
-alignment = 1
-
-[node name="DiscardPileHorizontal" type="HBoxContainer" parent="VerticalDeckContainer"]
-layout_mode = 2
-theme_override_constants/separation = 15
-alignment = 1
+icon = ExtResource("7_k87sd")
 
 [connection signal="pressed" from="VerticalDeckContainer/ButtonInterface/Reset_button" to="." method="_on_reset_button_pressed"]
 [connection signal="pressed" from="VerticalDeckContainer/ButtonInterface/Shuffle_button" to="." method="_on_shuffle_button_pressed"]
 [connection signal="pressed" from="VerticalDeckContainer/ButtonInterface/Draw_button" to="." method="_on_draw_button_pressed"]
+[connection signal="pressed" from="VerticalDeckContainer/ButtonInterface/Remove_button" to="." method="_on_remove_button_pressed"]

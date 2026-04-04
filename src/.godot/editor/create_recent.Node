@@ -1,7 +1,7 @@
 Button
+Control
 HBoxContainer
 VBoxContainer
-Control
 Node2D
 CanvasLayer
 TextureRect
