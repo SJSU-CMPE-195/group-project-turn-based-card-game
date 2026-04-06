@@ -1,22 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://bckqrikkxb2i2"]
+[gd_scene load_steps=5 format=3 uid="uid://bckqrikkxb2i2"]
 
 [ext_resource type="PackedScene" uid="uid://kgo4cjemjess" path="res://Cards/_Template/Card.tscn" id="1_1tysj"]
 [ext_resource type="Script" uid="uid://bmxkbkx044f03" path="res://Cards/Fireball/fireball_card.gd" id="2_ew4aa"]
 [ext_resource type="PackedScene" uid="uid://buxhoxquu328k" path="res://Cards/Fireball/FireballVFX.tscn" id="3_ew4aa"]
+[ext_resource type="Texture2D" uid="uid://cwvm4ttyujci6" path="res://icon.svg" id="3_rldc7"]
 
-[node name="FireballCard" unique_id=1758048854 instance=ExtResource("1_1tysj")]
+[node name="FireballCard" instance=ExtResource("1_1tysj")]
 script = ExtResource("2_ew4aa")
 card_name = "Fireball"
-description = "Launches a ball of fire that burns the target
-[color=red]30 Fire Damage"
+art = ExtResource("3_rldc7")
+description = "[color=red]30 Fire Damage"
 vfx_scene = ExtResource("3_ew4aa")
 
-[node name="Name" parent="PanelContainer/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1732733523) index="0" unique_id=1440426399]
+[node name="Name" parent="PanelContainer/MarginContainer/VBoxContainer" index="0"]
 text = "Fireball"
 
-[node name="Description" parent="PanelContainer/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1732733523) index="2" unique_id=907473193]
-text = "Launches a ball of fire that burns the target
-[color=red]30 Fire Damage"
+[node name="Description" parent="PanelContainer/MarginContainer/VBoxContainer" index="2"]
+text = "[color=red]30 Fire Damage"
 
-[node name="EnergyCost" parent="PanelContainer" parent_id_path=PackedInt32Array(1270336072) index="1" unique_id=638470859]
+[node name="EnergyCost" parent="PanelContainer" index="1"]
 text = "2"

@@ -4,7 +4,6 @@ extends Control
 @onready var horizontal_hand = $VerticalDeckContainer/HorizontalContainerHand
 @onready var horizontal_discard = $VerticalDeckContainer/DiscardPileHorizontal
 @onready var button_interface = $VerticalDeckContainer/ButtonInterface
-
 var fireball = preload("res://Cards/Fireball/fireball.tres")
 var shield = preload("res://Cards/Shield/shield.tres")
 var heal = preload("res://Cards/Heal/heal.tres")
@@ -57,7 +56,7 @@ func reset_card_deck(): # removed cards returned to initial deck, shuffle deck
 	print("Deck has been reset successfully.")
 	
 func shuffle_card_deck(): 
-	hand.shuffle()
+	cards.shuffle()
 	print("Deck has been shuffled successfully.")
 
 func obtain_top_card():
@@ -79,9 +78,7 @@ func show_hand():
 		horizontal_hand.add_child(card_in_hand)
 		card_in_hand.card_type = j.card_type
 		card_in_hand.card_name = j.card_name
-		card_in_hand.art = j.art
 		card_in_hand.description = j.description
-		card_in_hand.cost = j.cost
 	
 func show_discard():
 	var card_in_discard
@@ -93,9 +90,7 @@ func show_discard():
 		horizontal_discard.add_child(card_in_discard)
 		card_in_discard.card_type = j.card_type
 		card_in_discard.card_name = j.card_name
-		card_in_discard.art = j.art
 		card_in_discard.description = j.description
-		card_in_discard.cost = j.cost
 
 func _on_reset_button_pressed() -> void:
 	reset_card_deck()

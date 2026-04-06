@@ -1,19 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://bftdh1ledd24o"]
+[gd_scene load_steps=4 format=3 uid="uid://bftdh1ledd24o"]
 
 [ext_resource type="PackedScene" uid="uid://kgo4cjemjess" path="res://Cards/_Template/Card.tscn" id="1_cnnd4"]
 [ext_resource type="Script" uid="uid://c1cys5b6lljsj" path="res://Cards/Shield/shield.gd" id="2_ejys1"]
+[ext_resource type="Texture2D" uid="uid://cwvm4ttyujci6" path="res://icon.svg" id="3_i3y1n"]
 
-[node name="Shield" unique_id=2102861138 instance=ExtResource("1_cnnd4")]
+[node name="Shield" instance=ExtResource("1_cnnd4")]
 script = ExtResource("2_ejys1")
 card_type = "Spell"
 card_name = "Shield"
+art = ExtResource("3_i3y1n")
 description = "Grants [color=blue]+5 Shield"
 
-[node name="Name" parent="PanelContainer/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1732733523) index="0" unique_id=1440426399]
+[node name="Name" parent="PanelContainer/MarginContainer/VBoxContainer" index="0"]
 text = "Shield"
 
-[node name="Type" parent="PanelContainer/MarginContainer/VBoxContainer/Control" parent_id_path=PackedInt32Array(1836816063) index="1" unique_id=1390091731]
+[node name="Type" parent="PanelContainer/MarginContainer/VBoxContainer/Control" index="1"]
 text = "Spell"
 
-[node name="Description" parent="PanelContainer/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1732733523) index="2" unique_id=907473193]
+[node name="Description" parent="PanelContainer/MarginContainer/VBoxContainer" index="2"]
 text = "Grants [color=blue]+5 Shield"

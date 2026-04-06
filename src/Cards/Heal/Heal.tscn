@@ -1,14 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://dk6dt1n6n4xbu"]
+[gd_scene load_steps=3 format=3 uid="uid://dk6dt1n6n4xbu"]
 
 [ext_resource type="PackedScene" uid="uid://kgo4cjemjess" path="res://Cards/_Template/Card.tscn" id="1_clhom"]
+[ext_resource type="Texture2D" uid="uid://cwvm4ttyujci6" path="res://icon.svg" id="2_wupa1"]
 
-[node name="HealCard" unique_id=1640214145 instance=ExtResource("1_clhom")]
-position = Vector2(-20, -48)
+[node name="HealCard" instance=ExtResource("1_clhom")]
+offset_left = -20.0
+offset_top = -48.0
+offset_right = 130.0
+offset_bottom = 252.0
 card_name = "Heal"
+art = ExtResource("2_wupa1")
 description = "Heals [color=dark_green]5 health"
 
-[node name="Name" parent="PanelContainer/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1732733523) index="0" unique_id=1440426399]
+[node name="Name" parent="PanelContainer/MarginContainer/VBoxContainer" index="0"]
 text = "Heal"
 
-[node name="Description" parent="PanelContainer/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1732733523) index="2" unique_id=907473193]
+[node name="Description" parent="PanelContainer/MarginContainer/VBoxContainer" index="2"]
 text = "Heals [color=dark_green]5 health"
