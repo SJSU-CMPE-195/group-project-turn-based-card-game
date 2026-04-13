@@ -1,14 +1,14 @@
-Button
+Label
+TextureRect
 Control
-HBoxContainer
+Button
 VBoxContainer
+GridContainer
+ScrollContainer
+HBoxContainer
+VScrollBar
 Node2D
 CanvasLayer
-TextureRect
 MarginContainer
-Label
 Label      - Matches the "text" keyword.
 Card
-Card_shop
-Node
-Camera2D

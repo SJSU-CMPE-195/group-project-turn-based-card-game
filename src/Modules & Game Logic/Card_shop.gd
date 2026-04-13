@@ -47,26 +47,3 @@ func display(): # output card name, cost, and description to console
 	return{"Name of card is": product.card_name, "Price of card is": product.money,
 	"Card description": product.description}
 	
-func _on_button_to_buy_fireball_pressed() -> void: # pressing button to buy fireball card
-	product = fireball
-	press_buy()
-
-func _on_button_to_buy_shield_pressed() -> void: # pressing button to buy shield card
-	product = shield
-	press_buy()
-	
-func _on_button_to_buy_heal_pressed() -> void: # pressing button to buy heal card
-	product = heal
-	press_buy()
-
-func _on_button_to_upgrade_shield_pressed() -> void: # pressing button to upgrade shield card
-	product = shield
-	press_upgrade()
-
-func _on_button_to_upgrade_heal_pressed() -> void: # pressing button to upgrade heal card
-	product = heal
-	press_upgrade()
-
-func _on_button_to_upgrade_fireball_pressed() -> void: # pressing button to upgrade fireball card
-	product = fireball
-	press_upgrade()
