@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dkto06aiqtmjk"]
+[gd_scene load_steps=15 format=3 uid="uid://dkto06aiqtmjk"]
 
 [ext_resource type="Texture2D" uid="uid://eyyh14nmcuef" path="res://images/Shop_background.png" id="1_awj6m"]
 [ext_resource type="Resource" uid="uid://duh650wd25okn" path="res://Cards/Fireball/fireball.tres" id="2_jtywd"]
@@ -15,6 +15,15 @@
 line_spacing = 0.0
 font_size = 25
 font_color = Color(0.0034808286, 0.064501986, 0.36675528, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jtywd"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_j63wu"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_rpni3"]
+font_size = 30
 
 [node name="UpgradeShop" type="Control"]
 layout_mode = 3
@@ -42,101 +51,91 @@ texture = ExtResource("1_awj6m")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Coin symbol fireball" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 32.0
-offset_top = 575.0
-offset_right = 411.0
-offset_bottom = 956.0
-scale = Vector2(0.17, 0.17)
-texture = ExtResource("3_gv66k")
-script = ExtResource("5_xbj78")
-
-[node name="Button to upgrade fireball" type="Button" parent="."]
-layout_mode = 0
-offset_left = 32.0
-offset_top = 525.0
-offset_right = 662.0
-offset_bottom = 680.0
-scale = Vector2(0.3, 0.3)
-text = "
-"
-icon = ExtResource("3_vrv3w")
-script = ExtResource("5_xbj78")
-
-[node name="FireballCard" parent="." instance=ExtResource("3_b0k30")]
-layout_mode = 0
-offset_left = 125.0
-offset_top = 200.0
-offset_right = 275.0
-offset_bottom = 500.0
-script = null
-
-[node name="Coin symbol shield" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 332.0
-offset_top = 575.0
-offset_right = 711.0
-offset_bottom = 956.0
-scale = Vector2(0.17, 0.17)
-texture = ExtResource("3_gv66k")
-
-[node name="Button to upgrade shield" type="Button" parent="."]
-layout_mode = 0
-offset_left = 332.0
-offset_top = 525.0
-offset_right = 958.0
-offset_bottom = 680.0
-scale = Vector2(0.3, 0.3)
-icon = ExtResource("3_vrv3w")
-script = ExtResource("5_xbj78")
-
-[node name="Button to upgrade heal" type="Button" parent="."]
-layout_mode = 0
-offset_left = 632.0
-offset_top = 525.0
-offset_right = 1258.0
-offset_bottom = 680.0
-scale = Vector2(0.3, 0.3)
-icon = ExtResource("3_vrv3w")
-
-[node name="Coin symbol heal" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 632.0
-offset_top = 575.0
-offset_right = 1011.0
-offset_bottom = 956.0
-scale = Vector2(0.17, 0.17)
-texture = ExtResource("3_gv66k")
-
-[node name="HealCard" parent="." instance=ExtResource("6_xbj78")]
-layout_mode = 0
-offset_left = 725.0
-offset_top = 200.0
-offset_right = 875.0
-offset_bottom = 500.0
-
-[node name="Shield" parent="." instance=ExtResource("5_6nlb5")]
-layout_mode = 0
-offset_left = 425.0
-offset_top = 200.0
-offset_right = 575.0
-offset_bottom = 500.0
-script = null
-
 [node name="Name label" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = 450.0
-offset_right = 650.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_right = 100.0
 offset_bottom = 300.0
 grow_horizontal = 2
 text = "Upgrade Shop
 "
 label_settings = SubResource("LabelSettings_2w6fm")
 
-[connection signal="pressed" from="Button to upgrade fireball" to="." method="_on_button_to_upgrade_fireball_pressed"]
-[connection signal="pressed" from="Button to upgrade fireball" to="FireballCard" method="_on_button_to_upgrade_fireball_pressed"]
-[connection signal="pressed" from="Button to upgrade shield" to="." method="_on_button_to_upgrade_shield_pressed"]
-[connection signal="pressed" from="Button to upgrade heal" to="." method="_on_button_to_upgrade_heal_pressed"]
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(1000, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -250.0
+offset_right = 500.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 75
+theme_override_constants/v_separation = 15
+columns = 3
+
+[node name="FireballCard" parent="ScrollContainer/GridContainer" instance=ExtResource("3_b0k30")]
+layout_mode = 2
+
+[node name="Shield" parent="ScrollContainer/GridContainer" instance=ExtResource("5_6nlb5")]
+layout_mode = 2
+
+[node name="HealCard" parent="ScrollContainer/GridContainer" instance=ExtResource("6_xbj78")]
+layout_mode = 2
+
+[node name="UpgradeFireballButton" type="Button" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+icon = ExtResource("3_vrv3w")
+
+[node name="UpgradeShieldButton" type="Button" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+icon = ExtResource("3_vrv3w")
+
+[node name="UpgradeHealButton" type="Button" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+icon = ExtResource("3_vrv3w")
+
+[node name="CoinImage" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("3_gv66k")
+
+[node name="CoinImage2" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("3_gv66k")
+
+[node name="CoinImage3" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("3_gv66k")
+
+[node name="UpgradeCost" type="Label" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+text = "400 coins to upgrade"
+label_settings = SubResource("LabelSettings_jtywd")
+horizontal_alignment = 1
+
+[node name="UpgradeCost2" type="Label" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+text = "400 coins to upgrade"
+label_settings = SubResource("LabelSettings_j63wu")
+horizontal_alignment = 1
+
+[node name="UpgradeCost3" type="Label" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+text = "400 coins to upgrade"
+label_settings = SubResource("LabelSettings_rpni3")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="ScrollContainer/GridContainer/UpgradeFireballButton" to="." method="_on_upgrade_fireball_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/UpgradeShieldButton" to="." method="_on_upgrade_shield_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/UpgradeHealButton" to="." method="_on_upgrade_heal_button_pressed"]
