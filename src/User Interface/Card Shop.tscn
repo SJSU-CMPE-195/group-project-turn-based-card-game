@@ -1,7 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://ch7aw5la4y251"]
+[gd_scene load_steps=13 format=3 uid="uid://ch7aw5la4y251"]
 
 [ext_resource type="Script" uid="uid://bfrymito8pxw1" path="res://Modules & Game Logic/Card_shop.gd" id="1_1ongq"]
-[ext_resource type="Resource" uid="uid://c7y58hfbd32vy" path="res://Cards/new_resource.tres" id="2_pmrkh"]
 [ext_resource type="Texture2D" uid="uid://eyyh14nmcuef" path="res://images/Shop_background.png" id="3_i40vj"]
 [ext_resource type="Resource" uid="uid://duh650wd25okn" path="res://Cards/Fireball/fireball.tres" id="3_vws81"]
 [ext_resource type="PackedScene" uid="uid://bckqrikkxb2i2" path="res://Cards/Fireball/FireballCard.tscn" id="4_fce2j"]
@@ -28,7 +27,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1ongq")
-product = ExtResource("2_pmrkh")
 fireball = ExtResource("3_vws81")
 shield = ExtResource("4_l6uhj")
 heal = ExtResource("5_88t1b")
@@ -135,3 +133,7 @@ layout_mode = 2
 text = "Costs 100 coins to buy"
 label_settings = SubResource("LabelSettings_l6uhj")
 horizontal_alignment = 1
+
+[connection signal="pressed" from="ScrollContainer/GridContainer/FireballBuyButton" to="." method="_on_fireball_buy_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/ShieldBuyButton" to="." method="_on_shield_buy_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/HealBuyButton" to="." method="_on_heal_buy_button_pressed"]

@@ -135,3 +135,7 @@ layout_mode = 2
 text = "400 coins to upgrade"
 label_settings = SubResource("LabelSettings_rpni3")
 horizontal_alignment = 1
+
+[connection signal="pressed" from="ScrollContainer/GridContainer/UpgradeFireballButton" to="." method="_on_upgrade_fireball_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/UpgradeShieldButton" to="." method="_on_upgrade_shield_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/UpgradeHealButton" to="." method="_on_upgrade_heal_button_pressed"]

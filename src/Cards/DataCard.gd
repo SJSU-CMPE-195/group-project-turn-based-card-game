@@ -29,6 +29,8 @@ func upgrade(): # function to upgrade
 		rank = rank + 1
 		damage = damage + 10
 		block = block + 10
+	print("You are now in rank # ", rank, ", damage dealt has increased to ", damage, 
+		  ", and block power has increased to ", block)
 	
 func effects(user: Unit, target: Unit): # effects function
 	if target != null:
