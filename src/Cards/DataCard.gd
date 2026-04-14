@@ -2,7 +2,7 @@ extends Resource
 class_name Data_Card
 
 # variable declaration
-@export_enum("Spell", "Attack", "Defense") var card_type: String = "Defense"
+@export_enum("Spell", "Attack", "Ward") var card_type: String = "Defense"
 @export var rank: int = 1
 @export var highest_rank: int = 10
 @export var money: int = 100

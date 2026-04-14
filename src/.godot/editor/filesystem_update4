@@ -1,7 +1,0 @@
-res://User Interface/Upgrade Shop.tscn
-res://Status Effects/Burn.tres
-res://energy_orb.gdshader
-res://User Interface/Card Shop.tscn
-res://Cards/_Template/card_scene.gd
-res://Modules & Game Logic/Card_shop.gd
-res://Cards/DataCard.gd
