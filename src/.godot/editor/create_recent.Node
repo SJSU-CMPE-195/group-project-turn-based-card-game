@@ -1,3 +1,6 @@
+UnitSlot
+MeshInstance2D
+Camera2D
 Label
 TextureRect
 Control
@@ -9,6 +12,3 @@ HBoxContainer
 VScrollBar
 Node2D
 CanvasLayer
-MarginContainer
-Label      - Matches the "text" keyword.
-Card

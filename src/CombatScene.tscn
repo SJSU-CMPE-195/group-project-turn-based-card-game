@@ -1,7 +1,7 @@
 [gd_scene load_steps=39 format=3 uid="uid://dy14emuaan1hh"]
 
 [ext_resource type="Texture2D" uid="uid://ca81l8hoi7uua" path="res://5DD67A08-8A4E-4C25-B1FB-5F781FD7DB76.png" id="1_c531c"]
-[ext_resource type="Script" uid="uid://b32nemcoekqmh" path="res://combat_scene.gd" id="1_obqq3"]
+[ext_resource type="Script" uid="uid://cxn2k2amdhylg" path="res://combat_scene.gd" id="1_obqq3"]
 [ext_resource type="Script" uid="uid://dbtdyjn18gho5" path="res://unit_slot.gd" id="2_6ravy"]
 [ext_resource type="Script" uid="uid://dj76uyh8ov30a" path="res://ally_unit.gd" id="2_diwen"]
 [ext_resource type="Texture2D" uid="uid://ddmlxg8f8wlw3" path="res://EnemySpriteSheet.png" id="3_hvv87"]
@@ -12,16 +12,16 @@
 [ext_resource type="PackedScene" uid="uid://bftdh1ledd24o" path="res://Cards/Shield/Shield.tscn" id="7_oc8fh"]
 [ext_resource type="PackedScene" uid="uid://xilvmcdv5y5f" path="res://Cursor.tscn" id="10_7gog2"]
 [ext_resource type="Script" uid="uid://dd1l21wes61le" path="res://combat_hint.gd" id="11_ji6bj"]
-[ext_resource type="Script" uid="uid://cuutkhvpbbvd7" path="res://turn_start_display.gd" id="13_qmjfx"]
+[ext_resource type="Script" uid="uid://duoeksra0abm1" path="res://turn_start_display.gd" id="13_qmjfx"]
 [ext_resource type="Shader" uid="uid://cadhqs8mql0ky" path="res://energy_orb.gdshader" id="13_vp7l8"]
-[ext_resource type="Script" uid="uid://wu572pavrk5e" path="res://energy_display.gd" id="14_y04i6"]
-[ext_resource type="Script" uid="uid://dxypkghv2gkc" path="res://end_turn_button.gd" id="15_b4bhy"]
+[ext_resource type="Script" uid="uid://mtffxf6dy7pl" path="res://energy_display.gd" id="14_y04i6"]
+[ext_resource type="Script" uid="uid://l6t2k42byqmi" path="res://end_turn_button.gd" id="15_b4bhy"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_ec351"]
 size = Vector2(-1200, -700)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7gog2"]
-size = Vector2(200, 100)
+size = Vector2(180, 95)
 
 [sub_resource type="QuadMesh" id="QuadMesh_6ravy"]
 size = Vector2(150, 75)
@@ -181,11 +181,15 @@ position = Vector2(250, -100)
 
 [node name="AllySlots" type="Node2D" parent="." unique_id=1528464300]
 
-[node name="AllySlot1" type="Node2D" parent="AllySlots" unique_id=677101576]
+[node name="AllySlot1" type="Area2D" parent="AllySlots" unique_id=1710022468]
 position = Vector2(-150, 0)
+script = ExtResource("2_6ravy")
+metadata/_custom_type_script = "uid://dbtdyjn18gho5"
 
-[node name="AllySlot2" type="Node2D" parent="AllySlots" unique_id=979696422]
+[node name="AllySlot2" type="Area2D" parent="AllySlots" unique_id=491349173]
 position = Vector2(-350, 0)
+script = ExtResource("2_6ravy")
+metadata/_custom_type_script = "uid://dbtdyjn18gho5"
 
 [node name="Icon" type="AnimatedSprite2D" parent="AllySlots/AllySlot2" unique_id=1905193477]
 texture_filter = 1
@@ -201,6 +205,9 @@ offset_top = -85.5
 offset_right = -49.0
 offset_bottom = -72.5
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AllySlots/AllySlot2" unique_id=451331541]
+shape = SubResource("RectangleShape2D_7gog2")
+
 [node name="AllySlot3" type="Node2D" parent="AllySlots" unique_id=223742878]
 position = Vector2(-250, 100)
 
@@ -212,25 +219,43 @@ position = Vector2(0, 59)
 scale = Vector2(0.9, 0.9)
 
 [node name="CardTemplate5" parent="Cards" unique_id=1997878244 instance=ExtResource("5_55xw1")]
-position = Vector2(261, 207)
+offset_left = 261.0
+offset_top = 207.0
+offset_right = 411.0
+offset_bottom = 507.0
 rotation = 0.12915437
 
 [node name="CardTemplate4" parent="Cards" unique_id=1595590724 instance=ExtResource("3_ijum5")]
-position = Vector2(171, 185)
+offset_left = 171.0
+offset_top = 185.0
+offset_right = 321.0
+offset_bottom = 485.0
 rotation = 0.064577185
 
 [node name="Shield" parent="Cards" unique_id=283810029 instance=ExtResource("7_oc8fh")]
-position = Vector2(86.00001, 181)
+offset_left = 86.00001
+offset_top = 181.0
+offset_right = 236.0
+offset_bottom = 481.0
 
 [node name="CardTemplate2" parent="Cards" unique_id=1729794657 instance=ExtResource("5_55xw1")]
-position = Vector2(-25, 174)
+offset_left = -25.0
+offset_top = 174.0
+offset_right = 125.0
+offset_bottom = 474.0
 
 [node name="CardTemplate" parent="Cards" unique_id=1592299025 instance=ExtResource("3_ijum5")]
-position = Vector2(-158, 187)
+offset_left = -158.0
+offset_top = 187.0
+offset_right = -8.0
+offset_bottom = 487.0
 rotation = -0.064577185
 
 [node name="CardTemplate3" parent="Cards" unique_id=1854188771 instance=ExtResource("5_55xw1")]
-position = Vector2(-243, 209)
+offset_left = -243.0
+offset_top = 209.0
+offset_right = -93.0
+offset_bottom = 509.0
 rotation = -0.12915437
 
 [node name="Cursor" parent="." unique_id=1526032638 instance=ExtResource("10_7gog2")]

@@ -1,6 +1,7 @@
 extends Room
 
 func enter():
+	$Camera2D.make_current()
 	$Fader.modulate = Color()
 	await get_tree().create_timer(1.0).timeout
 	var tween = create_tween()

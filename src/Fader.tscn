@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqyxgwk41f07w"]
+
+[ext_resource type="Script" uid="uid://crmt4xell3kp1" path="res://fader.gd" id="1_7pw67"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_v4xd1"]
+size = Vector2(10000, 10000)
+
+[node name="Fader" type="MeshInstance2D" unique_id=517843066]
+modulate = Color(0, 0, 0, 0)
+z_index = 10
+mesh = SubResource("QuadMesh_v4xd1")
+script = ExtResource("1_7pw67")

@@ -8,6 +8,9 @@ class_name Map
 
 @onready var node_scene = preload("res://MapNode.tscn")
 
+@onready var camera: Camera2D = $Camera2D
+@export var scroll_speed := 0.05
+
 enum node_type { DEFAULT, SPLIT, BRIDGE, EMPTY }
 enum room_type { COMBAT, SHOP, REWARD }
 
@@ -202,3 +205,10 @@ func assign_room_type():
 				data["room"] = room_type.REWARD
 			else:
 				data["room"] = room_type.SHOP
+
+
+
+func _input(event):
+	if event is InputEventPanGesture:
+		var scroll : float = event.delta.y
+		camera.position.y = clamp(camera.position.y + scroll * scroll_speed, -700.0, -100.0)

@@ -1,42 +1,51 @@
-[gd_scene load_steps=6 format=3 uid="uid://slbyaxo6t3f0"]
+[gd_scene load_steps=9 format=3 uid="uid://slbyaxo6t3f0"]
 
 [ext_resource type="Script" uid="uid://cn7rufkvjmxpg" path="res://map_generator.gd" id="1_tpkai"]
-[ext_resource type="Texture2D" uid="uid://eyyh14nmcuef" path="res://images/Shop_background.png" id="2_l8cd0"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_l8cd0"]
 size = Vector2(1200, -800)
 
 [sub_resource type="Gradient" id="Gradient_dtwme"]
-colors = PackedColorArray(0, 0, 0, 0.41960785, 0, 0, 0, 0)
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.40492958, 1)
+colors = PackedColorArray(0, 0, 0, 0.16862746, 0, 0, 0, 0, 1, 1, 1, 0.16862746)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_6qhsq"]
 gradient = SubResource("Gradient_dtwme")
 fill_from = Vector2(0.5606796, 1)
-fill_to = Vector2(0.22572815, 0)
+fill_to = Vector2(0.3106796, 0)
+
+[sub_resource type="QuadMesh" id="QuadMesh_tpkai"]
+size = Vector2(1000, 2000)
+
+[sub_resource type="Gradient" id="Gradient_tpkai"]
+colors = PackedColorArray(0.95, 0.85895836, 0.7125, 1, 0.93, 0.81592, 0.63240004, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_l8cd0"]
+frequency = 0.0356
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_dtwme"]
+height = 1024
+noise = SubResource("FastNoiseLite_l8cd0")
+color_ramp = SubResource("Gradient_tpkai")
 
 [node name="Node2D" type="Node2D" unique_id=1822779809]
 z_index = -2
 position = Vector2(598, 579)
 script = ExtResource("1_tpkai")
 bridges = 25
+scroll_speed = 1.0
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=2144006252]
-modulate = Color(0.8, 0.8, 0.8, 1)
-z_index = -2
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -622.0
-offset_top = -607.0
-offset_right = 578.0
-offset_bottom = 93.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_l8cd0")
-expand_mode = 1
-stretch_mode = 6
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1264957397]
+position = Vector2(-20, -100)
+zoom = Vector2(2, 2)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=619078462]
-position = Vector2(-23, -293)
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Camera2D" unique_id=619078462]
+scale = Vector2(0.6, 0.6)
 mesh = SubResource("QuadMesh_l8cd0")
 texture = SubResource("GradientTexture2D_6qhsq")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=807963482]
+z_index = -4
+mesh = SubResource("QuadMesh_tpkai")
+texture = SubResource("NoiseTexture2D_dtwme")

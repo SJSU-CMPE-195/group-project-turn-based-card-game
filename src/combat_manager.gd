@@ -16,6 +16,7 @@ var max_player_energy: int = 5
 var player_energy: int = 5
 
 signal enemy_selected
+signal ally_selected
 signal unit_selected
 signal enemy_turn_ended
 signal player_turn_ended
@@ -59,6 +60,9 @@ func select_unit(unit: Unit):
 	if unit is Enemy:
 		selected_enemy = unit
 		enemy_selected.emit()
+	else:
+		selected_ally = unit
+		ally_selected.emit()
 	unit_selected.emit()
 
 func begin_combat():
