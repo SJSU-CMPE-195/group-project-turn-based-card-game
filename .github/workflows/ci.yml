@@ -39,7 +39,7 @@ jobs:
         # testing with mike schulze from marketplace
         uses: godot-gdunit-labs/gdUnit4-action@v1
         with:
-          godot-version: '4.4.1'
+          godot-version: '4.5.1'
           # include path to tests, need to access in root directory
           paths: 'res://tests'
           version: 'v6.1.2'
@@ -53,6 +53,7 @@ jobs:
         # using automated deploy
         uses: softprops/action-gh-release@v1
         with:
+          tag_name: first_version
           # run: |
           files: |
             CardGame.console.exe
