@@ -1,24 +1,14 @@
-<<<<<<< HEAD
 Label
-=======
-
->>>>>>> a404472969fce8c5b416fe09ff331a344002b5c9
-Label      - Matches the "text" keyword.
 TextureRect
-Button
-HBoxContainer
-Card
-Card_shop
-Node
-Camera2D
-MeshInstance2D
-<<<<<<< HEAD
-=======
-Button
-RichTextLabel
-Label
-Camera2D
->>>>>>> a404472969fce8c5b416fe09ff331a344002b5c9
 Control
-CollisionShape2D
-Area2D
+Button
+VBoxContainer
+GridContainer
+ScrollContainer
+HBoxContainer
+VScrollBar
+Node2D
+CanvasLayer
+MarginContainer
+Label      - Matches the "text" keyword.
+Card

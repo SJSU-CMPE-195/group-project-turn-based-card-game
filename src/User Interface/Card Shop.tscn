@@ -1,7 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://ch7aw5la4y251"]
 
 [ext_resource type="Script" uid="uid://bfrymito8pxw1" path="res://Modules & Game Logic/Card_shop.gd" id="1_1ongq"]
-[ext_resource type="Resource" uid="uid://c7y58hfbd32vy" path="res://Cards/new_resource.tres" id="2_pmrkh"]
 [ext_resource type="Texture2D" uid="uid://eyyh14nmcuef" path="res://images/Shop_background.png" id="3_i40vj"]
 [ext_resource type="Resource" uid="uid://duh650wd25okn" path="res://Cards/Fireball/fireball.tres" id="3_vws81"]
 [ext_resource type="PackedScene" uid="uid://bckqrikkxb2i2" path="res://Cards/Fireball/FireballCard.tscn" id="4_fce2j"]
@@ -13,124 +12,129 @@
 [ext_resource type="Texture2D" uid="uid://bofenkjv1aaam" path="res://images/Coin.png" id="9_l6uhj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fce2j"]
+line_spacing = 30.0
 font_size = 25
 font_color = Color(0.043137256, 0, 1, 1)
 
-[node name="CardShop" type="Node2D"]
+[sub_resource type="LabelSettings" id="LabelSettings_l6uhj"]
+font_size = 30
+
+[node name="CardShop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_1ongq")
-product = ExtResource("2_pmrkh")
 fireball = ExtResource("3_vws81")
 shield = ExtResource("4_l6uhj")
 heal = ExtResource("5_88t1b")
 gold = 700
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1200.0
-offset_bottom = 700.0
+[node name="Wood" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 348.0
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("3_i40vj")
-
-[node name="FireballCard" parent="TextureRect" instance=ExtResource("4_fce2j")]
-position = Vector2(125, 200)
-
-[node name="Button to buy fireball" type="Button" parent="TextureRect/FireballCard"]
-offset_left = -55.0
-offset_top = 155.0
-offset_right = 343.0
-offset_bottom = 314.0
-scale = Vector2(0.3, 0.3)
-icon = ExtResource("5_fce2j")
-script = ExtResource("1_1ongq")
-
-[node name="Coin symbol" type="TextureRect" parent="TextureRect/FireballCard"]
-offset_left = -93.0
-offset_top = 207.0
-offset_right = 286.0
-offset_bottom = 588.0
-scale = Vector2(0.17, 0.17)
-texture = ExtResource("9_l6uhj")
-
-[node name="Cost of fireball" type="Label" parent="TextureRect/FireballCard"]
-offset_left = -17.0
-offset_top = 217.0
-offset_right = 63.0
-offset_bottom = 350.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0.7764706, 1)
-theme_override_font_sizes/font_size = 47
-text = "300
-
-"
-
-[node name="Shield" parent="TextureRect" instance=ExtResource("6_1yxok")]
-position = Vector2(425, 200)
-
-[node name="Button to buy shield" type="Button" parent="TextureRect/Shield"]
-offset_left = -55.0
-offset_top = 155.0
-offset_right = 343.0
-offset_bottom = 314.0
-scale = Vector2(0.3, 0.3)
-icon = ExtResource("5_fce2j")
-
-[node name="Cost of shield" type="Label" parent="TextureRect/Shield"]
-offset_left = -17.0
-offset_top = 217.0
-offset_right = 63.0
-offset_bottom = 350.0
-theme_override_font_sizes/font_size = 47
-text = "200
-"
-
-[node name="Coin symbol" type="TextureRect" parent="TextureRect/Shield"]
-offset_left = -93.0
-offset_top = 207.0
-offset_right = 286.0
-offset_bottom = 588.0
-scale = Vector2(0.17, 0.17)
-texture = ExtResource("9_l6uhj")
-
-[node name="HealCard" parent="TextureRect" instance=ExtResource("4_hn8vq")]
-position = Vector2(725, 200)
-
-[node name="Button to buy heal" type="Button" parent="TextureRect/HealCard"]
-offset_left = -55.0
-offset_top = 155.0
-offset_right = 343.0
-offset_bottom = 314.0
-scale = Vector2(0.3, 0.3)
-icon = ExtResource("5_fce2j")
-
-[node name="Coin symbol" type="TextureRect" parent="TextureRect/HealCard"]
-offset_left = -93.0
-offset_top = 207.0
-offset_right = 286.0
-offset_bottom = 588.0
-scale = Vector2(0.17, 0.17)
-texture = ExtResource("9_l6uhj")
-
-[node name="Cost of healing" type="Label" parent="TextureRect/HealCard"]
-offset_left = -17.0
-offset_top = 217.0
-offset_right = 63.0
-offset_bottom = 350.0
-theme_override_colors/font_outline_color = Color(0, 0, 0.827451, 1)
-theme_override_font_sizes/font_size = 47
-text = "100
-
-"
+expand_mode = 1
 
 [node name="Name label" type="Label" parent="."]
-offset_left = 500.0
-offset_right = 580.0
-offset_bottom = 49.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -199.0
+offset_right = 199.0
+offset_bottom = 165.0
+grow_horizontal = 2
 text = "Card Shop
 "
 label_settings = SubResource("LabelSettings_fce2j")
+horizontal_alignment = 1
 
-[node name="Gold remaining" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(3000, 1000)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -476.0
+offset_top = -548.0
+offset_right = 2524.0
+offset_bottom = 452.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
 
-[connection signal="pressed" from="TextureRect/FireballCard/Button to buy fireball" to="." method="_on_button_to_buy_fireball_pressed"]
-[connection signal="pressed" from="TextureRect/Shield/Button to buy shield" to="." method="_on_button_to_buy_shield_pressed"]
-[connection signal="pressed" from="TextureRect/HealCard/Button to buy heal" to="." method="_on_button_to_buy_heal_pressed"]
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+clip_contents = true
+layout_mode = 2
+theme_override_constants/h_separation = 75
+theme_override_constants/v_separation = 10
+columns = 3
+
+[node name="FireballCard" parent="ScrollContainer/GridContainer" instance=ExtResource("4_fce2j")]
+layout_mode = 2
+
+[node name="ShieldCard" parent="ScrollContainer/GridContainer" instance=ExtResource("6_1yxok")]
+layout_mode = 2
+
+[node name="HealCard" parent="ScrollContainer/GridContainer" instance=ExtResource("4_hn8vq")]
+layout_mode = 2
+
+[node name="FireballBuyButton" type="Button" parent="ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 5)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("5_fce2j")
+
+[node name="ShieldBuyButton" type="Button" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+icon = ExtResource("5_fce2j")
+
+[node name="HealBuyButton" type="Button" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+icon = ExtResource("5_fce2j")
+
+[node name="CoinImage" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("9_l6uhj")
+
+[node name="CoinImage2" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("9_l6uhj")
+
+[node name="CoinImage3" type="TextureRect" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("9_l6uhj")
+
+[node name="FireballCost" type="Label" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+text = "Costs 300 coins to buy"
+label_settings = SubResource("LabelSettings_l6uhj")
+horizontal_alignment = 1
+
+[node name="ShieldCost" type="Label" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+text = "Costs 200 coins to buy"
+label_settings = SubResource("LabelSettings_l6uhj")
+horizontal_alignment = 1
+
+[node name="HealCost" type="Label" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+text = "Costs 100 coins to buy"
+label_settings = SubResource("LabelSettings_l6uhj")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="ScrollContainer/GridContainer/FireballBuyButton" to="." method="_on_fireball_buy_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/ShieldBuyButton" to="." method="_on_shield_buy_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/HealBuyButton" to="." method="_on_heal_buy_button_pressed"]

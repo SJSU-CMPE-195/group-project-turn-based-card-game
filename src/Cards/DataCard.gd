@@ -2,7 +2,7 @@ extends Resource
 class_name Data_Card
 
 # variable declaration
-@export_enum("Spell", "Attack", "Defense") var card_type: String = "Defense"
+@export_enum("Spell", "Attack", "Ward") var card_type: String = "Defense"
 @export var rank: int = 1
 @export var highest_rank: int = 10
 @export var money: int = 100
@@ -29,6 +29,8 @@ func upgrade(): # function to upgrade
 		rank = rank + 1
 		damage = damage + 10
 		block = block + 10
+	print("You are now in rank # ", rank, ", damage dealt has increased to ", damage, 
+		  ", and block power has increased to ", block)
 	
 func effects(user: Unit, target: Unit): # effects function
 	if target != null:

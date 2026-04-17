@@ -1,9 +1,13 @@
-[gd_resource type="Resource" script_class="Data_Card" load_steps=2 format=3 uid="uid://bd5hajgcfm6c5"]
+[gd_resource type="Resource" script_class="Data_Card" load_steps=3 format=3 uid="uid://bd5hajgcfm6c5"]
 
 [ext_resource type="Script" uid="uid://dxvr65658sfjm" path="res://Cards/DataCard.gd" id="1_7rkjo"]
+[ext_resource type="Texture2D" uid="uid://cwvm4ttyujci6" path="res://icon.svg" id="1_bqorj"]
 
 [resource]
 script = ExtResource("1_7rkjo")
+card_type = "Ward"
 money = 200
+art = ExtResource("1_bqorj")
+description = "Grants [color=blue]+5 Shield"
 card_name = "Shield card"
 metadata/_custom_type_script = "uid://dxvr65658sfjm"

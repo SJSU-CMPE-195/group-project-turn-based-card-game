@@ -1,4 +1,18 @@
-Deck system requirement
-	Data structure
-	Draw card from deck
-	Shuffle card deck
+Deck: where you draw from, has the cards
+	Includes all three cards at minimum (fireball, shield, heal)
+	Could include duplicates
+Hand: what the player uses 
+	Can only include as many cards as deck has
+	if deck has three fireball, three heal, three shield, hand cannot have more than three fireball, more than three shield, nor more than three heal
+	Can have duplicates
+Discard pile: where used cards go
+	If card gets used from hand, it goes to discard pile
+	reset card deck
+	No impact on hand
+	Discard pile becomes empty
+	Deck will get restored, cards return to it
+shuffle card deck
+	Changes order of contents in deck
+	No impact on hand
+	No impact on discard pile	
+	No creation/removal of cards
