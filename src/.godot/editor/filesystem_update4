@@ -1,10 +1,4 @@
-res://fader.gd
-res://Fader.tscn
 res://Status Effects/Burn.tres
-res://User Interface/Upgrade Shop.tscn
-res://MapGenerator.tscn
+res://GameMenu.gd
+res://GameMenu.tscn
 res://map_generator.gd
-res://CombatScene.tscn
-res://combat_scene.gd
-res://unit_slot.gd
-res://combat_manager.gd

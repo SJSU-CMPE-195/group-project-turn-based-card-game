@@ -1,11 +1,11 @@
+Button
+VBoxContainer
+TextureRect
+Control
 UnitSlot
 MeshInstance2D
 Camera2D
 Label
-TextureRect
-Control
-Button
-VBoxContainer
 GridContainer
 ScrollContainer
 HBoxContainer
