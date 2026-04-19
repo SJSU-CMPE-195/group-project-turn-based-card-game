@@ -164,8 +164,3 @@ docker-data/
 *.cfg
 *.cfg
 #*.godot
-src/unit.gd.uid
-src/map_generator.gd.uid
-src/unit.gd.uid
-*.uid
-*.cfg
