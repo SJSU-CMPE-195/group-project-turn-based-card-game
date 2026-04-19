@@ -61,17 +61,11 @@ horizontal_alignment = 1
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 custom_minimum_size = Vector2(3000, 1000)
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -476.0
-offset_top = -548.0
-offset_right = 2524.0
-offset_bottom = 452.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 
 [node name="GridContainer" type="GridContainer" parent="ScrollContainer"]

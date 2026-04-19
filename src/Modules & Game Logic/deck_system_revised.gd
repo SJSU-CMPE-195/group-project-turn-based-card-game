@@ -2,6 +2,7 @@ extends Control
 @export var scene: PackedScene
 @onready var vertical_deck = $VerticalDeckContainer
 @onready var player_hand = $"../Hand"
+# @onready var player_hand = $VerticalDeckContainer/HorizontalContainerHand
 @onready var horizontal_discard = $VerticalDeckContainer/DiscardPileHorizontal
 @onready var button_interface = $VerticalDeckContainer/ButtonInterface
 var fireball = preload("res://Cards/Fireball/fireball.tres")
@@ -25,6 +26,9 @@ func _ready():
 	CombatManager.deck_manager = self
 
 func draw_card():
+	if(player_hand == null):
+		print("Drawing card is done in combat")
+		return
 	var size
 	var front
 	size = cards.size()
@@ -50,6 +54,9 @@ func add_card(card):
 	deck.push_back(card_duplicate)
 	
 func reset_card_deck(): # removed cards returned to initial deck, shuffle deck
+	if(player_hand == null):
+		print("Resetting card deck is done in combat")
+		return
 	discard_pile = []
 	hand = []
 	cards = deck.duplicate()

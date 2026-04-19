@@ -25,7 +25,7 @@ font_size = 30
 [sub_resource type="LabelSettings" id="LabelSettings_rpni3"]
 font_size = 30
 
-[node name="UpgradeShop" type="Control" unique_id=425073810]
+[node name="UpgradeShop" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,7 +38,7 @@ shield = ExtResource("3_j63wu")
 heal = ExtResource("4_rpni3")
 gold = 700
 
-[node name="Wood" type="TextureRect" parent="." unique_id=801037501]
+[node name="Wood" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -51,7 +51,7 @@ texture = ExtResource("1_awj6m")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Name label" type="Label" parent="." unique_id=315269930]
+[node name="Name label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -64,7 +64,7 @@ text = "Upgrade Shop
 "
 label_settings = SubResource("LabelSettings_2w6fm")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1292202927]
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
 custom_minimum_size = Vector2(3000, 1000)
 layout_mode = 1
 anchors_preset = 7
@@ -80,59 +80,59 @@ grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.5, 0.5)
 
-[node name="GridContainer" type="GridContainer" parent="ScrollContainer" unique_id=1710849824]
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
 layout_mode = 2
 theme_override_constants/h_separation = 75
 theme_override_constants/v_separation = 15
 columns = 3
 
-[node name="FireballCard" parent="ScrollContainer/GridContainer" unique_id=1184224662 instance=ExtResource("3_b0k30")]
+[node name="FireballCard" parent="ScrollContainer/GridContainer" instance=ExtResource("3_b0k30")]
 layout_mode = 2
 
-[node name="Shield" parent="ScrollContainer/GridContainer" unique_id=745241469 instance=ExtResource("5_6nlb5")]
+[node name="Shield" parent="ScrollContainer/GridContainer" instance=ExtResource("5_6nlb5")]
 layout_mode = 2
 
-[node name="HealCard" parent="ScrollContainer/GridContainer" unique_id=1550840408 instance=ExtResource("6_xbj78")]
+[node name="HealCard" parent="ScrollContainer/GridContainer" instance=ExtResource("6_xbj78")]
 layout_mode = 2
 
-[node name="UpgradeFireballButton" type="Button" parent="ScrollContainer/GridContainer" unique_id=737773496]
-layout_mode = 2
-icon = ExtResource("3_vrv3w")
-
-[node name="UpgradeShieldButton" type="Button" parent="ScrollContainer/GridContainer" unique_id=1460287099]
+[node name="UpgradeFireballButton" type="Button" parent="ScrollContainer/GridContainer"]
 layout_mode = 2
 icon = ExtResource("3_vrv3w")
 
-[node name="UpgradeHealButton" type="Button" parent="ScrollContainer/GridContainer" unique_id=1091774312]
+[node name="UpgradeShieldButton" type="Button" parent="ScrollContainer/GridContainer"]
 layout_mode = 2
 icon = ExtResource("3_vrv3w")
 
-[node name="CoinImage" type="TextureRect" parent="ScrollContainer/GridContainer" unique_id=1049407789]
+[node name="UpgradeHealButton" type="Button" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+icon = ExtResource("3_vrv3w")
+
+[node name="CoinImage" type="TextureRect" parent="ScrollContainer/GridContainer"]
 layout_mode = 2
 texture = ExtResource("3_gv66k")
 expand_mode = 1
 
-[node name="CoinImage2" type="TextureRect" parent="ScrollContainer/GridContainer" unique_id=169271504]
+[node name="CoinImage2" type="TextureRect" parent="ScrollContainer/GridContainer"]
 layout_mode = 2
 texture = ExtResource("3_gv66k")
 
-[node name="CoinImage3" type="TextureRect" parent="ScrollContainer/GridContainer" unique_id=908635191]
+[node name="CoinImage3" type="TextureRect" parent="ScrollContainer/GridContainer"]
 layout_mode = 2
 texture = ExtResource("3_gv66k")
 
-[node name="UpgradeCost" type="Label" parent="ScrollContainer/GridContainer" unique_id=2119722654]
+[node name="UpgradeCost" type="Label" parent="ScrollContainer/GridContainer"]
 layout_mode = 2
 text = "400 coins to upgrade"
 label_settings = SubResource("LabelSettings_jtywd")
 horizontal_alignment = 1
 
-[node name="UpgradeCost2" type="Label" parent="ScrollContainer/GridContainer" unique_id=401753623]
+[node name="UpgradeCost2" type="Label" parent="ScrollContainer/GridContainer"]
 layout_mode = 2
 text = "400 coins to upgrade"
 label_settings = SubResource("LabelSettings_j63wu")
 horizontal_alignment = 1
 
-[node name="UpgradeCost3" type="Label" parent="ScrollContainer/GridContainer" unique_id=995848431]
+[node name="UpgradeCost3" type="Label" parent="ScrollContainer/GridContainer"]
 layout_mode = 2
 text = "400 coins to upgrade"
 label_settings = SubResource("LabelSettings_rpni3")
