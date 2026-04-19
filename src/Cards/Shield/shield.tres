@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="Data_Card" load_steps=3 format=3 uid="uid://bd5hajgcfm6c5"]
+[gd_resource type="Resource" script_class="Data_Card" load_steps=4 format=3 uid="uid://bd5hajgcfm6c5"]
 
 [ext_resource type="Script" uid="uid://dxvr65658sfjm" path="res://Cards/DataCard.gd" id="1_7rkjo"]
 [ext_resource type="Texture2D" uid="uid://cwvm4ttyujci6" path="res://icon.svg" id="1_bqorj"]
+[ext_resource type="PackedScene" uid="uid://bftdh1ledd24o" path="res://Cards/Shield/Shield.tscn" id="2_sk7l0"]
 
 [resource]
 script = ExtResource("1_7rkjo")
+card_scene = ExtResource("2_sk7l0")
 card_type = "Ward"
 money = 200
 art = ExtResource("1_bqorj")

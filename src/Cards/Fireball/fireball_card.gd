@@ -6,6 +6,7 @@ func select_card():
 		CombatManager.spend_energy(cost)
 		await CombatManager.select_enemy()
 		activate()
+		CombatManager.deck_manager.remove_card(self)
 
 func activate():
 	var instance = vfx_scene.instantiate()
@@ -17,6 +18,7 @@ func activate():
 	var burn = preload("res://Status Effects/Burn.tres").duplicate()
 	CombatManager.selected_enemy.apply_status_effect(burn)
 	CombatManager.selected_enemy.take_damage(30)
+	queue_free()
 	
 
 func _input(event):

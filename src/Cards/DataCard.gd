@@ -2,6 +2,7 @@ extends Resource
 class_name Data_Card
 
 # variable declaration
+@export var card_scene: PackedScene
 @export_enum("Spell", "Attack", "Ward") var card_type: String = "Defense"
 @export var rank: int = 1
 @export var highest_rank: int = 10

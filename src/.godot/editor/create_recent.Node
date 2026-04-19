@@ -1,14 +1,15 @@
+Panel
+Node2D
+MeshInstance2D
 Button
 VBoxContainer
 TextureRect
 Control
 UnitSlot
-MeshInstance2D
 Camera2D
 Label
 GridContainer
 ScrollContainer
 HBoxContainer
 VScrollBar
-Node2D
 CanvasLayer

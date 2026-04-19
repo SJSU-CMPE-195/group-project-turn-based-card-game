@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="Data_Card" load_steps=3 format=3 uid="uid://duh650wd25okn"]
+[gd_resource type="Resource" script_class="Data_Card" load_steps=4 format=3 uid="uid://duh650wd25okn"]
 
 [ext_resource type="Script" uid="uid://dxvr65658sfjm" path="res://Cards/DataCard.gd" id="1_bklhr"]
 [ext_resource type="Texture2D" uid="uid://cwvm4ttyujci6" path="res://icon.svg" id="1_j2bss"]
+[ext_resource type="PackedScene" uid="uid://bckqrikkxb2i2" path="res://Cards/Fireball/FireballCard.tscn" id="2_xowti"]
 
 [resource]
 script = ExtResource("1_bklhr")
+card_scene = ExtResource("2_xowti")
 card_type = "Attack"
 money = 300
 art = ExtResource("1_j2bss")

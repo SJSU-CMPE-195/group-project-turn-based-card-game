@@ -65,6 +65,7 @@ class_name Card
 @onready var type = $PanelContainer/MarginContainer/VBoxContainer/Control/Type
 @onready var energy_cost = $PanelContainer/EnergyCost
 
+var slot: Node2D
 
 var tween: Tween
 
@@ -92,4 +93,9 @@ func end_hover():
 		tween.kill()
 	tween = create_tween()
 	tween.parallel().tween_property(self, "scale", Vector2(1.0, 1.0), 0.05)
-	tween.parallel().tween_property(get_child(0), "position:y", 0, 0.1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CIRC)
+	tween.parallel().tween_property(get_child(0), "position:y", -150.0, 0.1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CIRC)
+
+func _process(delta):
+	if slot != null:
+		global_position = global_position.move_toward(slot.global_position, delta * clamp((global_position.distance_to(slot.global_position) * 10.0), 50, 2000.0))
+		rotation = move_toward(rotation,slot.rotation, delta)

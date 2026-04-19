@@ -21,7 +21,6 @@ func end_hover(node):
 		$SelectReticle.visible = false
 
 func select():
-#
 	#$SelectReticle.visible = true
 	#$SelectReticle.modulate = Color(0.0, 1.0, 0.0, 0.392)
 	CombatManager.select_unit(unit)

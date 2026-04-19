@@ -15,6 +15,8 @@ var target_select_hint: Node
 var max_player_energy: int = 5
 var player_energy: int = 5
 
+var deck_manager
+
 signal enemy_selected
 signal ally_selected
 signal unit_selected
@@ -46,6 +48,7 @@ func end_turn():
 func begin_turn():
 	if player_turn:
 		create_energy(max_player_energy - player_energy)
+		deck_manager.draw_card()
 		player_turn_start.emit()
 	else:
 		enemy_turn_start.emit()
@@ -67,6 +70,9 @@ func select_unit(unit: Unit):
 
 func begin_combat():
 	begin_turn()
+	for i in range(5):
+		deck_manager.draw_card()
+		await get_tree().create_timer(0.2).timeout
 	combat_started.emit()
 
 func create_energy(amount: int):
