@@ -1,65 +1,19 @@
-@tool
 extends Control
 class_name Card
 
-@export var card_type: String = "Not Set":
-	set(t):
-		if Engine.is_editor_hint():
-			card_type = t
-			type.text = str(card_type)
-		else:
-			card_type = t
-			if not type:
-				return null
-			type.text = str(card_type)
+@export var card_type: String = "Not Set"
 
-@export var card_name: String = "Name":
-	set(t):
-		if Engine.is_editor_hint():
-			card_name = t
-			name_label.text = card_name
-		else:
-			card_name = t
-			if not name_label:
-				return null
-			name_label.text = card_name
+@export var card_name: String = "Name"
 
-@export var art: Texture2D = load("res://icon.svg"):
-	set(t):
-		if Engine.is_editor_hint():
-			art = t
-			card_art.texture = art
-		else:
-			art = t
-			if not card_art:
-				return null
-			card_art.texture = art
+@export var art: Texture2D = load("res://icon.svg")
 
-@export_multiline var description: String = "Description":
-	set(t):
-		if Engine.is_editor_hint():
-			description = t
-			card_description.text = description
-		else:
-			description = t 
-			if not card_description:
-				return null
-			card_description.text = description
+@export_multiline var description: String = "Description"
 			
-@export var cost: int = 2:
-	set(t):
-		if Engine.is_editor_hint():
-			cost = t
-			energy_cost.text = str(cost)
-		else:
-			cost = t  
-			if not energy_cost:
-				return null
-			energy_cost.text = str(cost)
+@export var cost: int = 2
 
 @export var vfx_scene: PackedScene
 
-@onready var card_art: TextureRect = $PanelContainer/MarginContainer/VBoxContainer/CardArt
+@onready var card_art: TextureRect = $PanelContainer/MarginContainer/VBoxContainer/Control/CardArt
 @onready var name_label = $PanelContainer/MarginContainer/VBoxContainer/Name
 @onready var card_description = $PanelContainer/MarginContainer/VBoxContainer/Description
 @onready var type = $PanelContainer/MarginContainer/VBoxContainer/Control/Type

@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1776579297
+::res://::1776580604
 5DD67A08-8A4E-4C25-B1FB-5F781FD7DB76.png::CompressedTexture2D::4842565863547310456::1772311237::1772311237::1::::<><><>0<>0<>6a1641d24a3b43405df85bd445bb07db<>res://.godot/imported/5DD67A08-8A4E-4C25-B1FB-5F781FD7DB76.png-fdefaeb4a7452b99a56f14aab84d1d76.ctex::
 ally_unit.gd::GDScript::7858940947498336426::1773983191::0::1::::AllyUnit<>Unit<><>0<>0<><>::
 BaseUnit.tscn::PackedScene::3054376799777507760::1772311356::0::1::::<><><>0<>0<><>::uid://bkuhysq7qpuwf::::res://unit.gd<>uid://6735gifvs4w1::::res://health_component.gd
@@ -14,7 +14,7 @@ enemy.gd::GDScript::1615846532760645375::1773983191::0::1::::Enemy<>Unit<><>0<>0
 EnemyBase.tscn::PackedScene::6920138340831930786::1772416737::0::1::::<><><>0<>0<><>::uid://c0jytsw6dtp67::::res://Skeleton_Sword/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Idle.png<>uid://xay0yki45qs2::::res://enemy.gd<>uid://cq02p6k1x53uj::::res://HealthComponent.tscn<>uid://di6br3and4k2y::::res://StatusEffectsComponent.tscn
 EnemySpriteSheet.png::CompressedTexture2D::7395310441613162324::1772170202::1772170202::1::::<><><>0<>0<>3704aff18231e201eae636df62427317<>res://.godot/imported/EnemySpriteSheet.png-9611d8cad7fc845d58745e5abf340e76.ctex::
 energy_display.gd::GDScript::881803032091444505::1773983191::0::1::::<>Label<><>0<>0<><>::
-energy_orb.gdshader::Shader::4779489089266141416::1776570981::0::1::::<><><>0<>0<><>::
+energy_orb.gdshader::Shader::4779489089266141416::1776580587::0::1::::<><><>0<>0<><>::
 fader.gd::GDScript::5992030867899147696::1776449016::0::1::::<>MeshInstance2D<><>0<>0<><>::
 Fader.tscn::PackedScene::3560395625910457762::1776449016::0::1::::<><><>0<>0<><>::uid://crmt4xell3kp1::::res://fader.gd
 GameMenu.gd::GDScript::3173799117267604277::1776559468::0::1::::<>Control<><>0<>0<><>::
@@ -23,7 +23,7 @@ hand.gd::GDScript::2232517510191139759::1776573374::0::1::::<>Node2D<><>0<>0<><>
 HealthComponent.tscn::PackedScene::5949140100044650177::1772170202::0::1::::<><><>0<>0<><>::uid://6735gifvs4w1::::res://health_component.gd
 health_component.gd::GDScript::2243668218278042746::1772170202::0::1::::HealthComponent<>ProgressBar<><>0<>0<><>::
 icon.svg::CompressedTexture2D::6361129280607079295::1772170202::1773947553::1::::<><><>0<>0<>6d5dbd9bec35f68d536b69ccf9a38c75<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-MapGenerator.tscn::PackedScene::1286210953034527675::1776579269::0::1::::<><><>0<>0<><>::uid://cn7rufkvjmxpg::::res://map_generator.gd
+MapGenerator.tscn::PackedScene::1286210953034527675::1776580479::0::1::::<><><>0<>0<><>::uid://cn7rufkvjmxpg::::res://map_generator.gd
 MapNode.tscn::PackedScene::4365003414179319587::1773983191::0::1::::<><><>0<>0<><>::uid://djreghmluv4xd::::res://map_node.gd
 map_generator.gd::GDScript::5752424606597128304::1776449822::0::1::::Map<>Node2D<><>0<>0<><>::
 map_node.gd::GDScript::7826310035103586125::1776448790::0::1::::MapNode<>MeshInstance2D<><>0<>0<><>::
@@ -43,12 +43,12 @@ unit_slot.gd::GDScript::7268899576094761430::1776569917::0::1::::UnitSlot<>Area2
 DataCard.gd::GDScript::8818046561074701554::1776560038::0::1::::Data_Card<>Resource<><>0<>0<><>::
 new_resource.tres::Resource/Data_Card::7070310246320578494::1773946574::0::1::::<><><>0<>0<><>::uid://dxvr65658sfjm::::res://Cards/DataCard.gd
 node.tscn::PackedScene::8125273095242507697::1773946574::0::1::::<><><>0<>0<><>::uid://bfrymito8pxw1::::res://Modules & Game Logic/Card_shop.gd<>uid://c7y58hfbd32vy::::res://Cards/new_resource.tres
-::res://Cards/_Template/::1776568465
+::res://Cards/_Template/::1776580587
 Card.tscn::PackedScene::715176647974731726::1776568410::0::1::::<><><>0<>0<><>::uid://mccf7osvgmqt::::res://Cards/_Template/card_scene.gd<>uid://cwvm4ttyujci6::::res://icon.svg
-card_scene.gd::GDScript::846526945340182947::1776568465::0::1::::Card<>Control<><>0<>1<><>::
-::res://Cards/Fireball/::1776573393
+card_scene.gd::GDScript::846526945340182947::1776580587::0::1::::Card<>Control<><>0<>0<><>::
+::res://Cards/Fireball/::1776580587
 fireball.tres::Resource/Data_Card::8579426715954310297::1776566225::0::1::::<><><>0<>0<><>::uid://dxvr65658sfjm::::res://Cards/DataCard.gd<>uid://cwvm4ttyujci6::::res://icon.svg<>uid://bckqrikkxb2i2::::res://Cards/Fireball/FireballCard.tscn
-FireballCard.tscn::PackedScene::2548444415010416335::1776560258::0::1::::<><><>0<>0<><>::uid://kgo4cjemjess::::res://Cards/_Template/Card.tscn<>uid://bmxkbkx044f03::::res://Cards/Fireball/fireball_card.gd<>uid://buxhoxquu328k::::res://Cards/Fireball/FireballVFX.tscn<>uid://cmysvhl7k6phy::::res://images/Fireball.png
+FireballCard.tscn::PackedScene::2548444415010416335::1776580587::0::1::::<><><>0<>0<><>::uid://kgo4cjemjess::::res://Cards/_Template/Card.tscn<>uid://bmxkbkx044f03::::res://Cards/Fireball/fireball_card.gd<>uid://buxhoxquu328k::::res://Cards/Fireball/FireballVFX.tscn<>uid://cmysvhl7k6phy::::res://images/Fireball.png
 FireballVFX.tscn::PackedScene::3838129498551649400::1772170202::0::1::::<><><>0<>0<><>::uid://bia6ym6m5iqya::::res://VFX/MasterProjectile.tscn
 fireball_card.gd::GDScript::3276777013354222874::1776573393::0::1::::<>Card<><>0<>1<><>::
 ::res://Cards/Heal/::1776566225
@@ -116,8 +116,8 @@ Skeleton_01_Yellow_Die.png::CompressedTexture2D::6129454548603323228::1772170202
 Skeleton_01_Yellow_Hurt.png::CompressedTexture2D::2420461975158141853::1772170202::1772170202::1::::<><><>0<>0<>eb434f5c54e7e3f8e45d31576f98a344<>res://.godot/imported/Skeleton_01_Yellow_Hurt.png-243fa1ce45ab48961b2ada886c00f9eb.ctex::
 Skeleton_01_Yellow_Idle.png::CompressedTexture2D::5928176781014286313::1772170202::1772170202::1::::<><><>0<>0<>4f9559921e22e78a95b3d37caac92938<>res://.godot/imported/Skeleton_01_Yellow_Idle.png-f51d754f11112f3ec3119c952573e225.ctex::
 Skeleton_01_Yellow_Walk.png::CompressedTexture2D::3019467542247336986::1772170202::1772170202::1::::<><><>0<>0<>0608bc0a82060945cf315d0bc6cc14fe<>res://.godot/imported/Skeleton_01_Yellow_Walk.png-73bbda0169010319574ce3dc959b9723.ctex::
-::res://Status Effects/::1776559794
-Burn.tres::Resource/BurningStatus::7743554928373056157::1776559794::0::1::::<><><>0<>0<><>::uid://dvhinv8pk82nb::::res://Status Effects/burning_status.gd
+::res://Status Effects/::1776580587
+Burn.tres::Resource/BurningStatus::7743554928373056157::1776580587::0::1::::<><><>0<>0<><>::uid://dvhinv8pk82nb::::res://Status Effects/burning_status.gd
 burning_status.gd::GDScript::8648188517684419183::1773983191::0::1::::BurningStatus<>StatusEffect<><>0<>0<><>::
 Poison.tres::Resource/PoisonStatus::3315271302316838734::1772416788::0::1::::<><><>0<>0<><>::uid://b28fuur8ndsom::::res://poison_status.gd
 status_effect.gd::GDScript::4672479618376417239::1773983191::0::1::::StatusEffect<>Resource<><>1<>0<><>::

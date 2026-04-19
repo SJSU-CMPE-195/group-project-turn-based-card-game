@@ -12,14 +12,14 @@ art = ExtResource("3_rldc7")
 description = "[color=red]30 Fire Damage"
 vfx_scene = ExtResource("3_ew4aa")
 
-[node name="Name" parent="PanelContainer/MarginContainer/VBoxContainer" index="0"]
+[node name="Name" parent="PanelContainer/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(659253752) index="0" unique_id=1221371154]
 text = "Fireball"
 
-[node name="CardArt" parent="PanelContainer/MarginContainer/VBoxContainer/Control" index="0"]
+[node name="CardArt" parent="PanelContainer/MarginContainer/VBoxContainer/Control" parent_id_path=PackedInt32Array(2136674178) index="0" unique_id=679232540]
 texture = ExtResource("3_rldc7")
 
-[node name="Description" parent="PanelContainer/MarginContainer/VBoxContainer" index="2"]
+[node name="Description" parent="PanelContainer/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(659253752) index="2" unique_id=1477428034]
 text = "[color=red]30 Fire Damage"
 
-[node name="EnergyCost" parent="PanelContainer" index="1"]
+[node name="EnergyCost" parent="PanelContainer" parent_id_path=PackedInt32Array(1472326090) index="1" unique_id=988734669]
 text = "2"
