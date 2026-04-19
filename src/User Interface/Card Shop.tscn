@@ -1,20 +1,20 @@
 [gd_scene load_steps=13 format=3 uid="uid://ch7aw5la4y251"]
 
 [ext_resource type="Script" uid="uid://bfrymito8pxw1" path="res://Modules & Game Logic/Card_shop.gd" id="1_1ongq"]
-[ext_resource type="Texture2D" uid="uid://eyyh14nmcuef" path="res://images/Shop_background.png" id="3_i40vj"]
 [ext_resource type="Resource" uid="uid://duh650wd25okn" path="res://Cards/Fireball/fireball.tres" id="3_vws81"]
 [ext_resource type="PackedScene" uid="uid://bckqrikkxb2i2" path="res://Cards/Fireball/FireballCard.tscn" id="4_fce2j"]
 [ext_resource type="PackedScene" uid="uid://dk6dt1n6n4xbu" path="res://Cards/Heal/Heal.tscn" id="4_hn8vq"]
 [ext_resource type="Resource" uid="uid://bd5hajgcfm6c5" path="res://Cards/Shield/shield.tres" id="4_l6uhj"]
 [ext_resource type="Resource" uid="uid://cbk7p85hmqim" path="res://Cards/Heal/heal.tres" id="5_88t1b"]
-[ext_resource type="Texture2D" uid="uid://bkb3h01mamkq0" path="res://images/Buy.png" id="5_fce2j"]
+[ext_resource type="Texture2D" uid="uid://bsg1wryavxcwp" path="res://images/Buy.png" id="5_fce2j"]
+[ext_resource type="Texture2D" uid="uid://orm0s8txemgb" path="res://images/Deck_bground.png" id="5_vws81"]
 [ext_resource type="PackedScene" uid="uid://bftdh1ledd24o" path="res://Cards/Shield/Shield.tscn" id="6_1yxok"]
-[ext_resource type="Texture2D" uid="uid://bofenkjv1aaam" path="res://images/Coin.png" id="9_l6uhj"]
+[ext_resource type="Texture2D" uid="uid://dpycp02vxlf84" path="res://images/Coin.png" id="9_l6uhj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fce2j"]
 line_spacing = 30.0
 font_size = 25
-font_color = Color(0.043137256, 0, 1, 1)
+font_color = Color(1, 0.42366666, 0.089999974, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_l6uhj"]
 font_size = 30
@@ -32,7 +32,7 @@ shield = ExtResource("4_l6uhj")
 heal = ExtResource("5_88t1b")
 gold = 700
 
-[node name="Wood" type="TextureRect" parent="."]
+[node name="Bground" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -41,7 +41,7 @@ offset_right = 348.0
 offset_bottom = 252.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_i40vj")
+texture = ExtResource("5_vws81")
 expand_mode = 1
 
 [node name="Name label" type="Label" parent="."]
@@ -61,11 +61,17 @@ horizontal_alignment = 1
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 custom_minimum_size = Vector2(3000, 1000)
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
+offset_left = -476.0
+offset_top = -548.0
+offset_right = 2524.0
+offset_bottom = 452.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 scale = Vector2(0.5, 0.5)
 
 [node name="GridContainer" type="GridContainer" parent="ScrollContainer"]

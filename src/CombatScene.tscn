@@ -1,19 +1,19 @@
 [gd_scene load_steps=40 format=3 uid="uid://dy14emuaan1hh"]
 
-[ext_resource type="Texture2D" uid="uid://ca81l8hoi7uua" path="res://5DD67A08-8A4E-4C25-B1FB-5F781FD7DB76.png" id="1_c531c"]
-[ext_resource type="Script" uid="uid://cxn2k2amdhylg" path="res://combat_scene.gd" id="1_obqq3"]
+[ext_resource type="Texture2D" uid="uid://ca81l8hoi7uua" path="res://images/5DD67A08-8A4E-4C25-B1FB-5F781FD7DB76.png" id="1_c531c"]
+[ext_resource type="Script" uid="uid://dli58hi8hvfvu" path="res://combat_scene.gd" id="1_obqq3"]
 [ext_resource type="Script" uid="uid://dbtdyjn18gho5" path="res://unit_slot.gd" id="2_6ravy"]
 [ext_resource type="Script" uid="uid://dj76uyh8ov30a" path="res://ally_unit.gd" id="2_diwen"]
 [ext_resource type="Texture2D" uid="uid://ddmlxg8f8wlw3" path="res://EnemySpriteSheet.png" id="3_hvv87"]
 [ext_resource type="PackedScene" uid="uid://cwxl03uj0y4li" path="res://Skeleton.tscn" id="4_6ravy"]
 [ext_resource type="PackedScene" uid="uid://cq02p6k1x53uj" path="res://HealthComponent.tscn" id="5_c531c"]
-[ext_resource type="Script" uid="uid://62pichu5qxqt" path="res://hand.gd" id="8_as4c2"]
+[ext_resource type="Script" path="res://hand.gd" id="8_as4c2"]
 [ext_resource type="PackedScene" uid="uid://xilvmcdv5y5f" path="res://Cursor.tscn" id="10_7gog2"]
 [ext_resource type="Script" uid="uid://dd1l21wes61le" path="res://combat_hint.gd" id="11_ji6bj"]
-[ext_resource type="Script" uid="uid://duoeksra0abm1" path="res://turn_start_display.gd" id="13_qmjfx"]
-[ext_resource type="Shader" uid="uid://cadhqs8mql0ky" path="res://energy_orb.gdshader" id="13_vp7l8"]
-[ext_resource type="Script" uid="uid://mtffxf6dy7pl" path="res://energy_display.gd" id="14_y04i6"]
-[ext_resource type="Script" uid="uid://l6t2k42byqmi" path="res://end_turn_button.gd" id="15_b4bhy"]
+[ext_resource type="Script" uid="uid://o77fjy5wd6sc" path="res://turn_start_display.gd" id="13_qmjfx"]
+[ext_resource type="Shader" uid="uid://bdqifmd6eko72" path="res://energy_orb.gdshader" id="13_vp7l8"]
+[ext_resource type="Script" uid="uid://b7w884btt4ken" path="res://energy_display.gd" id="14_y04i6"]
+[ext_resource type="Script" uid="uid://bsnw0y61f8teo" path="res://end_turn_button.gd" id="15_b4bhy"]
 [ext_resource type="PackedScene" uid="uid://olexu8hc1rho" path="res://User Interface/Deck system.tscn" id="17_1r5v8"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_ec351"]
@@ -147,70 +147,70 @@ border_color = Color(0, 0, 0, 1)
 [sub_resource type="QuadMesh" id="QuadMesh_qmjfx"]
 size = Vector2(2000, 2000)
 
-[node name="CombatScene" type="Node2D" unique_id=2032171980]
+[node name="CombatScene" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_obqq3")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1512804352]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 z_index = -1
 mesh = SubResource("QuadMesh_ec351")
 texture = ExtResource("1_c531c")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=225394864]
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="EnemySlots" type="Node2D" parent="." unique_id=1727745768]
+[node name="EnemySlots" type="Node2D" parent="."]
 
-[node name="EnemySlot1" type="Area2D" parent="EnemySlots" unique_id=275739690 node_paths=PackedStringArray("unit")]
+[node name="EnemySlot1" type="Area2D" parent="EnemySlots" node_paths=PackedStringArray("unit")]
 position = Vector2(350, 0)
 script = ExtResource("2_6ravy")
 unit = NodePath("Enemy")
 
-[node name="Enemy" parent="EnemySlots/EnemySlot1" unique_id=27350651 instance=ExtResource("4_6ravy")]
+[node name="Enemy" parent="EnemySlots/EnemySlot1" instance=ExtResource("4_6ravy")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemySlots/EnemySlot1" unique_id=141110708]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemySlots/EnemySlot1"]
 shape = SubResource("RectangleShape2D_7gog2")
 
-[node name="SelectReticle" type="MeshInstance2D" parent="EnemySlots/EnemySlot1" unique_id=1326995879]
+[node name="SelectReticle" type="MeshInstance2D" parent="EnemySlots/EnemySlot1"]
 visible = false
 z_index = -1
 mesh = SubResource("QuadMesh_6ravy")
 texture = SubResource("GradientTexture2D_ji6bj")
 
-[node name="EnemySlot2" type="Area2D" parent="EnemySlots" unique_id=1861846888 node_paths=PackedStringArray("unit")]
+[node name="EnemySlot2" type="Area2D" parent="EnemySlots" node_paths=PackedStringArray("unit")]
 position = Vector2(150, 0)
 script = ExtResource("2_6ravy")
 unit = NodePath("Enemy")
 
-[node name="Enemy" parent="EnemySlots/EnemySlot2" unique_id=453356191 instance=ExtResource("4_6ravy")]
+[node name="Enemy" parent="EnemySlots/EnemySlot2" instance=ExtResource("4_6ravy")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemySlots/EnemySlot2" unique_id=1585660991]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemySlots/EnemySlot2"]
 shape = SubResource("RectangleShape2D_7gog2")
 
-[node name="SelectReticle" type="MeshInstance2D" parent="EnemySlots/EnemySlot2" unique_id=1292658222]
+[node name="SelectReticle" type="MeshInstance2D" parent="EnemySlots/EnemySlot2"]
 visible = false
 z_index = -1
 mesh = SubResource("QuadMesh_6ravy")
 texture = SubResource("GradientTexture2D_ji6bj")
 
-[node name="EnemySlot3" type="Node2D" parent="EnemySlots" unique_id=1918844704]
+[node name="EnemySlot3" type="Node2D" parent="EnemySlots"]
 position = Vector2(250, 100)
 
-[node name="EnemySlot4" type="Node2D" parent="EnemySlots" unique_id=1541309174]
+[node name="EnemySlot4" type="Node2D" parent="EnemySlots"]
 position = Vector2(250, -100)
 
-[node name="AllySlots" type="Node2D" parent="." unique_id=1528464300]
+[node name="AllySlots" type="Node2D" parent="."]
 
-[node name="AllySlot1" type="Area2D" parent="AllySlots" unique_id=1710022468]
+[node name="AllySlot1" type="Area2D" parent="AllySlots"]
 position = Vector2(-150, 0)
 script = ExtResource("2_6ravy")
 metadata/_custom_type_script = "uid://dbtdyjn18gho5"
 
-[node name="AllySlot2" type="Area2D" parent="AllySlots" unique_id=491349173]
+[node name="AllySlot2" type="Area2D" parent="AllySlots"]
 position = Vector2(-350, 0)
 script = ExtResource("2_6ravy")
 metadata/_custom_type_script = "uid://dbtdyjn18gho5"
 
-[node name="Icon" type="AnimatedSprite2D" parent="AllySlots/AllySlot2" unique_id=1905193477]
+[node name="Icon" type="AnimatedSprite2D" parent="AllySlots/AllySlot2"]
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_ovs4j")
@@ -218,53 +218,53 @@ frame_progress = 0.75967073
 offset = Vector2(0, -40)
 script = ExtResource("2_diwen")
 
-[node name="HealthComponent" parent="AllySlots/AllySlot2/Icon" unique_id=242525121 instance=ExtResource("5_c531c")]
+[node name="HealthComponent" parent="AllySlots/AllySlot2/Icon" instance=ExtResource("5_c531c")]
 offset_left = -119.0
 offset_top = -85.5
 offset_right = -49.0
 offset_bottom = -72.5
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AllySlots/AllySlot2" unique_id=451331541]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AllySlots/AllySlot2"]
 shape = SubResource("RectangleShape2D_7gog2")
 
-[node name="SelectReticle" type="MeshInstance2D" parent="AllySlots/AllySlot2" unique_id=1511267860]
+[node name="SelectReticle" type="MeshInstance2D" parent="AllySlots/AllySlot2"]
 visible = false
 z_index = -1
 mesh = SubResource("QuadMesh_6ravy")
 texture = SubResource("GradientTexture2D_ji6bj")
 
-[node name="AllySlot3" type="Node2D" parent="AllySlots" unique_id=223742878]
+[node name="AllySlot3" type="Node2D" parent="AllySlots"]
 position = Vector2(-250, 100)
 
-[node name="AllySlot4" type="Node2D" parent="AllySlots" unique_id=1880193809]
+[node name="AllySlot4" type="Node2D" parent="AllySlots"]
 position = Vector2(-250, -100)
 
-[node name="LeftBound" type="Node2D" parent="." unique_id=917744398]
+[node name="LeftBound" type="Node2D" parent="."]
 visible = false
 position = Vector2(-271, 226)
 rotation = -0.20943952
 scale = Vector2(0.9, 0.9)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="LeftBound" unique_id=1444079637]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="LeftBound"]
 mesh = SubResource("QuadMesh_b4bhy")
 
-[node name="RightBound" type="Node2D" parent="." unique_id=1093255942]
+[node name="RightBound" type="Node2D" parent="."]
 visible = false
 position = Vector2(281.99994, 213)
 rotation = 0.20943952
 scale = Vector2(0.9, 0.9)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="RightBound" unique_id=393407828]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="RightBound"]
 mesh = SubResource("QuadMesh_b4bhy")
 
-[node name="Hand" type="Node2D" parent="." unique_id=30043342 node_paths=PackedStringArray("left_bound", "right_bound", "discard_pile")]
+[node name="Hand" type="Node2D" parent="." node_paths=PackedStringArray("left_bound", "right_bound", "discard_pile")]
 position = Vector2(483, 381)
 script = ExtResource("8_as4c2")
 left_bound = NodePath("../LeftBound")
 right_bound = NodePath("../RightBound")
 discard_pile = NodePath("../DiscardPile")
 
-[node name="Panel" type="Panel" parent="Hand" unique_id=2130385031]
+[node name="Panel" type="Panel" parent="Hand"]
 custom_minimum_size = Vector2(200, 300)
 offset_left = -100.0
 offset_top = -150.0
@@ -272,9 +272,9 @@ offset_right = 100.0
 offset_bottom = 150.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_b4bhy")
 
-[node name="Cursor" parent="." unique_id=1526032638 instance=ExtResource("10_7gog2")]
+[node name="Cursor" parent="." instance=ExtResource("10_7gog2")]
 
-[node name="Label" type="Label" parent="." unique_id=1315830748]
+[node name="Label" type="Label" parent="."]
 visible = false
 offset_left = -154.0
 offset_top = -139.0
@@ -285,7 +285,7 @@ theme_override_font_sizes/font_size = 50
 text = "Select Target"
 script = ExtResource("11_ji6bj")
 
-[node name="Label2" type="Label" parent="." unique_id=2001665026]
+[node name="Label2" type="Label" parent="."]
 visible = false
 offset_left = -154.0
 offset_top = -139.0
@@ -296,12 +296,12 @@ theme_override_font_sizes/font_size = 50
 text = "Select Target"
 script = ExtResource("13_qmjfx")
 
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=148367841]
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
 material = SubResource("ShaderMaterial_y04i6")
 position = Vector2(-352, 88)
 mesh = SubResource("QuadMesh_obqq3")
 
-[node name="Label2" type="Label" parent="MeshInstance2D2" unique_id=1247353341]
+[node name="Label2" type="Label" parent="MeshInstance2D2"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -321,7 +321,7 @@ text = "1
 horizontal_alignment = 1
 script = ExtResource("14_y04i6")
 
-[node name="Button" type="Button" parent="." unique_id=420053276]
+[node name="Button" type="Button" parent="."]
 custom_minimum_size = Vector2(100, 30)
 offset_left = -557.0
 offset_top = 153.0
@@ -333,19 +333,19 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_y04i6")
 text = "End Turn"
 script = ExtResource("15_b4bhy")
 
-[node name="Fader" type="MeshInstance2D" parent="." unique_id=1070435559]
+[node name="Fader" type="MeshInstance2D" parent="."]
 modulate = Color(0, 0, 0, 0)
 z_index = 10
 mesh = SubResource("QuadMesh_qmjfx")
 
-[node name="DeckSystem" parent="." unique_id=548185509 instance=ExtResource("17_1r5v8")]
+[node name="DeckSystem" parent="." instance=ExtResource("17_1r5v8")]
 visible = false
 
-[node name="DiscardPile" type="Node2D" parent="." unique_id=1198090222]
+[node name="DiscardPile" type="Node2D" parent="."]
 z_index = -1
 position = Vector2(-462, 422)
 
-[node name="Panel2" type="Panel" parent="DiscardPile" unique_id=892036868]
+[node name="Panel2" type="Panel" parent="DiscardPile"]
 custom_minimum_size = Vector2(200, 300)
 offset_left = -100.0
 offset_top = -150.0

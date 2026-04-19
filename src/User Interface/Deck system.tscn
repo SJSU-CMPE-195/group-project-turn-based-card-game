@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" uid="uid://d2ydl7lfnckpt" path="res://Modules & Game Logic/deck_system_revised.gd" id="1_ikkbp"]
 [ext_resource type="PackedScene" uid="uid://kgo4cjemjess" path="res://Cards/_Template/Card.tscn" id="2_eex1v"]
-[ext_resource type="Texture2D" uid="uid://qqy1h64kxant" path="res://images/Deck_background.png" id="3_dbfnp"]
-[ext_resource type="Texture2D" uid="uid://bpdpjnqibu370" path="res://images/reset.png" id="4_tayht"]
-[ext_resource type="Texture2D" uid="uid://cq4l5hhdg8s06" path="res://images/shuffle.png" id="5_k87sd"]
-[ext_resource type="Texture2D" uid="uid://niidmi0ifdth" path="res://images/draw.png" id="6_3rxnu"]
-[ext_resource type="Texture2D" uid="uid://ca25uvv0vkp81" path="res://images/remove.png" id="7_k87sd"]
+[ext_resource type="Texture2D" uid="uid://orm0s8txemgb" path="res://images/Deck_bground.png" id="3_k87sd"]
+[ext_resource type="Texture2D" uid="uid://cnrugoo6ndpon" path="res://images/reset.png" id="4_tayht"]
+[ext_resource type="Texture2D" uid="uid://tc4qo3tqj3ix" path="res://images/Shuffle.png" id="5_k87sd"]
+[ext_resource type="Texture2D" uid="uid://b223evjr0owtn" path="res://images/Draw.png" id="6_k87sd"]
+[ext_resource type="Texture2D" uid="uid://dfk3b7amby44v" path="res://images/remove.png" id="7_k87sd"]
 
-[node name="DeckSystem" type="Control" unique_id=1172432684]
+[node name="DeckSystem" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,17 +18,17 @@ grow_vertical = 2
 script = ExtResource("1_ikkbp")
 scene = ExtResource("2_eex1v")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1697628766]
+[node name="Bground" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_dbfnp")
+texture = ExtResource("3_k87sd")
 expand_mode = 1
 
-[node name="VerticalDeckContainer" type="VBoxContainer" parent="." unique_id=873561010]
+[node name="VerticalDeckContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -45,37 +45,37 @@ scale = Vector2(0.7, 0.7)
 theme_override_constants/separation = 10
 alignment = 2
 
-[node name="HorizontalContainerHand" type="HBoxContainer" parent="VerticalDeckContainer" unique_id=1316533008]
+[node name="HorizontalContainerHand" type="HBoxContainer" parent="VerticalDeckContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 50
 alignment = 1
 
-[node name="DiscardPileHorizontal" type="HBoxContainer" parent="VerticalDeckContainer" unique_id=896840525]
+[node name="DiscardPileHorizontal" type="HBoxContainer" parent="VerticalDeckContainer"]
 layout_mode = 2
 theme_override_constants/separation = 50
 alignment = 1
 
-[node name="ButtonInterface" type="HBoxContainer" parent="VerticalDeckContainer" unique_id=170054794]
+[node name="ButtonInterface" type="HBoxContainer" parent="VerticalDeckContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 25
 alignment = 1
 
-[node name="Reset_button" type="Button" parent="VerticalDeckContainer/ButtonInterface" unique_id=1125470979]
+[node name="Reset_button" type="Button" parent="VerticalDeckContainer/ButtonInterface"]
 layout_mode = 2
 icon = ExtResource("4_tayht")
 
-[node name="Shuffle_button" type="Button" parent="VerticalDeckContainer/ButtonInterface" unique_id=71733242]
+[node name="Shuffle_button" type="Button" parent="VerticalDeckContainer/ButtonInterface"]
 layout_mode = 2
 icon = ExtResource("5_k87sd")
 
-[node name="Draw_button" type="Button" parent="VerticalDeckContainer/ButtonInterface" unique_id=1673863155]
+[node name="Draw_button" type="Button" parent="VerticalDeckContainer/ButtonInterface"]
 layout_mode = 2
-icon = ExtResource("6_3rxnu")
+icon = ExtResource("6_k87sd")
 
-[node name="Remove_button" type="Button" parent="VerticalDeckContainer/ButtonInterface" unique_id=799970688]
+[node name="Remove_button" type="Button" parent="VerticalDeckContainer/ButtonInterface"]
 layout_mode = 2
 icon = ExtResource("7_k87sd")
 

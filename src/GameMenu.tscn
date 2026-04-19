@@ -5,11 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://slbyaxo6t3f0" path="res://MapGenerator.tscn" id="3_upkby"]
 [ext_resource type="PackedScene" uid="uid://ch7aw5la4y251" path="res://User Interface/Card Shop.tscn" id="4_mmtk5"]
 [ext_resource type="PackedScene" uid="uid://dqqepwj2cckmx" path="res://User Interface/Upgrade Shop.tscn" id="5_qsbh7"]
-[ext_resource type="Texture2D" uid="uid://ca81l8hoi7uua" path="res://5DD67A08-8A4E-4C25-B1FB-5F781FD7DB76.png" id="6_mmtk5"]
-[ext_resource type="Texture2D" uid="uid://cdkac6bixxw6s" path="res://images/Combat.png" id="7_qsbh7"]
-[ext_resource type="Texture2D" uid="uid://bf7n4rcw5gxhs" path="res://images/Map.png" id="8_qdkox"]
-[ext_resource type="Texture2D" uid="uid://baxhckbyesq01" path="res://images/CardShop.png" id="9_l3vkx"]
-[ext_resource type="Texture2D" uid="uid://dro6h77aauyfm" path="res://images/Upgrade.png" id="10_14y2f"]
+[ext_resource type="Texture2D" uid="uid://ca81l8hoi7uua" path="res://images/5DD67A08-8A4E-4C25-B1FB-5F781FD7DB76.png" id="6_mmtk5"]
+[ext_resource type="Texture2D" uid="uid://bfl1pijxqk1u5" path="res://images/Combat.png" id="7_qsbh7"]
+[ext_resource type="Texture2D" uid="uid://dvl0fx6oe71hl" path="res://images/Map.png" id="8_qdkox"]
+[ext_resource type="Texture2D" uid="uid://c5ybtacxoeoe7" path="res://images/CardShop.png" id="9_l3vkx"]
+[ext_resource type="Texture2D" uid="uid://dtj8732vmvrgb" path="res://images/Upgrade.png" id="10_14y2f"]
 
 [node name="GameMenu" type="Control"]
 layout_mode = 3
@@ -39,36 +39,36 @@ clip_contents = true
 layout_mode = 0
 offset_left = 500.0
 offset_top = 200.0
-offset_right = 1535.0
-offset_bottom = 505.0
-scale = Vector2(0.2, 0.2)
+offset_right = 1388.0
+offset_bottom = 415.0
+scale = Vector2(0.3, 0.3)
 icon = ExtResource("7_qsbh7")
 
 [node name="MapButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 550.0
+offset_left = 500.0
 offset_top = 300.0
-offset_right = 929.0
-offset_bottom = 579.0
-scale = Vector2(0.3, 0.3)
+offset_right = 687.0
+offset_bottom = 405.0
+scale = Vector2(0.7, 0.7)
 icon = ExtResource("8_qdkox")
 
 [node name="CardButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 515.0
-offset_top = 425.0
-offset_right = 1134.0
-offset_bottom = 542.0
-scale = Vector2(0.3, 0.3)
+offset_left = 500.0
+offset_top = 400.0
+offset_right = 1331.0
+offset_bottom = 663.0
+scale = Vector2(0.2, 0.2)
 icon = ExtResource("9_l3vkx")
 
 [node name="UpgradeButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 515.0
+offset_left = 500.0
 offset_top = 500.0
-offset_right = 1444.0
-offset_bottom = 679.0
-scale = Vector2(0.2, 0.2)
+offset_right = 862.0
+offset_bottom = 613.0
+scale = Vector2(0.5, 0.5)
 icon = ExtResource("10_14y2f")
 
 [connection signal="pressed" from="CombatPlayButton" to="." method="_on_combat_play_button_pressed"]

@@ -1,5 +1,11 @@
-res://User Interface/Upgrade Shop.tscn
+res://Cards/_Template/Card.tscn
 res://Status Effects/Burn.tres
 res://Cards/_Template/card_scene.gd
+res://Cards/Fireball/fireball.tres
+res://Cards/Shield/shield.tres
+res://Cards/Heal/Heal.tscn
 res://User Interface/Card Shop.tscn
-res://Modules & Game Logic/deck_system_revised.gd
+res://GameMenu.tscn
+res://User Interface/Upgrade Shop.tscn
+res://User Interface/Deck system.tscn
+res://CombatScene.tscn

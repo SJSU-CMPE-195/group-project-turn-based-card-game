@@ -1,20 +1,20 @@
 [gd_scene load_steps=15 format=3 uid="uid://dqqepwj2cckmx"]
 
-[ext_resource type="Texture2D" uid="uid://eyyh14nmcuef" path="res://images/Shop_background.png" id="1_awj6m"]
 [ext_resource type="Resource" uid="uid://duh650wd25okn" path="res://Cards/Fireball/fireball.tres" id="2_jtywd"]
 [ext_resource type="PackedScene" uid="uid://bckqrikkxb2i2" path="res://Cards/Fireball/FireballCard.tscn" id="3_b0k30"]
-[ext_resource type="Texture2D" uid="uid://bofenkjv1aaam" path="res://images/Coin.png" id="3_gv66k"]
+[ext_resource type="Texture2D" uid="uid://dpycp02vxlf84" path="res://images/Coin.png" id="3_gv66k"]
 [ext_resource type="Resource" uid="uid://bd5hajgcfm6c5" path="res://Cards/Shield/shield.tres" id="3_j63wu"]
-[ext_resource type="Texture2D" uid="uid://bl7uy6vkcc37c" path="res://images/Upgrade_button.png" id="3_vrv3w"]
 [ext_resource type="Resource" uid="uid://cbk7p85hmqim" path="res://Cards/Heal/heal.tres" id="4_rpni3"]
 [ext_resource type="PackedScene" uid="uid://bftdh1ledd24o" path="res://Cards/Shield/Shield.tscn" id="5_6nlb5"]
+[ext_resource type="Texture2D" uid="uid://orm0s8txemgb" path="res://images/Deck_bground.png" id="5_jtywd"]
 [ext_resource type="Script" uid="uid://bfrymito8pxw1" path="res://Modules & Game Logic/Card_shop.gd" id="5_xbj78"]
 [ext_resource type="PackedScene" uid="uid://dk6dt1n6n4xbu" path="res://Cards/Heal/Heal.tscn" id="6_xbj78"]
+[ext_resource type="Texture2D" uid="uid://dtj8732vmvrgb" path="res://images/Upgrade.png" id="9_jtywd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2w6fm"]
 line_spacing = 0.0
 font_size = 25
-font_color = Color(0.0034808286, 0.064501986, 0.36675528, 1)
+font_color = Color(1, 0.35686275, 0.18039216, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_jtywd"]
 font_size = 30
@@ -38,7 +38,7 @@ shield = ExtResource("3_j63wu")
 heal = ExtResource("4_rpni3")
 gold = 700
 
-[node name="Wood" type="TextureRect" parent="."]
+[node name="Bground" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -47,8 +47,7 @@ offset_right = 348.0
 offset_bottom = 252.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_awj6m")
-expand_mode = 1
+texture = ExtResource("5_jtywd")
 stretch_mode = 6
 
 [node name="Name label" type="Label" parent="."]
@@ -78,7 +77,7 @@ offset_right = 2524.0
 offset_bottom = 452.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.55, 0.55)
 
 [node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
 layout_mode = 2
@@ -97,15 +96,15 @@ layout_mode = 2
 
 [node name="UpgradeFireballButton" type="Button" parent="ScrollContainer/GridContainer"]
 layout_mode = 2
-icon = ExtResource("3_vrv3w")
+icon = ExtResource("9_jtywd")
 
 [node name="UpgradeShieldButton" type="Button" parent="ScrollContainer/GridContainer"]
 layout_mode = 2
-icon = ExtResource("3_vrv3w")
+icon = ExtResource("9_jtywd")
 
 [node name="UpgradeHealButton" type="Button" parent="ScrollContainer/GridContainer"]
 layout_mode = 2
-icon = ExtResource("3_vrv3w")
+icon = ExtResource("9_jtywd")
 
 [node name="CoinImage" type="TextureRect" parent="ScrollContainer/GridContainer"]
 layout_mode = 2
