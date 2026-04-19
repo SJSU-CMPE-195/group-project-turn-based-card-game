@@ -1,11 +1,11 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1776559794
+::res://::1776579297
 5DD67A08-8A4E-4C25-B1FB-5F781FD7DB76.png::CompressedTexture2D::4842565863547310456::1772311237::1772311237::1::::<><><>0<>0<>6a1641d24a3b43405df85bd445bb07db<>res://.godot/imported/5DD67A08-8A4E-4C25-B1FB-5F781FD7DB76.png-fdefaeb4a7452b99a56f14aab84d1d76.ctex::
 ally_unit.gd::GDScript::7858940947498336426::1773983191::0::1::::AllyUnit<>Unit<><>0<>0<><>::
 BaseUnit.tscn::PackedScene::3054376799777507760::1772311356::0::1::::<><><>0<>0<><>::uid://bkuhysq7qpuwf::::res://unit.gd<>uid://6735gifvs4w1::::res://health_component.gd
-CombatScene.tscn::PackedScene::8899236717140312901::1776559794::0::1::::<><><>0<>0<><>::uid://ca81l8hoi7uua::::res://5DD67A08-8A4E-4C25-B1FB-5F781FD7DB76.png<>uid://cxn2k2amdhylg::::res://combat_scene.gd<>uid://dbtdyjn18gho5::::res://unit_slot.gd<>uid://dj76uyh8ov30a::::res://ally_unit.gd<>uid://ddmlxg8f8wlw3::::res://EnemySpriteSheet.png<>uid://bckqrikkxb2i2::::res://Cards/Fireball/FireballCard.tscn<>uid://cwxl03uj0y4li::::res://Skeleton.tscn<>uid://dk6dt1n6n4xbu::::res://Cards/Heal/Heal.tscn<>uid://cq02p6k1x53uj::::res://HealthComponent.tscn<>uid://bftdh1ledd24o::::res://Cards/Shield/Shield.tscn<>uid://xilvmcdv5y5f::::res://Cursor.tscn<>uid://dd1l21wes61le::::res://combat_hint.gd<>uid://duoeksra0abm1::::res://turn_start_display.gd<>uid://cadhqs8mql0ky::::res://energy_orb.gdshader<>uid://mtffxf6dy7pl::::res://energy_display.gd<>uid://l6t2k42byqmi::::res://end_turn_button.gd<>uid://olexu8hc1rho::::res://User Interface/Deck system.tscn
+CombatScene.tscn::PackedScene::8899236717140312901::1776573443::0::1::::<><><>0<>0<><>::uid://ca81l8hoi7uua::::res://5DD67A08-8A4E-4C25-B1FB-5F781FD7DB76.png<>uid://cxn2k2amdhylg::::res://combat_scene.gd<>uid://dbtdyjn18gho5::::res://unit_slot.gd<>uid://dj76uyh8ov30a::::res://ally_unit.gd<>uid://ddmlxg8f8wlw3::::res://EnemySpriteSheet.png<>uid://cwxl03uj0y4li::::res://Skeleton.tscn<>uid://cq02p6k1x53uj::::res://HealthComponent.tscn<>uid://62pichu5qxqt::::res://hand.gd<>uid://xilvmcdv5y5f::::res://Cursor.tscn<>uid://dd1l21wes61le::::res://combat_hint.gd<>uid://duoeksra0abm1::::res://turn_start_display.gd<>uid://cadhqs8mql0ky::::res://energy_orb.gdshader<>uid://mtffxf6dy7pl::::res://energy_display.gd<>uid://l6t2k42byqmi::::res://end_turn_button.gd<>uid://olexu8hc1rho::::res://User Interface/Deck system.tscn
 combat_hint.gd::GDScript::7424219906754663290::1773944708::0::1::::<>Label<><>0<>0<><>::
-combat_manager.gd::GDScript::5679347407917366860::1776450509::0::1::::<>Node<><>0<>0<><>::
+combat_manager.gd::GDScript::5679347407917366860::1776569716::0::1::::<>Node<><>0<>0<><>::
 combat_scene.gd::GDScript::6415680317287458756::1776450209::0::1::::<>Room<><>0<>0<><>::
 cursor.gd::GDScript::3965377801861286436::1773944708::0::1::::<>Area2D<><>0<>0<><>::
 Cursor.tscn::PackedScene::1631564447835044737::1773944708::0::1::::<><><>0<>0<><>::uid://bwq4gtfsup11q::::res://cursor.gd
@@ -14,15 +14,16 @@ enemy.gd::GDScript::1615846532760645375::1773983191::0::1::::Enemy<>Unit<><>0<>0
 EnemyBase.tscn::PackedScene::6920138340831930786::1772416737::0::1::::<><><>0<>0<><>::uid://c0jytsw6dtp67::::res://Skeleton_Sword/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Idle.png<>uid://xay0yki45qs2::::res://enemy.gd<>uid://cq02p6k1x53uj::::res://HealthComponent.tscn<>uid://di6br3and4k2y::::res://StatusEffectsComponent.tscn
 EnemySpriteSheet.png::CompressedTexture2D::7395310441613162324::1772170202::1772170202::1::::<><><>0<>0<>3704aff18231e201eae636df62427317<>res://.godot/imported/EnemySpriteSheet.png-9611d8cad7fc845d58745e5abf340e76.ctex::
 energy_display.gd::GDScript::881803032091444505::1773983191::0::1::::<>Label<><>0<>0<><>::
-energy_orb.gdshader::Shader::4779489089266141416::1773983191::0::1::::<><><>0<>0<><>::
+energy_orb.gdshader::Shader::4779489089266141416::1776570981::0::1::::<><><>0<>0<><>::
 fader.gd::GDScript::5992030867899147696::1776449016::0::1::::<>MeshInstance2D<><>0<>0<><>::
 Fader.tscn::PackedScene::3560395625910457762::1776449016::0::1::::<><><>0<>0<><>::uid://crmt4xell3kp1::::res://fader.gd
 GameMenu.gd::GDScript::3173799117267604277::1776559468::0::1::::<>Control<><>0<>0<><>::
 GameMenu.tscn::PackedScene::4627574353316393902::1776559474::0::1::::<><><>0<>0<><>::uid://b5a8cbi06a1d0::::res://GameMenu.gd<>uid://dy14emuaan1hh::::res://CombatScene.tscn<>uid://slbyaxo6t3f0::::res://MapGenerator.tscn<>uid://ch7aw5la4y251::::res://User Interface/Card Shop.tscn<>uid://dqqepwj2cckmx::::res://User Interface/Upgrade Shop.tscn<>uid://ca81l8hoi7uua::::res://5DD67A08-8A4E-4C25-B1FB-5F781FD7DB76.png<>uid://cdkac6bixxw6s::::res://images/Combat.png<>uid://bf7n4rcw5gxhs::::res://images/Map.png<>uid://baxhckbyesq01::::res://images/CardShop.png<>uid://dro6h77aauyfm::::res://images/Upgrade.png
+hand.gd::GDScript::2232517510191139759::1776573374::0::1::::<>Node2D<><>0<>0<><>::
 HealthComponent.tscn::PackedScene::5949140100044650177::1772170202::0::1::::<><><>0<>0<><>::uid://6735gifvs4w1::::res://health_component.gd
 health_component.gd::GDScript::2243668218278042746::1772170202::0::1::::HealthComponent<>ProgressBar<><>0<>0<><>::
 icon.svg::CompressedTexture2D::6361129280607079295::1772170202::1773947553::1::::<><><>0<>0<>6d5dbd9bec35f68d536b69ccf9a38c75<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-MapGenerator.tscn::PackedScene::1286210953034527675::1776449925::0::1::::<><><>0<>0<><>::uid://cn7rufkvjmxpg::::res://map_generator.gd
+MapGenerator.tscn::PackedScene::1286210953034527675::1776579269::0::1::::<><><>0<>0<><>::uid://cn7rufkvjmxpg::::res://map_generator.gd
 MapNode.tscn::PackedScene::4365003414179319587::1773983191::0::1::::<><><>0<>0<><>::uid://djreghmluv4xd::::res://map_node.gd
 map_generator.gd::GDScript::5752424606597128304::1776449822::0::1::::Map<>Node2D<><>0<>0<><>::
 map_node.gd::GDScript::7826310035103586125::1776448790::0::1::::MapNode<>MeshInstance2D<><>0<>0<><>::
@@ -37,31 +38,31 @@ status_effects_component.gd::GDScript::3033848946991199685::1773983191::0::1::::
 status_effect_tile.gd::GDScript::2158772098838848678::1772416737::0::1::::<>TextureRect<><>0<>0<><>::
 turn_start_display.gd::GDScript::8592201910022290182::1773983191::0::1::::<>Label<><>0<>0<><>::
 unit.gd::GDScript::3130065524770804793::1773983191::0::1::::Unit<>AnimatedSprite2D<><>1<>0<><>::
-unit_slot.gd::GDScript::7268899576094761430::1776450385::0::1::::UnitSlot<>Area2D<><>0<>0<><>::
+unit_slot.gd::GDScript::7268899576094761430::1776569917::0::1::::UnitSlot<>Area2D<><>0<>0<><>::
 ::res://Cards/::1776560038
 DataCard.gd::GDScript::8818046561074701554::1776560038::0::1::::Data_Card<>Resource<><>0<>0<><>::
 new_resource.tres::Resource/Data_Card::7070310246320578494::1773946574::0::1::::<><><>0<>0<><>::uid://dxvr65658sfjm::::res://Cards/DataCard.gd
 node.tscn::PackedScene::8125273095242507697::1773946574::0::1::::<><><>0<>0<><>::uid://bfrymito8pxw1::::res://Modules & Game Logic/Card_shop.gd<>uid://c7y58hfbd32vy::::res://Cards/new_resource.tres
-::res://Cards/_Template/::1776448802
-Card.tscn::PackedScene::715176647974731726::1776448802::0::1::::<><><>0<>0<><>::uid://mccf7osvgmqt::::res://Cards/_Template/card_scene.gd<>uid://cwvm4ttyujci6::::res://icon.svg
-card_scene.gd::GDScript::846526945340182947::1776448802::0::1::::Card<>Control<><>0<>1<><>::
-::res://Cards/Fireball/::1776560077
-fireball.tres::Resource/Data_Card::8579426715954310297::1776560077::0::1::::<><><>0<>0<><>::uid://dxvr65658sfjm::::res://Cards/DataCard.gd<>uid://cwvm4ttyujci6::::res://icon.svg<>uid://bckqrikkxb2i2::::res://Cards/Fireball/FireballCard.tscn
-FireballCard.tscn::PackedScene::2548444415010416335::1776448802::0::1::::<><><>0<>0<><>::uid://kgo4cjemjess::::res://Cards/_Template/Card.tscn<>uid://bmxkbkx044f03::::res://Cards/Fireball/fireball_card.gd<>uid://buxhoxquu328k::::res://Cards/Fireball/FireballVFX.tscn<>uid://fql7byx4dg2h::::res://Cards/Fireball/Fireball.png
+::res://Cards/_Template/::1776568465
+Card.tscn::PackedScene::715176647974731726::1776568410::0::1::::<><><>0<>0<><>::uid://mccf7osvgmqt::::res://Cards/_Template/card_scene.gd<>uid://cwvm4ttyujci6::::res://icon.svg
+card_scene.gd::GDScript::846526945340182947::1776568465::0::1::::Card<>Control<><>0<>1<><>::
+::res://Cards/Fireball/::1776573393
+fireball.tres::Resource/Data_Card::8579426715954310297::1776566225::0::1::::<><><>0<>0<><>::uid://dxvr65658sfjm::::res://Cards/DataCard.gd<>uid://cwvm4ttyujci6::::res://icon.svg<>uid://bckqrikkxb2i2::::res://Cards/Fireball/FireballCard.tscn
+FireballCard.tscn::PackedScene::2548444415010416335::1776560258::0::1::::<><><>0<>0<><>::uid://kgo4cjemjess::::res://Cards/_Template/Card.tscn<>uid://bmxkbkx044f03::::res://Cards/Fireball/fireball_card.gd<>uid://buxhoxquu328k::::res://Cards/Fireball/FireballVFX.tscn<>uid://cmysvhl7k6phy::::res://images/Fireball.png
 FireballVFX.tscn::PackedScene::3838129498551649400::1772170202::0::1::::<><><>0<>0<><>::uid://bia6ym6m5iqya::::res://VFX/MasterProjectile.tscn
-fireball_card.gd::GDScript::3276777013354222874::1773983191::0::1::::<>Card<><>0<>1<><>::
-::res://Cards/Heal/::1776448919
-heal.tres::Resource/Data_Card::143107220564451244::1776448919::0::1::::<><><>0<>0<><>::uid://cwvm4ttyujci6::::res://icon.svg<>uid://dxvr65658sfjm::::res://Cards/DataCard.gd
+fireball_card.gd::GDScript::3276777013354222874::1776573393::0::1::::<>Card<><>0<>1<><>::
+::res://Cards/Heal/::1776566225
+heal.tres::Resource/Data_Card::143107220564451244::1776566225::0::1::::<><><>0<>0<><>::uid://cwvm4ttyujci6::::res://icon.svg<>uid://dxvr65658sfjm::::res://Cards/DataCard.gd<>uid://dk6dt1n6n4xbu::::res://Cards/Heal/Heal.tscn
 Heal.tscn::PackedScene::7925363666014570602::1776448802::0::1::::<><><>0<>0<><>::uid://kgo4cjemjess::::res://Cards/_Template/Card.tscn
 HealVFX.tscn::PackedScene::1195095665528216435::1772170202::0::1::::<><><>0<>0<><>::uid://d3iqm4qpdbagk::::res://VFX/decal.gdshader
 ::res://Cards/Poison/::1773945956
 poison.tscn::PackedScene::649436679786618812::1773945956::0::1::::<><><>0<>0<><>::
 poison_card.gd::GDScript::7499392044452373649::1773945956::0::1::::<>Card<><>0<>1<><>::
-::res://Cards/Shield/::1776448919
+::res://Cards/Shield/::1776566225
 shield.gd::GDScript::6603370988268796857::1772311356::0::1::::<>Card<><>0<>1<><>::
-shield.tres::Resource/Data_Card::2659344048255394638::1776448919::0::1::::<><><>0<>0<><>::uid://dxvr65658sfjm::::res://Cards/DataCard.gd<>uid://cwvm4ttyujci6::::res://icon.svg
+shield.tres::Resource/Data_Card::2659344048255394638::1776566225::0::1::::<><><>0<>0<><>::uid://dxvr65658sfjm::::res://Cards/DataCard.gd<>uid://cwvm4ttyujci6::::res://icon.svg<>uid://bftdh1ledd24o::::res://Cards/Shield/Shield.tscn
 Shield.tscn::PackedScene::2776784113531885532::1776448802::0::1::::<><><>0<>0<><>::uid://kgo4cjemjess::::res://Cards/_Template/Card.tscn<>uid://c1cys5b6lljsj::::res://Cards/Shield/shield.gd
-::res://images/::1776560243
+::res://images/::1776560244
 Buy.png::CompressedTexture2D::3092087427976657217::1773945956::1773945956::1::::<><><>0<>0<>285fbcbefd08ca80050a0dafd1e29c93<>res://.godot/imported/Buy.png-c87c6951eb5544c89d897275b2b10155.ctex::
 CardShop.png::CompressedTexture2D::2434330490448479164::1776559468::1776559474::1::::<><><>0<>0<>a778a76b8599bce73a3d2ce96838e8f7<>res://.godot/imported/CardShop.png-9902f8d16ec8b717750b2a26892e2fc7.ctex::
 Coin.png::CompressedTexture2D::3379653006813312652::1773945956::1773945956::1::::<><><>0<>0<>8a0182876de399b2d7ed1b32f0ab94c3<>res://.godot/imported/Coin.png-1a1806c522c80e97612b78d38e7e9dfe.ctex::
@@ -76,12 +77,12 @@ Shop_background.png::CompressedTexture2D::331771560046523789::1773945956::177394
 shuffle.png::CompressedTexture2D::5956451659822756673::1776448802::1776448899::1::::<><><>0<>0<>24e2c7540299da812e9a5f2cb7fdf161<>res://.godot/imported/shuffle.png-10172dd5c0cea462693dc12527e725be.ctex::
 Upgrade.png::CompressedTexture2D::8383270138997545142::1776559468::1776559474::1::::<><><>0<>0<>724324af396127f86c34f24ad4ec663a<>res://.godot/imported/Upgrade.png-2f6bbfde71a2dd52fcbb3b063e910b63.ctex::
 Upgrade_button.png::CompressedTexture2D::3225816911872303074::1773945956::1773945956::1::::<><><>0<>0<>cee0c6a5689e8cbc2f867de8bc6f02c1<>res://.godot/imported/Upgrade_button.png-542e145dfc8b286d151db0ed49474662.ctex::
-::res://Modules & Game Logic/::1776560191
+::res://Modules & Game Logic/::1776571598
 Card.gd::GDScript::3562216972424298969::1773983322::0::1::::Cards<>Resource<><>0<>0<><>::
 Card_shop.gd::GDScript::2773938411274430058::1776448802::0::1::::Card_shop<>Node<><>0<>0<><>::
 Deck_class_variables_and_functions.txt::TextFile::-1::1773945956::0::1::::<><><>0<>0<><>::
 deck_system_requirement.txt::TextFile::-1::1776448802::0::1::::<><><>0<>0<><>::
-deck_system_revised.gd::GDScript::9104109388099558777::1776560191::0::1::::<>Control<><>0<>0<><>::
+deck_system_revised.gd::GDScript::9104109388099558777::1776571598::0::1::::<>Control<><>0<>0<><>::
 Unit_class_variables_and_functions.txt::TextFile::-1::1773945956::0::1::::<><><>0<>0<><>::
 Upgrade_shop.gd::GDScript::2624085188849154106::1773983322::0::1::::Upgrade_shop<>Node<><>0<>0<><>::
 ::res://Skeleton_Sword/::1772170202
@@ -120,9 +121,9 @@ Burn.tres::Resource/BurningStatus::7743554928373056157::1776559794::0::1::::<><>
 burning_status.gd::GDScript::8648188517684419183::1773983191::0::1::::BurningStatus<>StatusEffect<><>0<>0<><>::
 Poison.tres::Resource/PoisonStatus::3315271302316838734::1772416788::0::1::::<><><>0<>0<><>::uid://b28fuur8ndsom::::res://poison_status.gd
 status_effect.gd::GDScript::4672479618376417239::1773983191::0::1::::StatusEffect<>Resource<><>1<>0<><>::
-::res://User Interface/::1776560202
+::res://User Interface/::1776560378
 Card Shop.tscn::PackedScene::5330264241181331538::1776448802::0::1::::<><><>0<>0<><>::uid://bfrymito8pxw1::::res://Modules & Game Logic/Card_shop.gd<>uid://c7y58hfbd32vy::::res://Cards/new_resource.tres<>uid://eyyh14nmcuef::::res://images/Shop_background.png<>uid://duh650wd25okn::::res://Cards/Fireball/fireball.tres<>uid://bckqrikkxb2i2::::res://Cards/Fireball/FireballCard.tscn<>uid://dk6dt1n6n4xbu::::res://Cards/Heal/Heal.tscn<>uid://bd5hajgcfm6c5::::res://Cards/Shield/shield.tres<>uid://cbk7p85hmqim::::res://Cards/Heal/heal.tres<>uid://bkb3h01mamkq0::::res://images/Buy.png<>uid://bftdh1ledd24o::::res://Cards/Shield/Shield.tscn<>uid://bofenkjv1aaam::::res://images/Coin.png
-Deck system.tscn::PackedScene::1005637009225300432::1776560202::0::1::::<><><>0<>0<><>::uid://d2ydl7lfnckpt::::res://Modules & Game Logic/deck_system_revised.gd<>uid://kgo4cjemjess::::res://Cards/_Template/Card.tscn<>uid://qqy1h64kxant::::res://images/Deck_background.png<>uid://bpdpjnqibu370::::res://images/reset.png<>uid://cq4l5hhdg8s06::::res://images/shuffle.png<>uid://niidmi0ifdth::::res://images/draw.png<>uid://ca25uvv0vkp81::::res://images/remove.png
+Deck system.tscn::PackedScene::1005637009225300432::1776560378::0::1::::<><><>0<>0<><>::uid://d2ydl7lfnckpt::::res://Modules & Game Logic/deck_system_revised.gd<>uid://kgo4cjemjess::::res://Cards/_Template/Card.tscn<>uid://qqy1h64kxant::::res://images/Deck_background.png<>uid://bpdpjnqibu370::::res://images/reset.png<>uid://cq4l5hhdg8s06::::res://images/shuffle.png<>uid://niidmi0ifdth::::res://images/draw.png<>uid://ca25uvv0vkp81::::res://images/remove.png
 Upgrade Shop.tscn::PackedScene::8315584418878879655::1776449249::0::1::::<><><>0<>0<><>::uid://eyyh14nmcuef::::res://images/Shop_background.png<>uid://duh650wd25okn::::res://Cards/Fireball/fireball.tres<>uid://bckqrikkxb2i2::::res://Cards/Fireball/FireballCard.tscn<>uid://bofenkjv1aaam::::res://images/Coin.png<>uid://bd5hajgcfm6c5::::res://Cards/Shield/shield.tres<>uid://bl7uy6vkcc37c::::res://images/Upgrade_button.png<>uid://cbk7p85hmqim::::res://Cards/Heal/heal.tres<>uid://bftdh1ledd24o::::res://Cards/Shield/Shield.tscn<>uid://bfrymito8pxw1::::res://Modules & Game Logic/Card_shop.gd<>uid://dk6dt1n6n4xbu::::res://Cards/Heal/Heal.tscn
 upgrade_shop.gd::GDScript::5534079401003843493::1773983191::0::1::::<>Room<><>0<>0<><>::
 ::res://VFX/::1772311237
