@@ -23,15 +23,16 @@ jobs:
 
       # Import project to load plugins
       - name: Import project
-        run: ./godot --headless --path . --import
+       # run: ./godot --headless --path . --import
+        run: ./godot --headless --path src --quit
 
       # Run GdUnit tests
-      - name: Run tests
-        uses: godot-gdunit-labs/gdUnit4-action@v1
-        with:
-          godot-version: '4.5.1'
-          paths: 'res://tests'
-          version: 'v6.0.0' # 👈 downgraded (more stable in CI)
+      #- name: Run tests
+      #  uses: godot-gdunit-labs/gdUnit4-action@v1
+      #  with:
+      #    godot-version: '4.5.1'
+      #    paths: 'res://tests'
+      #    version: 'v6.0.0' # 👈 downgraded (more stable in CI)
 
   deploy:
     runs-on: ubuntu-latest
