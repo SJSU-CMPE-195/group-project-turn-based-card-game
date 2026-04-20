@@ -91,6 +91,12 @@ cd group-project-turn-based-card-game
 
 # The app will be available at http://localhost:XXXX
 ```
+### Pipeline
+It is in ci.yml located under .github/workflows. We use a headless build/script to run the game. This means it's done without some processing unit.
+
+Testing: In ci.yml, locate it under "jobs:" and "tests:". First, Godot is installed manually. Then, the project we built gets imported. As we haven't run the tests, this stage does succeed, but the implementation is basic. It gives us a green check mark. These are not the test cases by the way. Mostly basic pipeline testing but ultimately it's just installation and importing. 
+
+Deployment: It's found under "deploy:" in the pipeline file. Exporting the project was successful, as the files are found in the export folder within the root directory. They are called "CardGame.console.exe", "CardGame.exe", and "CardGame.pck." That said, actual deployment in the pipeline gives 403 forbidden error. This is due to the settings of the repository. Because we don't have access to repo options, the best way to access the deployed project is downloading the export files in the "export" folder. As of now, it gives a red x. 
 
 ### Running
 Press "run specific scene" or use shortcut "ctrl + shift + f5. Once in "select scene" window, click any scene twice to run it.
@@ -99,6 +105,12 @@ Press "run specific scene" or use shortcut "ctrl + shift + f5. Once in "select s
 Players can go through each scene. They typically will begin at the map generator scene. Move to the combat scene to play the game. Use provided cards to defeat enemies. Select an energy target by pressing space on keyboard, click where to place card, and launch it. Buy new cards or upgrade owned cards to have better chances at winning. 
 
 ### Running Tests
+View tests folder for e2e, edge cases, integration tests, and unit tests. They are going to contain each variation for different parts of the game. 
+
+### Pipeline Output
+Basic testing in pipeline successful, deployment not successful.
+<img width="629" height="136" alt="Screenshot 2026-04-19 203815" src="https://github.com/user-attachments/assets/cc0a2bd1-02d9-42ff-bb62-e9906cbfb732" />
+
 
 ```bash
 [test command]
@@ -128,11 +140,20 @@ Players can go through each scene. They typically will begin at the map generato
 ```
 .
 ├── [folder]                 # Description
+    ├── github/workflows
+        ci.yml
     ├── docs/               # Documentation files
-       .gitkeep
+        Evaluation/
+            stress-test-results.md
+            stress-test-images/
+        .gitkeep
         Card_shop.png
         Combat_scene.png
         Map_generator.png
+    ├── export/
+        CardGame.console.exe
+        CardGame.exe
+        CardGame.pck
     ├── src/                # Source code files
         .godot
         Cards
@@ -143,6 +164,12 @@ Players can go through each scene. They typically will begin at the map generato
         VFX
         images
     ├── tests/              # Test files
+            e2e/
+            edgecases/
+            integration/
+            unit/
+            utility/
+            .gitkeep/
         .gitignore
         README_195.md
         SCHEDULE-195.md
