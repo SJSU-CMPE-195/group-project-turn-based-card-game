@@ -1,1 +1,3 @@
-extends Node
+extends Node 
+var testing_deck
+
