@@ -37,7 +37,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     # Uncomment this once tests pass
-    # needs: tests
+    needs: tests
     steps:
       - uses: actions/checkout@v4
 
@@ -45,9 +45,10 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: first_version
+          overwrite: true
           files: |
-            CardGame.console.exe
-            CardGame.exe
-            CardGame.pck
+            export/CardGame.console.exe
+            export/CardGame.exe
+            export/CardGame.pck
         env:
-          API_KEY: ${{ secrets.API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
