@@ -20,13 +20,16 @@ func add_card(card_instance: Node):
 		reposition_slots()
 
 func remove_card(card: Node):
-	slots.erase(card.slot)
+	if not cards.has(card):
+		return
+	var slot = card.slot  # grab reference before erasing anything
+	slots.erase(slot)
 	cards.erase(card)
-	card.slot.global_position = discard_pile.global_position
-	reposition_slots()
-	await get_tree().create_timer(0.3).timeout
-	card.slot.queue_free()
+	reposition_slots()  # reposition remaining slots first
+	slot.global_position = discard_pile.global_position  # then animate the removed slot
 	card.visible = false
+	await get_tree().create_timer(0.3).timeout
+	slot.queue_free()
 
 func reposition_slots():
 	var n := slots.size()

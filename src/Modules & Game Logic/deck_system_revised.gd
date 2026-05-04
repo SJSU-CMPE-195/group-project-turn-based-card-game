@@ -8,9 +8,10 @@ extends Control
 var fireball = preload("res://Cards/Fireball/fireball.tres")
 var shield = preload("res://Cards/Shield/shield.tres")
 var heal = preload("res://Cards/Heal/heal.tres")
+var poison = preload("res://Cards/Poison/poison.tres")
 
 # deck has three cards of each minimum
-var deck = [fireball, heal, shield, fireball.duplicate(), heal.duplicate(), shield.duplicate(),
+var deck = [poison, fireball, heal, shield, fireball.duplicate(), heal.duplicate(), shield.duplicate(),
 fireball.duplicate(), heal.duplicate(), shield.duplicate()] 
 
 # player draws from cards, duplicate of deck

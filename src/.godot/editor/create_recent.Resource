@@ -1,4 +1,4 @@
 Data_Card
+PoisonStatus
 Resource
 BurningStatus
-PoisonStatus

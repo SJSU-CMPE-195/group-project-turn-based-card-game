@@ -8,7 +8,7 @@ func select_card():
 		CombatManager.deck_manager.remove_card(self)
 
 func activate():
-	CombatManager.selected_ally.add_block(10)
+	CombatManager.selected_ally.heal(20)
 	queue_free()
 
 func _input(event):

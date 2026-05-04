@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Data_Card" load_steps=3 format=3 uid="uid://ck5a23mhdvuyw"]
+
+[ext_resource type="PackedScene" uid="uid://bdvlmqqc3na68" path="res://Cards/Poison/Poison.tscn" id="1_avykw"]
+[ext_resource type="Script" uid="uid://dxvr65658sfjm" path="res://Cards/DataCard.gd" id="1_c64xs"]
+
+[resource]
+script = ExtResource("1_c64xs")
+card_scene = ExtResource("1_avykw")
+card_type = "Attack"
+cost = 1
+damage = 3
+description = "Deal 3 Poison Damage each turn"
+card_name = "Poison Card"
+metadata/_custom_type_script = "uid://dxvr65658sfjm"

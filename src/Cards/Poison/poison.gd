@@ -4,11 +4,13 @@ extends Card
 func select_card():
 	if CombatManager.player_energy >= cost:
 		CombatManager.spend_energy(cost)
+		await CombatManager.select_enemy()
 		activate()
 		CombatManager.deck_manager.remove_card(self)
 
 func activate():
-	CombatManager.selected_ally.add_block(10)
+	var poison = preload("res://Status Effects/Poison.tres").duplicate()
+	CombatManager.selected_enemy.apply_status_effect(poison)
 	queue_free()
 
 func _input(event):

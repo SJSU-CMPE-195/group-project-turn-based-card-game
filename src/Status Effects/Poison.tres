@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="PoisonStatus" load_steps=4 format=3 uid="uid://bnh7bfjvkywbu"]
 
-[ext_resource type="Script" uid="uid://b28fuur8ndsom" path="res://poison_status.gd" id="1_wckpa"]
+[ext_resource type="Script" uid="uid://b28fuur8ndsom" path="res://Status Effects/poison_status.gd" id="1_wckpa"]
 
 [sub_resource type="Gradient" id="Gradient_wckpa"]
 offsets = PackedFloat32Array(0.5880282, 0.62323946)

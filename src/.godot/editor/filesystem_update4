@@ -1,4 +1,4 @@
+res://Cards/Poison/Poison.tscn
 res://Status Effects/Burn.tres
-res://Card_Buying_System.gd
-res://CardBuyingSystem.tscn
-res://GameMenu.gd
+res://Status Effects/Poison.tres
+res://Cards/Poison/poison.tres
