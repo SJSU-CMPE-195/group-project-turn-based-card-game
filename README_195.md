@@ -104,11 +104,11 @@ Press "run specific scene" or use shortcut "ctrl + shift + f5. Once in "select s
 ### Usage
 Players can go through each scene. They typically will begin at the map generator scene. Move to the combat scene to play the game. Use provided cards to defeat enemies. Select an energy target by pressing space on keyboard, click where to place card, and launch it. Buy new cards or upgrade owned cards to have better chances at winning. 
 
-### Running Tests
-View tests folder for e2e, edge cases, integration tests, and unit tests. They are going to contain each variation for different parts of the game. 
+### Tests
+In docs/evaluation/stress-test-results.md
 
 ### Pipeline Output
-Basic testing in pipeline successful, deployment not successful.
+Project importing works, deployment not successful.
 <img width="629" height="136" alt="Screenshot 2026-04-19 203815" src="https://github.com/user-attachments/assets/cc0a2bd1-02d9-42ff-bb62-e9906cbfb732" />
 
 
