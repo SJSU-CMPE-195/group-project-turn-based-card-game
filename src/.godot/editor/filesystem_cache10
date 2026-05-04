@@ -1,7 +1,8 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1777578777
+::res://::1777878207
 ally_unit.gd::GDScript::7858940947498336426::1776071407::0::1::::AllyUnit<>Unit<><>0<>0<><>::
 BaseUnit.tscn::PackedScene::3054376799777507760::1772162997::0::1::::<><><>0<>0<><>::uid://bkuhysq7qpuwf::::res://unit.gd<>uid://6735gifvs4w1::::res://health_component.gd
+Card_Buying_System.gd::GDScript::2540259039870673648::1777580334::0::1::::Card_Buying_System<>Node<><>0<>0<><>::
 CombatScene.tscn::PackedScene::8899236717140312901::1776590180::0::1::::<><><>0<>0<><>::uid://ca81l8hoi7uua::::res://images/5DD67A08-8A4E-4C25-B1FB-5F781FD7DB76.png<>uid://dli58hi8hvfvu::::res://combat_scene.gd<>uid://dbtdyjn18gho5::::res://unit_slot.gd<>uid://dj76uyh8ov30a::::res://ally_unit.gd<>uid://ddmlxg8f8wlw3::::res://EnemySpriteSheet.png<>uid://cwxl03uj0y4li::::res://Skeleton.tscn<>uid://cq02p6k1x53uj::::res://HealthComponent.tscn<>res://hand.gd<>uid://xilvmcdv5y5f::::res://Cursor.tscn<>uid://dd1l21wes61le::::res://combat_hint.gd<>uid://o77fjy5wd6sc::::res://turn_start_display.gd<>uid://bdqifmd6eko72::::res://energy_orb.gdshader<>uid://b7w884btt4ken::::res://energy_display.gd<>uid://bsnw0y61f8teo::::res://end_turn_button.gd<>uid://olexu8hc1rho::::res://User Interface/Deck system.tscn
 combat_hint.gd::GDScript::7424219906754663290::1775970858::0::1::::<>Label<><>0<>0<><>::
 combat_manager.gd::GDScript::5679347407917366860::1776581252::0::1::::<>Node<><>0<>0<><>::
@@ -29,6 +30,7 @@ map_generator.gd::GDScript::5752424606597128304::1776505499::0::1::::Map<>Node2D
 map_node.gd::GDScript::7826310035103586125::1776071407::0::1::::MapNode<>MeshInstance2D<><>0<>0<><>::
 poison_status.gd::GDScript::4349984306891436792::1772941576::0::1::::PoisonStatus<>StatusEffect<><>0<>0<><>::
 README.md::TextFile::-1::1771218461::0::1::::<><><>0<>0<><>::
+Card_Buying_System.tscn::PackedScene::7094002797696928414::1777878207::0::1::::<><><>0<>0<><>::
 room.gd::GDScript::2678538583361329936::1776071407::0::1::::Room<>Node<><>1<>0<><>::
 scene_manager.gd::GDScript::5734684284552013540::1776071407::0::1::::<>Node<><>0<>0<><>::
 Skeleton.tscn::PackedScene::6365190649527539682::1776071407::0::1::::<><><>0<>0<><>::uid://c5ufwxsu6d6ew::::res://EnemyBase.tscn
@@ -115,8 +117,8 @@ Skeleton_01_Yellow_Die.png::CompressedTexture2D::6129454548603323228::1771218461
 Skeleton_01_Yellow_Hurt.png::CompressedTexture2D::2420461975158141853::1771218461::1771218602::1::::<><><>0<>0<>eb434f5c54e7e3f8e45d31576f98a344<>res://.godot/imported/Skeleton_01_Yellow_Hurt.png-243fa1ce45ab48961b2ada886c00f9eb.ctex::
 Skeleton_01_Yellow_Idle.png::CompressedTexture2D::5928176781014286313::1771218461::1771218602::1::::<><><>0<>0<>4f9559921e22e78a95b3d37caac92938<>res://.godot/imported/Skeleton_01_Yellow_Idle.png-f51d754f11112f3ec3119c952573e225.ctex::
 Skeleton_01_Yellow_Walk.png::CompressedTexture2D::3019467542247336986::1771218461::1771218602::1::::<><><>0<>0<>0608bc0a82060945cf315d0bc6cc14fe<>res://.godot/imported/Skeleton_01_Yellow_Walk.png-73bbda0169010319574ce3dc959b9723.ctex::
-::res://Status Effects/::1776585660
-Burn.tres::Resource/BurningStatus::7743554928373056157::1776585660::0::1::::<><><>0<>0<><>::uid://dvhinv8pk82nb::::res://Status Effects/burning_status.gd
+::res://Status Effects/::1777878207
+Burn.tres::Resource/BurningStatus::7743554928373056157::1777878207::0::1::::<><><>0<>0<><>::uid://dvhinv8pk82nb::::res://Status Effects/burning_status.gd
 burning_status.gd::GDScript::8648188517684419183::1776071407::0::1::::BurningStatus<>StatusEffect<><>0<>0<><>::
 Poison.tres::Resource/PoisonStatus::3315271302316838734::1773954044::0::1::::<><><>0<>0<><>::uid://b28fuur8ndsom::::res://poison_status.gd
 status_effect.gd::GDScript::4672479618376417239::1776071407::0::1::::StatusEffect<>Resource<><>1<>0<><>::

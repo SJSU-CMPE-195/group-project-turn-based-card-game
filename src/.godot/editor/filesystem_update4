@@ -1,1 +1,4 @@
+res://Status Effects/Burn.tres
 res://Card_Buying_System.gd
+res://CardBuyingSystem.tscn
+res://GameMenu.gd

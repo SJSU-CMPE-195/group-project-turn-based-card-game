@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8cngphjd861w"]
+
+[ext_resource type="Script" uid="uid://bcgrxvyd3xrka" path="res://Card_Buying_System.gd" id="1_s0sub"]
+[ext_resource type="Texture2D" uid="uid://orm0s8txemgb" path="res://images/Deck_bground.png" id="1_yktyq"]
+[ext_resource type="PackedScene" uid="uid://b66vqdmr3ivby" path="res://GameMenu.tscn" id="2_u77d2"]
+
+[node name="CardBuyingSystem" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s0sub")
+Menu_Scene = ExtResource("2_u77d2")
+
+[node name="Setting" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 405.0
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yktyq")
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 0
+offset_right = 139.0
+offset_bottom = 31.0
+allow_reselect = true
+item_count = 4
+popup/item_0/text = "Menu"
+popup/item_0/id = 0
+popup/item_1/text = "Buy"
+popup/item_1/id = 1
+popup/item_2/text = "Claim Reward"
+popup/item_2/id = 2
+popup/item_3/text = "Upgrade"
+popup/item_3/id = 3
+
+[connection signal="item_selected" from="OptionButton" to="." method="_on_option_button_item_selected"]
