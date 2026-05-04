@@ -32,6 +32,10 @@ func select_card():
 func _ready():
 	$PanelContainer.mouse_entered.connect(hover)
 	$PanelContainer.mouse_exited.connect(end_hover)
+	$PanelContainer/EnergyCost.text = str(cost)
+	$PanelContainer/MarginContainer/VBoxContainer/Description.text = description
+	#if card_art != null:
+		#$PanelContainer/MarginContainer/VBoxContainer/Control/CardArt.texture = card_art
 
 func hover():
 	z_index = 1.0

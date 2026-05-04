@@ -4,11 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://kgo4cjemjess" path="res://Cards/_Template/Card.tscn" id="2_eex1v"]
 [ext_resource type="Texture2D" uid="uid://orm0s8txemgb" path="res://images/Deck_bground.png" id="3_k87sd"]
 [ext_resource type="Texture2D" uid="uid://cnrugoo6ndpon" path="res://images/reset.png" id="4_tayht"]
-[ext_resource type="Texture2D" uid="uid://tc4qo3tqj3ix" path="res://images/Shuffle.png" id="5_k87sd"]
-[ext_resource type="Texture2D" uid="uid://b223evjr0owtn" path="res://images/Draw.png" id="6_k87sd"]
+[ext_resource type="Texture2D" uid="uid://tc4qo3tqj3ix" path="res://images/shuffle.png" id="5_k87sd"]
+[ext_resource type="Texture2D" uid="uid://b223evjr0owtn" path="res://images/draw.png" id="6_k87sd"]
 [ext_resource type="Texture2D" uid="uid://dfk3b7amby44v" path="res://images/remove.png" id="7_k87sd"]
 
-[node name="DeckSystem" type="Control"]
+[node name="DeckSystem" type="Control" unique_id=1089850480]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,7 +18,7 @@ grow_vertical = 2
 script = ExtResource("1_ikkbp")
 scene = ExtResource("2_eex1v")
 
-[node name="Bground" type="TextureRect" parent="."]
+[node name="Bground" type="TextureRect" parent="." unique_id=760683456]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,7 +28,7 @@ grow_vertical = 2
 texture = ExtResource("3_k87sd")
 expand_mode = 1
 
-[node name="VerticalDeckContainer" type="VBoxContainer" parent="."]
+[node name="VerticalDeckContainer" type="VBoxContainer" parent="." unique_id=1612411858]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -45,37 +45,37 @@ scale = Vector2(0.7, 0.7)
 theme_override_constants/separation = 10
 alignment = 2
 
-[node name="HorizontalContainerHand" type="HBoxContainer" parent="VerticalDeckContainer"]
+[node name="HorizontalContainerHand" type="HBoxContainer" parent="VerticalDeckContainer" unique_id=1514429616]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 50
 alignment = 1
 
-[node name="DiscardPileHorizontal" type="HBoxContainer" parent="VerticalDeckContainer"]
+[node name="DiscardPileHorizontal" type="HBoxContainer" parent="VerticalDeckContainer" unique_id=1137807201]
 layout_mode = 2
 theme_override_constants/separation = 50
 alignment = 1
 
-[node name="ButtonInterface" type="HBoxContainer" parent="VerticalDeckContainer"]
+[node name="ButtonInterface" type="HBoxContainer" parent="VerticalDeckContainer" unique_id=1080970365]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 25
 alignment = 1
 
-[node name="Reset_button" type="Button" parent="VerticalDeckContainer/ButtonInterface"]
+[node name="Reset_button" type="Button" parent="VerticalDeckContainer/ButtonInterface" unique_id=621531250]
 layout_mode = 2
 icon = ExtResource("4_tayht")
 
-[node name="Shuffle_button" type="Button" parent="VerticalDeckContainer/ButtonInterface"]
+[node name="Shuffle_button" type="Button" parent="VerticalDeckContainer/ButtonInterface" unique_id=1173286438]
 layout_mode = 2
 icon = ExtResource("5_k87sd")
 
-[node name="Draw_button" type="Button" parent="VerticalDeckContainer/ButtonInterface"]
+[node name="Draw_button" type="Button" parent="VerticalDeckContainer/ButtonInterface" unique_id=908694679]
 layout_mode = 2
 icon = ExtResource("6_k87sd")
 
-[node name="Remove_button" type="Button" parent="VerticalDeckContainer/ButtonInterface"]
+[node name="Remove_button" type="Button" parent="VerticalDeckContainer/ButtonInterface" unique_id=1722626104]
 layout_mode = 2
 icon = ExtResource("7_k87sd")
 

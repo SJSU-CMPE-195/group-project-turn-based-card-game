@@ -1,4 +1,10 @@
-res://Cards/Poison/Poison.tscn
+res://CombatScene.tscn
 res://Status Effects/Burn.tres
+res://energy_orb.gdshader
 res://Status Effects/Poison.tres
-res://Cards/Poison/poison.tres
+res://Cards/Poison/poison.tscn
+res://User Interface/Deck system.tscn
+res://Modules & Game Logic/deck_system_revised.gd
+res://Cards/Shield/Shield.tscn
+res://Cards/_Template/card_scene.gd
+res://MapGenerator.tscn
